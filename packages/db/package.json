@@ -1,0 +1,36 @@
+{
+  "name": "@scp/db",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "generate": "prisma generate",
+    "push": "dotenv -e ../../.env -- prisma db push",
+    "migrate": "dotenv -e ../../.env -- prisma migrate dev",
+    "migrate:deploy": "dotenv -e ../../.env -- prisma migrate deploy",
+    "studio": "dotenv -e ../../.env -- prisma studio",
+    "seed": "tsx src/seed/index.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "echo 'no lint'"
+  },
+  "prisma": {
+    "schema": "prisma/schema.prisma"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.20.0",
+    "@scp/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.0.3",
+    "dotenv": "^16.4.5",
+    "dotenv-cli": "^7.4.2",
+    "prisma": "^5.20.0",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  }
+}

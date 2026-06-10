@@ -1,0 +1,427 @@
+// Shopper Growth Copilot — data model
+// Design notes:
+//  - CommunicationEvent is append-only; Communication.status is a materialised
+//    projection rebuildable from events (event sourcing for the send funnel).
+//  - ChannelCallback stores every raw inbound callback (audit + replay).
+//  - Heavy read paths (customer table filters, campaign funnels) are indexed.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ───────────────────────── enums ─────────────────────────
+
+enum Channel {
+  WHATSAPP
+  SMS
+  EMAIL
+  RCS
+}
+
+enum CommunicationStatus {
+  QUEUED
+  SENT
+  DELIVERED
+  READ
+  CLICKED
+  ATTRIBUTED_ORDER
+  FAILED
+}
+
+enum CampaignStatus {
+  DRAFT
+  SCHEDULED
+  LAUNCHING
+  RUNNING
+  COMPLETED
+  FAILED
+}
+
+enum LoyaltyTier {
+  PLATINUM
+  GOLD
+  SILVER
+  BRONZE
+}
+
+enum ChurnRisk {
+  LOW
+  MEDIUM
+  HIGH
+}
+
+enum ProductCategory {
+  FASHION
+  BEAUTY
+  ACCESSORIES
+  SNEAKERS
+}
+
+enum Persona {
+  VIP_FASHION_LOYALIST
+  DORMANT_HIGH_SPENDER
+  DISCOUNT_LED_BUYER
+  NEW_CUSTOMER
+  BEAUTY_REPEAT_BUYER
+  WINDOW_SHOPPER
+  AT_RISK_LOYALIST
+}
+
+enum Gender {
+  FEMALE
+  MALE
+  OTHER
+}
+
+// ───────────────────────── core retail ─────────────────────────
+
+model Brand {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  industry  String
+  createdAt DateTime @default(now())
+
+  customers Customer[]
+  campaigns Campaign[]
+  segments  Segment[]
+  products  Product[]
+}
+
+model Customer {
+  id    String  @id @default(cuid())
+  brand Brand   @relation(fields: [brandId], references: [id])
+  brandId String
+
+  name          String
+  email         String  @unique
+  phone         String
+  city          String
+  gender        Gender?
+  loyaltyTier   LoyaltyTier @default(BRONZE)
+  preferredChannel Channel  @default(WHATSAPP)
+
+  // consent flags per channel
+  consentWhatsApp Boolean @default(true)
+  consentSms      Boolean @default(true)
+  consentEmail    Boolean @default(true)
+  consentRcs      Boolean @default(true)
+
+  // behavioural metrics (denormalised for fast segment/table queries)
+  totalSpend          Float    @default(0)
+  orderCount          Int      @default(0)
+  averageOrderValue   Float    @default(0)
+  favouriteCategory   ProductCategory @default(FASHION)
+  discountSensitivity Float    @default(0) // 0..1
+  churnRisk           ChurnRisk @default(LOW)
+  persona             Persona   @default(NEW_CUSTOMER)
+  lifetimeValue       Float    @default(0)
+
+  // RFM
+  rfmRecency   Int @default(1)
+  rfmFrequency Int @default(1)
+  rfmMonetary  Int @default(1)
+  rfmCell      String @default("111")
+  rfmTotal     Int    @default(3)
+
+  firstPurchaseAt DateTime?
+  lastPurchaseAt  DateTime?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  orders         Order[]
+  communications Communication[]
+  attributedOrders AttributedOrder[]
+
+  // Indexes tuned for the customer table + segment resolution.
+  @@index([brandId, city])
+  @@index([brandId, churnRisk])
+  @@index([brandId, favouriteCategory])
+  @@index([brandId, persona])
+  @@index([brandId, loyaltyTier])
+  @@index([brandId, totalSpend])
+  @@index([brandId, lastPurchaseAt])
+  @@index([brandId, rfmTotal])
+}
+
+model Product {
+  id        String   @id @default(cuid())
+  brand     Brand    @relation(fields: [brandId], references: [id])
+  brandId   String
+  name      String
+  category  ProductCategory
+  price     Float
+  createdAt DateTime @default(now())
+
+  orderItems OrderItem[]
+
+  @@index([brandId, category])
+}
+
+model Order {
+  id         String   @id @default(cuid())
+  customer   Customer @relation(fields: [customerId], references: [id])
+  customerId String
+
+  orderNumber    String   @unique
+  totalAmount    Float
+  discountAmount Float    @default(0)
+  category       ProductCategory
+  placedAt       DateTime
+
+  items OrderItem[]
+  attributedOrder AttributedOrder?
+
+  createdAt DateTime @default(now())
+
+  @@index([customerId, placedAt])
+  @@index([category])
+  @@index([placedAt])
+}
+
+model OrderItem {
+  id        String  @id @default(cuid())
+  order     Order   @relation(fields: [orderId], references: [id])
+  orderId   String
+  product   Product @relation(fields: [productId], references: [id])
+  productId String
+  quantity  Int     @default(1)
+  unitPrice Float
+
+  @@index([orderId])
+  @@index([productId])
+}
+
+// ───────────────────────── segments ─────────────────────────
+
+model Segment {
+  id      String @id @default(cuid())
+  brand   Brand  @relation(fields: [brandId], references: [id])
+  brandId String
+
+  name        String
+  description String?
+  naturalLanguageQuery String?
+  aiExplanation        String? @db.Text
+
+  // cached aggregates from last preview/save
+  cachedAudienceSize    Int?
+  cachedRevenuePotential Float?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  rules     SegmentRule[]
+  campaigns Campaign[]
+
+  @@index([brandId])
+}
+
+// Versioned structured rule for a segment (append a new version on edit).
+model SegmentRule {
+  id        String  @id @default(cuid())
+  segment   Segment @relation(fields: [segmentId], references: [id], onDelete: Cascade)
+  segmentId String
+  version   Int     @default(1)
+  rule      Json
+  createdAt DateTime @default(now())
+
+  @@unique([segmentId, version])
+  @@index([segmentId])
+}
+
+// ───────────────────────── campaigns ─────────────────────────
+
+model Campaign {
+  id      String @id @default(cuid())
+  brand   Brand  @relation(fields: [brandId], references: [id])
+  brandId String
+
+  name String
+  goal String? @db.Text
+  status CampaignStatus @default(DRAFT)
+
+  segment   Segment? @relation(fields: [segmentId], references: [id])
+  segmentId String?
+  /// frozen audience rule snapshot at launch
+  segmentRuleSnapshot Json?
+
+  primaryChannel  Channel
+  fallbackChannel Channel?
+  offerCode       String?
+
+  controlGroupRatio Float @default(0.1)
+
+  // launch-time audience accounting
+  audienceSize     Int @default(0)
+  controlGroupSize Int @default(0)
+  targetedSize     Int @default(0)
+
+  aiPlanRunId String?
+
+  launchedAt  DateTime?
+  completedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  variants       CampaignVariant[]
+  communications Communication[]
+  attributedOrders AttributedOrder[]
+  callbacks      ChannelCallback[]
+
+  @@index([brandId, status])
+  @@index([brandId, createdAt])
+}
+
+model CampaignVariant {
+  id         String   @id @default(cuid())
+  campaign   Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  campaignId String
+
+  label        String // "A", "B"
+  channel      Channel
+  allocation   Int    // percentage
+  subject      String?
+  bodyTemplate String @db.Text
+  offerCode    String?
+
+  communications Communication[]
+
+  createdAt DateTime @default(now())
+
+  @@unique([campaignId, label])
+  @@index([campaignId])
+}
+
+// ───────────────────────── communications ─────────────────────────
+
+model Communication {
+  id         String   @id @default(cuid())
+  campaign   Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  campaignId String
+  variant    CampaignVariant @relation(fields: [variantId], references: [id])
+  variantId  String
+  customer   Customer @relation(fields: [customerId], references: [id])
+  customerId String
+
+  channel Channel
+  /// rendered, personalised content actually "sent"
+  renderedSubject String?
+  renderedBody    String  @db.Text
+  recipient       String
+
+  /// materialised projection of CommunicationEvent log
+  status CommunicationStatus @default(QUEUED)
+  isControlGroup Boolean @default(false)
+
+  providerMessageId String?
+  failureReason     String?
+
+  queuedAt    DateTime @default(now())
+  sentAt      DateTime?
+  deliveredAt DateTime?
+  readAt      DateTime?
+  clickedAt   DateTime?
+  attributedAt DateTime?
+
+  events CommunicationEvent[]
+  attributedOrder AttributedOrder?
+
+  @@index([campaignId, status])
+  @@index([campaignId, variantId])
+  @@index([customerId])
+  @@index([status])
+}
+
+// Append-only event log. Never updated or deleted — full funnel is rebuildable.
+model CommunicationEvent {
+  id              String   @id @default(cuid())
+  communication   Communication @relation(fields: [communicationId], references: [id], onDelete: Cascade)
+  communicationId String
+  eventType       CommunicationStatus
+  channel         Channel
+  providerMessageId String?
+  /// the callback idempotency key that produced this event
+  idempotencyKey  String?
+  occurredAt      DateTime
+  createdAt       DateTime @default(now())
+
+  @@index([communicationId, occurredAt])
+  @@index([eventType])
+  @@index([occurredAt])
+}
+
+// Raw inbound callbacks — stored verbatim for audit/replay + idempotency guard.
+model ChannelCallback {
+  id             String   @id @default(cuid())
+  campaign       Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  campaignId     String
+  idempotencyKey String   @unique
+  eventType      CommunicationStatus
+  channel        Channel
+  signatureValid Boolean
+  /// false on signature/validation failure: dead-letter style tracking
+  processed      Boolean  @default(false)
+  errorReason    String?
+  rawPayload     Json
+  receivedAt     DateTime @default(now())
+
+  @@index([campaignId])
+  @@index([processed])
+}
+
+model AttributedOrder {
+  id              String   @id @default(cuid())
+  campaign        Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  campaignId      String
+  communication   Communication @relation(fields: [communicationId], references: [id], onDelete: Cascade)
+  communicationId String   @unique
+  customer        Customer @relation(fields: [customerId], references: [id])
+  customerId      String
+  order           Order?   @relation(fields: [orderId], references: [id])
+  orderId         String?  @unique
+
+  orderValue   Float
+  attributedAt DateTime @default(now())
+
+  @@index([campaignId])
+  @@index([customerId])
+}
+
+// ───────────────────────── AI ─────────────────────────
+
+model AiAgentRun {
+  id         String   @id @default(cuid())
+  capability String   // matches AiCapability values
+  provider   String   // "mock" | "openai"
+  model      String?
+  input      Json
+  output     Json?
+  explanation String?  @db.Text
+  confidence Float?
+  status     String   @default("SUCCESS") // SUCCESS | FALLBACK | ERROR
+  latencyMs  Int?
+  createdAt  DateTime @default(now())
+
+  auditLogs AiAuditLog[]
+
+  @@index([capability])
+  @@index([createdAt])
+}
+
+model AiAuditLog {
+  id        String   @id @default(cuid())
+  run       AiAgentRun @relation(fields: [runId], references: [id], onDelete: Cascade)
+  runId     String
+  level     String   @default("info") // info | warn | error
+  message   String   @db.Text
+  data      Json?
+  createdAt DateTime @default(now())
+
+  @@index([runId])
+}

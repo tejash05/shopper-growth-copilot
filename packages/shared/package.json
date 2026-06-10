@@ -1,0 +1,25 @@
+{
+  "name": "@scp/shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./constants": "./src/constants/index.ts",
+    "./domain": "./src/domain/index.ts",
+    "./dto": "./src/dto/index.ts",
+    "./crypto": "./src/domain/hmac.ts"
+  },
+  "scripts": {
+    "lint": "echo 'no lint'",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}

@@ -1,0 +1,30 @@
+node_modules/
+dist/
+.next/
+out/
+.turbo/
+*.tsbuildinfo
+coverage/
+
+# env
+.env
+.env.local
+.env.*.local
+
+# logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# os
+.DS_Store
+
+# prisma
+packages/db/prisma/*.db
+
+# misc
+.vscode/*
+!.vscode/extensions.json
+.env
+.env.local
+.env.*.local
