@@ -93,10 +93,10 @@ Both point the web app at the CRM API. No database or Redis variables are requir
 - Own campaign simulation or channel callback logic (handled by CRM API + channel service)
 - Use Framer Motion
 
-## Interview notes
+## Engineering highlights
 
-- **Shared typed contracts** (`@scp/shared`, `@scp/ai`) keep request/response shapes aligned with the API and reduce frontend/backend drift.
-- **React Query** separates server state from UI state, making loading, refetch, and invalidation predictable across dashboards and wizards.
-- **Workspace context + `X-Brand-Id`** gives a simple multi-tenant UX without embedding brand IDs in every route.
-- **Campaign Monitor polling** is intentional: delivery metrics arrive asynchronously; the UI models eventual updates rather than pretending sends are synchronous.
-- **Product-led flow** — insight (Command Center) → audience (Segments) → campaign (Studio) → performance (Monitor) — mirrors how marketers actually work.
+- **Shared typed contracts** (`@scp/shared`, `@scp/ai`) align the UI with API payloads and reduce frontend/backend drift as features evolve.
+- **React Query** owns server state separately from UI state, so loading, refetch, and cache invalidation stay consistent across dashboards and multi-step wizards.
+- **Workspace context with `X-Brand-Id`** scopes multi-tenant behavior in one place instead of threading brand IDs through every route and component.
+- **Campaign Monitor polling** reflects how messaging actually works: delivery metrics arrive asynchronously, so the UI tracks eventual updates instead of assuming synchronous sends.
+- **Product-led navigation** follows the marketer workflow — insight (Command Center) → audience (Segments) → campaign (Studio) → performance (Monitor).
