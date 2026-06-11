@@ -19,6 +19,84 @@ attribution for a fashion brand (**NovaWear**).
 
 ---
 
+## Architecture Overview
+
+| Layer | Technology | Role |
+| --- | --- | --- |
+| **Frontend** | Next.js 15, React, Tailwind | Command Center, segments, studio, monitor |
+| **CRM API** | Fastify, Prisma, PostgreSQL | Product APIs, campaigns, imports, AI, receipts |
+| **Async sends** | Redis + BullMQ | Outbound send queue only — not used for dashboard/table caching |
+| **Channel service** | Fastify (separate process) | Stubbed WhatsApp / SMS / Email / RCS provider |
+
+In production messaging, providers do not return final delivery results in the same HTTP response. The CRM submits a send; the provider later posts webhooks for `sent`, `delivered`, `read`, `clicked`, `failed`, and so on. This project models that lifecycle: **crm-api** enqueues sends, **channel-service** simulates delayed lifecycle events, and posts **HMAC-signed, idempotent** callbacks to `/api/receipts/channel-callback`. `CommunicationEvent` rows are append-only; `Communication.status` is a materialised projection.
+
+More detail: [`docs/architecture.md`](docs/architecture.md) · [`apps/crm-api/README.md`](apps/crm-api/README.md) · [`apps/channel-service/README.md`](apps/channel-service/README.md)
+
+---
+
+## Product Walkthrough
+
+Screenshots from the live demo workspace. [Open the app →](https://web-production-092f5.up.railway.app/)
+
+### Command Center
+
+Workspace-scoped KPIs, communication performance, and an AI opportunity card with recoverable revenue and a recommended next action.
+
+<img src="./repo-assets/command-center-novawear.png" alt="Command Center" width="100%" />
+
+<p align="center"><em>NovaWear demo dashboard — shoppers, revenue, at-risk count, and active campaigns</em></p>
+
+### Workspace & Data Import
+
+Switch workspaces from the sidebar, generate brand-scoped demo data for empty tenants, or upload CSV/JSON shoppers and orders with preview, validation, and import history.
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<img src="./repo-assets/empty-workspace.png" alt="Empty workspace" width="100%" />
+<p align="center"><em>Empty workspace — generate demo data or upload files</em></p>
+</td>
+<td width="50%" valign="top">
+<img src="./repo-assets/data-import.png" alt="Data import" width="100%" />
+<p align="center"><em>Data import — JSON/CSV upload, templates, staged progress</em></p>
+</td>
+</tr>
+</table>
+
+### Shoppers Intelligence
+
+Server-side paginated shopper table with RFM, churn risk, persona, favourite category, and a detail drawer for orders and campaign history.
+
+<img src="./repo-assets/shoppers.png" alt="Shoppers intelligence table" width="100%" />
+
+<p align="center"><em>Shopper intelligence table with filters, sorting, and profile drawer</em></p>
+
+### Segment Builder
+
+Natural-language intent is parsed into a structured segment rule with live audience preview, revenue potential, and saved segments reusable in Campaign Studio.
+
+<img src="./repo-assets/segment-builder.png" alt="Segment builder" width="100%" />
+
+<p align="center"><em>NL segment builder — AI-parsed rule and audience preview</em></p>
+
+### AI Campaign Studio
+
+Business goal → AI or saved segment → channel mix, offer, A/B variants with personalisation tokens, safety check, and launch.
+
+<img src="./repo-assets/campaign-studio.png" alt="Campaign studio" width="100%" />
+
+<p align="center"><em>Campaign Studio — plan, variants, and pre-launch safety panel</em></p>
+
+### Campaign Monitoring & Performance
+
+Live funnel metrics, channel and variant breakdown, lift vs control, timeline chart, and post-campaign AI insights after events settle.
+
+<img src="./repo-assets/campaign-monitor.png" alt="Campaign monitor" width="100%" />
+
+<p align="center"><em>Campaign monitor — funnel KPIs, channel split, and performance insights</em></p>
+
+---
+
 ## Product thesis
 
 A marketer should be able to express intent, not operate machinery. The Copilot turns a
@@ -41,47 +119,23 @@ the product is fully usable with zero API keys.
 | **Campaign safety panel** | Removes no-consent / recently-messaged / duplicate shoppers, flags SMS length + fatigue + discount-abuse risk, recommends a 10% control group. |
 | **Live campaign monitor** | Near-real-time funnel (sent→delivered→read→clicked→converted), channel + A/B breakdown, **lift vs control**, engagement-over-time chart, and lazy-loaded AI insights. |
 | **AI insights** | What worked / what didn't, best channel/variant/audience, and the recommended next campaign. |
-
-> **Saved segments:** Saved segments can be reused in Campaign Studio. Campaigns keep a `segmentId` reference plus a `segmentRuleSnapshot` for auditability.
 | **Workspace data import** | Upload CSV or JSON shoppers/orders per workspace. Preview → validate → import with row-level errors, upsert dedupe, and automatic RFM/persona recompute. |
 | **Workspace demo data** | Empty workspaces can generate brand-scoped demo shoppers without running global seed or touching NovaWear. |
 
+Saved segments can be reused in Campaign Studio (`segmentId` + frozen `segmentRuleSnapshot` on each campaign).
+
 ---
 
-## Architecture
+## System diagram
 
 ```
-┌──────────────┐      HTTP/JSON       ┌────────────────┐    BullMQ jobs    ┌──────────────────┐
-│  apps/web     │ ───────────────────▶ │  apps/crm-api  │ ────────────────▶ │ apps/channel-     │
-│  Next.js 15   │ ◀─────────────────── │  Fastify       │                   │ service (Fastify) │
-│  (SSR + RSC)  │     dashboards,      │  + send worker │ ◀──── signed ──── │ + lifecycle      │
-└──────────────┘     tables, studio    └───────┬────────┘   HMAC callbacks  │   simulator       │
-                                               │             (idempotent)   └──────────────────┘
-                                  Prisma │      │ BullMQ
-                                         ▼      ▼
-                                 ┌────────────┐ ┌──────────┐
-                                 │ PostgreSQL │ │  Redis   │
-                                 └────────────┘ └──────────┘
-
-packages/db     Prisma schema + client + seed       packages/shared  enums, DTOs, domain logic, HMAC
-packages/ai     prompts, schemas, mock + OpenAI      docs/            architecture, ai-workflow, …
+web (Next.js) ──▶ crm-api (Fastify + Prisma + send worker) ──▶ channel-service (simulator)
+                        │   ▲                                      │
+                        ▼   └── HMAC callbacks (idempotent) ───────┘
+                   PostgreSQL          Redis (BullMQ queues only)
 ```
 
-- **`apps/web`** — Next.js App Router, TypeScript, Tailwind + shadcn-style components, TanStack
-  Table/Query, Recharts. SSR for dashboard/campaign/customer pages; client islands for the
-  interactive table, studio, and live monitor. Heavy components (charts, insights) are
-  `dynamic()`-imported.
-- **`apps/crm-api`** — Fastify service: customers, segments, campaigns, AI endpoints, and the
-  signed channel-callback receiver. Owns the BullMQ **send worker** and all business logic.
-- **`apps/channel-service`** — Separate Fastify service that simulates the communication
-  lifecycle as delayed BullMQ jobs and posts **HMAC-signed, idempotent** callbacks to the CRM.
-- **`packages/db`** — Prisma schema (Postgres) + singleton client + realistic seed generator.
-- **`packages/shared`** — Canonical enums, Zod DTOs, and pure domain logic (RFM, persona,
-  churn, LTV, communication-state projection, segment-rule → SQL, HMAC).
-- **`packages/ai`** — Centralised AI service layer: one module per capability with a prompt, a
-  Zod output schema, and a deterministic mock. Never scatters prompts in components.
-
-See [`docs/architecture.md`](docs/architecture.md) for the deep dive.
+Package layout and service READMEs: [`docs/architecture.md`](docs/architecture.md)
 
 ---
 
@@ -277,8 +331,8 @@ call `pnpm db:seed`, truncate tables, or switch you to NovaWear. NovaWear remain
 
 ## Scale assumptions & tradeoffs
 
-For take-home scope: Postgres is the primary store, Redis/BullMQ runs async sends + callback
-simulation, and analytics are SQL aggregations with light caching. At production scale you'd
+For take-home scope: Postgres is the primary store; Redis/BullMQ handles async sends and callback
+simulation only; analytics are SQL aggregations from Postgres. At production scale you'd
 move communication events to Kafka/SQS, fan sends across dedicated workers, push analytics to
 an OLAP store (ClickHouse/BigQuery), precompute segment membership, partition events by
 date/campaign, add per-channel rate limiting and a real DLQ, and cache AI templates to cut
