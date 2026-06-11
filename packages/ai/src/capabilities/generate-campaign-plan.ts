@@ -28,6 +28,80 @@ function categoryDisplayName(category: ProductCategory | undefined): string {
   }
 }
 
+function buildSavedSegmentPlan(input: GenerateCampaignPlanInput): CampaignPlanOutput {
+  const rule = input.segmentRule!;
+  const segmentName = input.segmentName!;
+  const brandToken = '{{brandName}}';
+  const constraints = parseGoalConstraints(input.goal);
+  const category = rule.favouriteCategory?.[0] ?? constraints.categories[0];
+  const categoryLabel = categoryDisplayName(category);
+  const discountPercent = resolveDiscountPercent(
+    input.goal,
+    defaultDiscountForCampaign(constraints.campaignType),
+  );
+  const offerCode = generateOfferCode(
+    category ? [category] : constraints.categories,
+    discountPercent,
+    constraints.campaignType,
+  );
+  const audienceSize = input.audience?.size ?? 500;
+  const aov = input.audience?.averageOrderValue ?? 2600;
+  const estConversion = 0.06;
+  const estimatedRevenue = Math.round(audienceSize * estConversion * aov);
+
+  const audienceContext = input.naturalLanguageQuery
+    ? `"${input.naturalLanguageQuery}"`
+    : 'the saved segment filters';
+
+  const businessReason = [
+    `This saved audience (${segmentName}) matches ${audienceContext}.`,
+    input.audience?.size
+      ? `${input.audience.size.toLocaleString('en-IN')} shoppers with strong ${categoryLabel} affinity are ready for a personalised push.`
+      : `Shoppers in this segment show strong ${categoryLabel} affinity and are ready for a personalised push.`,
+    `A targeted ${categoryLabel} offer through their preferred channels should drive repeat purchases efficiently.`,
+  ].join(' ');
+
+  const messageStrategy = `Lead with ${categoryLabel} relevance and a clear ${discountPercent}% offer (${offerCode}). WhatsApp carries the primary push; SMS is the fallback for non-WhatsApp-consented shoppers. Keep copy brand-specific to ${brandToken}.`;
+
+  return {
+    recommendedSegmentName: segmentName,
+    segmentRule: rule,
+    businessReason,
+    channelMix: [
+      { channel: Channel.WHATSAPP, share: 0.65 },
+      { channel: Channel.SMS, share: 0.35 },
+    ],
+    offerRecommendation: {
+      type: 'percentage',
+      value: `${discountPercent}%`,
+      code: offerCode,
+      rationale: `A ${discountPercent}% ${categoryLabel} incentive re-engages this saved audience without over-discounting.`,
+    },
+    messageStrategy,
+    sampleMessages: [
+      {
+        channel: Channel.WHATSAPP,
+        text: `Hey {{firstName}}! Your favourite {{category}} picks are waiting at ${brandToken}. Use ${offerCode} this weekend — ${discountPercent}% off with {{offer}}. Tap to explore 👉`,
+      },
+      {
+        channel: Channel.SMS,
+        text: `{{firstName}}, your {{category}} favourites are back at ${brandToken}. Use {{offer}} for ${discountPercent}% off.`,
+      },
+    ],
+    expectedPerformance: {
+      estimatedDeliveryRate: 0.94,
+      estimatedClickRate: 0.18,
+      estimatedConversionRate: estConversion,
+      estimatedRevenue,
+    },
+    risks: [
+      'Exclude shoppers without messaging consent before launch.',
+      'Cap frequency: skip anyone messaged in the last 7 days to avoid fatigue.',
+      'Hold a 10% control group to measure true incremental lift from this saved audience.',
+    ],
+  };
+}
+
 /**
  * The hero capability: turn a free-text business goal into an actionable plan
  * (segment + channel mix + offer + message strategy + impact estimate + risks).
@@ -37,15 +111,32 @@ export const generateCampaignPlan: Capability<GenerateCampaignPlanInput, Campaig
   schemaHint: campaignPlanOutput.toString(),
   buildPrompt: (input) =>
     [
-      'You are a senior retail growth strategist for NovaWear (fashion e-commerce).',
+      `You are a senior retail growth strategist for ${input.brandName ?? 'a retail brand'}.`,
       `Business goal: """${input.goal}"""`,
+      input.segmentName
+        ? `Saved segment: "${input.segmentName}".${input.naturalLanguageQuery ? ` Original query: """${input.naturalLanguageQuery}"""` : ''}`
+        : '',
       input.audience
         ? `Resolved audience: ${input.audience.size} shoppers, ₹${Math.round(input.audience.totalRevenue)} historic revenue, AOV ₹${Math.round(input.audience.averageOrderValue)}.`
         : 'Audience not yet resolved.',
       'Produce a complete campaign plan: recommended segment + rule, business reason, channel mix, offer, message strategy, 2-3 sample messages, expected performance, and risks (consent/fatigue/discount).',
+      'Use {{brandName}} as a template token in sample messages — do not hardcode a brand name.',
       'Return strict JSON matching the CampaignPlan schema.',
-    ].join('\n'),
+    ]
+      .filter(Boolean)
+      .join('\n'),
   mock: (input) => {
+    const brandToken = '{{brandName}}';
+
+    if (input.segmentRule && input.segmentName) {
+      const result = buildSavedSegmentPlan(input);
+      return {
+        result,
+        explanation: `Built a campaign plan for saved segment "${input.segmentName}" with ${result.offerRecommendation.code} over WhatsApp+SMS.`,
+        confidence: 0.82,
+      };
+    }
+
     const constraints = parseGoalConstraints(input.goal);
     const parsed = parseSegmentIntent.mock({ query: input.goal });
     const rule = parsed.result.rule;
@@ -109,21 +200,21 @@ export const generateCampaignPlan: Capability<GenerateCampaignPlanInput, Campaig
       ? [
           {
             channel: Channel.WHATSAPP,
-            text: `Hey Priya! Last pairs of ${categoryLabel} in your size are on clearance at NovaWear. Enjoy ${discountPercent}% off with ${offerCode} — shop the ${priceBandLabel ?? 'limited'} edit before they're gone 👉`,
+            text: `Hey {{firstName}}! Last pairs of ${categoryLabel} in your size are on clearance at ${brandToken}. Enjoy ${discountPercent}% off with {{offer}} — shop the ${priceBandLabel ?? 'limited'} edit before they're gone 👉`,
           },
           {
             channel: Channel.SMS,
-            text: `Aman, ${categoryLabel} clearance is live. ${discountPercent}% off with ${offerCode}. Limited stock — shop now.`,
+            text: `{{firstName}}, ${categoryLabel} clearance is live at ${brandToken}. ${discountPercent}% off with {{offer}}. Limited stock — shop now.`,
           },
         ]
       : [
           {
             channel: Channel.WHATSAPP,
-            text: `Hey Priya! Your favourite summer dresses are back at NovaWear. Enjoy ${discountPercent}% off this weekend with ${offerCode}. Tap to explore 👉`,
+            text: `Hey {{firstName}}! Your favourite ${categoryLabel} are back at ${brandToken}. Enjoy ${discountPercent}% off this weekend with {{offer}}. Tap to explore 👉`,
           },
           {
             channel: Channel.SMS,
-            text: `Aman, fresh sneaker drops just landed. ${discountPercent}% off with ${offerCode}. Shop now.`,
+            text: `{{firstName}}, fresh ${categoryLabel} just landed at ${brandToken}. ${discountPercent}% off with {{offer}}. Shop now.`,
           },
         ];
 

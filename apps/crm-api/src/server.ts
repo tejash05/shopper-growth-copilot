@@ -7,6 +7,8 @@ import { segmentRoutes } from './routes/segments.js';
 import { campaignRoutes } from './routes/campaigns.js';
 import { aiRoutes } from './routes/ai.js';
 import { receiptRoutes } from './routes/receipts.js';
+import { brandRoutes } from './routes/brands.js';
+import { importRoutes } from './routes/import.js';
 
 export async function buildServer(): Promise<FastifyInstance> {
   const app = Fastify({
@@ -19,7 +21,10 @@ export async function buildServer(): Promise<FastifyInstance> {
   const corsOrigin = env.CORS_ORIGIN
     ? env.CORS_ORIGIN.split(',').map((origin) => origin.trim()).filter(Boolean)
     : true;
-  await app.register(cors, { origin: corsOrigin });
+  await app.register(cors, {
+    origin: corsOrigin,
+    allowedHeaders: ['Content-Type', 'X-Brand-Id'],
+  });
 
   // Centralised error handler → consistent structured error envelope.
   app.setErrorHandler((error, _req, reply) => {
@@ -34,6 +39,8 @@ export async function buildServer(): Promise<FastifyInstance> {
 
   app.get('/health', async () => ({ status: 'ok', service: 'crm-api', ts: new Date().toISOString() }));
 
+  await app.register(brandRoutes);
+  await app.register(importRoutes);
   await app.register(dashboardRoutes);
   await app.register(customerRoutes);
   await app.register(segmentRoutes);

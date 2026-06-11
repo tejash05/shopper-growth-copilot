@@ -29,6 +29,9 @@ interface SegmentSourcePanelProps {
   aiSegmentName?: string;
   aiExplanation?: string;
   onRetryLoad?: () => void;
+  onGenerateFromSegment?: () => void;
+  generateFromSegmentPending?: boolean;
+  generatedFromSavedSegment?: boolean;
 }
 
 export function SegmentSourcePanel({
@@ -45,6 +48,9 @@ export function SegmentSourcePanel({
   aiSegmentName,
   aiExplanation,
   onRetryLoad,
+  onGenerateFromSegment,
+  generateFromSegmentPending,
+  generatedFromSavedSegment,
 }: SegmentSourcePanelProps) {
   const savedRule = selectedSegment ? getLatestSegmentRule(selectedSegment) : undefined;
 
@@ -147,7 +153,14 @@ export function SegmentSourcePanel({
               <div className="rounded-lg border border-primary/20 bg-primary/[0.03] p-4 space-y-3">
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <p className="font-medium">{selectedSegment.name}</p>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <p className="font-medium">{selectedSegment.name}</p>
+                      {generatedFromSavedSegment && (
+                        <Badge variant="primary" className="font-normal">
+                          Generated from saved segment
+                        </Badge>
+                      )}
+                    </div>
                     {selectedSegment.naturalLanguageQuery && (
                       <p className="mt-1 text-sm italic text-muted-foreground">
                         “{selectedSegment.naturalLanguageQuery}”
@@ -161,6 +174,10 @@ export function SegmentSourcePanel({
                     </Button>
                   )}
                 </div>
+                <p className="text-xs text-muted-foreground">
+                  Generate a campaign plan from this saved audience to refresh channels, offer and message
+                  variants.
+                </p>
                 <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm">
                   <span>
                     <span className="text-muted-foreground">Audience: </span>
@@ -183,6 +200,12 @@ export function SegmentSourcePanel({
                   </p>
                 )}
                 <SegmentRuleDetails rule={savedRule} />
+                {onGenerateFromSegment && (
+                  <Button onClick={onGenerateFromSegment} disabled={generateFromSegmentPending}>
+                    {generateFromSegmentPending ? <Spinner /> : <Sparkles className="size-4" />}
+                    Generate campaign plan for this segment
+                  </Button>
+                )}
               </div>
             )}
           </div>

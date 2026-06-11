@@ -6,6 +6,14 @@ import {
   type CampaignFunnelMetrics,
 } from '@scp/shared';
 
+async function requireCampaignForBrand(campaignId: string, brandId: string) {
+  const campaign = await prisma.campaign.findFirst({ where: { id: campaignId, brandId } });
+  if (!campaign) {
+    throw Object.assign(new Error('Campaign not found.'), { statusCode: 404 });
+  }
+  return campaign;
+}
+
 /** Count communications that reached AT LEAST the given funnel stage. */
 function reachedAtLeast(
   byStatus: Map<CommunicationStatus, number>,
@@ -19,8 +27,11 @@ function reachedAtLeast(
   return total;
 }
 
-export async function getCampaignMetrics(campaignId: string): Promise<CampaignFunnelMetrics> {
-  const campaign = await prisma.campaign.findUniqueOrThrow({ where: { id: campaignId } });
+export async function getCampaignMetrics(
+  campaignId: string,
+  brandId: string,
+): Promise<CampaignFunnelMetrics> {
+  const campaign = await requireCampaignForBrand(campaignId, brandId);
 
   const [targetedGroups, controlAttributed, revenueAgg, controlCount] = await Promise.all([
     prisma.communication.groupBy({
@@ -123,7 +134,8 @@ async function aggregateChannelStats(campaignId: string): Promise<Map<Channel, C
   return channels;
 }
 
-export async function getChannelBreakdown(campaignId: string) {
+export async function getChannelBreakdown(campaignId: string, brandId: string) {
+  await requireCampaignForBrand(campaignId, brandId);
   const channels = await aggregateChannelStats(campaignId);
   return [...channels.values()]
     .filter((c) => c.sent > 0)
@@ -139,7 +151,8 @@ export async function getChannelBreakdown(campaignId: string) {
  * Variant rows use the same actual send-channel stats as channel performance so
  * Variant A (WhatsApp) sent matches WhatsApp channel sent when channels are 1:1.
  */
-export async function getVariantBreakdown(campaignId: string) {
+export async function getVariantBreakdown(campaignId: string, brandId: string) {
+  await requireCampaignForBrand(campaignId, brandId);
   const variants = await prisma.campaignVariant.findMany({ where: { campaignId } });
   const channelStats = await aggregateChannelStats(campaignId);
 
@@ -164,7 +177,8 @@ export async function getVariantBreakdown(campaignId: string) {
 }
 
 /** Recent event activity bucketed for the live monitor sparkline. */
-export async function getEventTimeline(campaignId: string) {
+export async function getEventTimeline(campaignId: string, brandId: string) {
+  await requireCampaignForBrand(campaignId, brandId);
   const events = await prisma.communicationEvent.findMany({
     where: { communication: { campaignId, isControlGroup: false } },
     orderBy: { occurredAt: 'desc' },
@@ -177,7 +191,8 @@ export async function getEventTimeline(campaignId: string) {
 }
 
 /** Top converting audience cells (city + persona) for the AI analysis. */
-export async function getTopAudience(campaignId: string) {
+export async function getTopAudience(campaignId: string, brandId: string) {
+  await requireCampaignForBrand(campaignId, brandId);
   const rows = await prisma.$queryRaw<
     { city: string; persona: string; conv: number }[]
   >`

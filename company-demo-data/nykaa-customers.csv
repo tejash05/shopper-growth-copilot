@@ -1,0 +1,501 @@
+externalCustomerId,firstName,lastName,email,phone,city,state,preferredChannel,loyaltyTier,consentWhatsApp,consentSms,consentEmail,consentRcs
+NYK-CUST-00001,Neha,Sharma,neha.sharma.1@nykaa.demo,9200000001,Delhi,Delhi,EMAIL,BRONZE,True,True,True,True
+NYK-CUST-00002,Kiara,Reddy,kiara.reddy.2@nykaa.demo,9200000002,Bangalore,Karnataka,EMAIL,SILVER,True,True,False,False
+NYK-CUST-00003,Nisha,Mehta,nisha.mehta.3@nykaa.demo,9200000003,Chennai,Tamil Nadu,EMAIL,BRONZE,True,True,True,True
+NYK-CUST-00004,Tanya,Saxena,tanya.saxena.4@nykaa.demo,9200000004,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00005,Simran,Reddy,simran.reddy.5@nykaa.demo,9200000005,Pune,Maharashtra,EMAIL,PLATINUM,False,True,False,False
+NYK-CUST-00006,Rahul,Patel,rahul.patel.6@nykaa.demo,9200000006,Bangalore,Karnataka,SMS,BRONZE,True,True,True,False
+NYK-CUST-00007,Aryan,Gupta,aryan.gupta.7@nykaa.demo,9200000007,Ahmedabad,Gujarat,SMS,GOLD,True,True,True,True
+NYK-CUST-00008,Tanya,Reddy,tanya.reddy.8@nykaa.demo,9200000008,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00009,Samar,Mehta,samar.mehta.9@nykaa.demo,9200000009,Kolkata,West Bengal,EMAIL,BRONZE,True,True,True,False
+NYK-CUST-00010,Rahul,Bose,rahul.bose.10@nykaa.demo,9200000010,Kolkata,West Bengal,EMAIL,BRONZE,True,False,True,True
+NYK-CUST-00011,Meera,Reddy,meera.reddy.11@nykaa.demo,9200000011,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00012,Riya,Mehta,riya.mehta.12@nykaa.demo,9200000012,Delhi,Delhi,SMS,SILVER,True,True,False,False
+NYK-CUST-00013,Samar,Mehta,samar.mehta.13@nykaa.demo,9200000013,Kolkata,West Bengal,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00014,Arjun,Nair,arjun.nair.14@nykaa.demo,9200000014,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00015,Sneha,Malhotra,sneha.malhotra.15@nykaa.demo,9200000015,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00016,Yash,Gupta,yash.gupta.16@nykaa.demo,9200000016,Ahmedabad,Gujarat,EMAIL,BRONZE,True,True,True,False
+NYK-CUST-00017,Rahul,Jain,rahul.jain.17@nykaa.demo,9200000017,Kolkata,West Bengal,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00018,Dev,Malhotra,dev.malhotra.18@nykaa.demo,9200000018,Chennai,Tamil Nadu,EMAIL,SILVER,True,True,True,False
+NYK-CUST-00019,Kiara,Bose,kiara.bose.19@nykaa.demo,9200000019,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00020,Karan,Nair,karan.nair.20@nykaa.demo,9200000020,Delhi,Delhi,WHATSAPP,GOLD,True,True,True,True
+NYK-CUST-00021,Rohan,Gupta,rohan.gupta.21@nykaa.demo,9200000021,Mumbai,Maharashtra,EMAIL,PLATINUM,True,True,True,False
+NYK-CUST-00022,Aryan,Kumar,aryan.kumar.22@nykaa.demo,9200000022,Delhi,Delhi,EMAIL,GOLD,True,True,True,True
+NYK-CUST-00023,Kiara,Das,kiara.das.23@nykaa.demo,9200000023,Ahmedabad,Gujarat,SMS,SILVER,True,True,True,False
+NYK-CUST-00024,Rohan,Gupta,rohan.gupta.24@nykaa.demo,9200000024,Bangalore,Karnataka,SMS,BRONZE,True,True,True,False
+NYK-CUST-00025,Neha,Nair,neha.nair.25@nykaa.demo,9200000025,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00026,Rohan,Patel,rohan.patel.26@nykaa.demo,9200000026,Mumbai,Maharashtra,WHATSAPP,GOLD,True,True,True,True
+NYK-CUST-00027,Ananya,Saxena,ananya.saxena.27@nykaa.demo,9200000027,Pune,Maharashtra,SMS,SILVER,True,True,False,False
+NYK-CUST-00028,Meera,Saxena,meera.saxena.28@nykaa.demo,9200000028,Delhi,Delhi,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00029,Rahul,Reddy,rahul.reddy.29@nykaa.demo,9200000029,Mumbai,Maharashtra,EMAIL,SILVER,True,False,True,False
+NYK-CUST-00030,Samar,Malhotra,samar.malhotra.30@nykaa.demo,9200000030,Hyderabad,Telangana,EMAIL,SILVER,True,True,True,True
+NYK-CUST-00031,Meera,Sharma,meera.sharma.31@nykaa.demo,9200000031,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00032,Rohan,Saxena,rohan.saxena.32@nykaa.demo,9200000032,Bangalore,Karnataka,EMAIL,BRONZE,False,True,True,False
+NYK-CUST-00033,Yash,Singh,yash.singh.33@nykaa.demo,9200000033,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,True
+NYK-CUST-00034,Pooja,Kumar,pooja.kumar.34@nykaa.demo,9200000034,Chennai,Tamil Nadu,EMAIL,SILVER,True,True,True,False
+NYK-CUST-00035,Simran,Verma,simran.verma.35@nykaa.demo,9200000035,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,False,False
+NYK-CUST-00036,Aryan,Bose,aryan.bose.36@nykaa.demo,9200000036,Pune,Maharashtra,WHATSAPP,GOLD,False,True,True,True
+NYK-CUST-00037,Karan,Iyer,karan.iyer.37@nykaa.demo,9200000037,Hyderabad,Telangana,EMAIL,BRONZE,True,True,True,False
+NYK-CUST-00038,Kabir,Singh,kabir.singh.38@nykaa.demo,9200000038,Delhi,Delhi,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00039,Pooja,Singh,pooja.singh.39@nykaa.demo,9200000039,Kolkata,West Bengal,EMAIL,BRONZE,False,True,False,True
+NYK-CUST-00040,Karan,Malhotra,karan.malhotra.40@nykaa.demo,9200000040,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00041,Aditi,Iyer,aditi.iyer.41@nykaa.demo,9200000041,Bangalore,Karnataka,WHATSAPP,SILVER,False,True,True,False
+NYK-CUST-00042,Pooja,Patel,pooja.patel.42@nykaa.demo,9200000042,Pune,Maharashtra,EMAIL,BRONZE,True,True,True,False
+NYK-CUST-00043,Priya,Iyer,priya.iyer.43@nykaa.demo,9200000043,Bangalore,Karnataka,EMAIL,BRONZE,True,True,True,False
+NYK-CUST-00044,Samar,Malhotra,samar.malhotra.44@nykaa.demo,9200000044,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00045,Tanya,Kapoor,tanya.kapoor.45@nykaa.demo,9200000045,Delhi,Delhi,EMAIL,BRONZE,True,True,True,False
+NYK-CUST-00046,Simran,Reddy,simran.reddy.46@nykaa.demo,9200000046,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,False,True,False
+NYK-CUST-00047,Sneha,Iyer,sneha.iyer.47@nykaa.demo,9200000047,Ahmedabad,Gujarat,EMAIL,GOLD,True,False,True,False
+NYK-CUST-00048,Kiara,Saxena,kiara.saxena.48@nykaa.demo,9200000048,Hyderabad,Telangana,SMS,BRONZE,True,True,True,True
+NYK-CUST-00049,Samar,Malhotra,samar.malhotra.49@nykaa.demo,9200000049,Pune,Maharashtra,SMS,BRONZE,True,True,True,True
+NYK-CUST-00050,Neha,Bose,neha.bose.50@nykaa.demo,9200000050,Kolkata,West Bengal,SMS,BRONZE,True,True,True,False
+NYK-CUST-00051,Dev,Sharma,dev.sharma.51@nykaa.demo,9200000051,Hyderabad,Telangana,SMS,BRONZE,False,True,False,False
+NYK-CUST-00052,Varun,Nair,varun.nair.52@nykaa.demo,9200000052,Chennai,Tamil Nadu,EMAIL,BRONZE,True,True,True,False
+NYK-CUST-00053,Rahul,Kumar,rahul.kumar.53@nykaa.demo,9200000053,Bangalore,Karnataka,WHATSAPP,SILVER,False,True,True,False
+NYK-CUST-00054,Neha,Singh,neha.singh.54@nykaa.demo,9200000054,Chennai,Tamil Nadu,RCS,SILVER,True,True,True,True
+NYK-CUST-00055,Yash,Kapoor,yash.kapoor.55@nykaa.demo,9200000055,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,False,False
+NYK-CUST-00056,Pooja,Nair,pooja.nair.56@nykaa.demo,9200000056,Delhi,Delhi,WHATSAPP,PLATINUM,False,True,True,True
+NYK-CUST-00057,Meera,Sharma,meera.sharma.57@nykaa.demo,9200000057,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,True,True,True
+NYK-CUST-00058,Priya,Saxena,priya.saxena.58@nykaa.demo,9200000058,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00059,Aditi,Mehta,aditi.mehta.59@nykaa.demo,9200000059,Pune,Maharashtra,WHATSAPP,SILVER,False,True,True,True
+NYK-CUST-00060,Aditi,Reddy,aditi.reddy.60@nykaa.demo,9200000060,Delhi,Delhi,EMAIL,SILVER,True,False,False,False
+NYK-CUST-00061,Rahul,Reddy,rahul.reddy.61@nykaa.demo,9200000061,Mumbai,Maharashtra,WHATSAPP,SILVER,False,False,False,False
+NYK-CUST-00062,Kiara,Kumar,kiara.kumar.62@nykaa.demo,9200000062,Kolkata,West Bengal,EMAIL,SILVER,True,True,True,True
+NYK-CUST-00063,Rahul,Kumar,rahul.kumar.63@nykaa.demo,9200000063,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,False,True
+NYK-CUST-00064,Tanya,Nair,tanya.nair.64@nykaa.demo,9200000064,Chennai,Tamil Nadu,EMAIL,SILVER,True,True,True,True
+NYK-CUST-00065,Tanya,Verma,tanya.verma.65@nykaa.demo,9200000065,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00066,Meera,Gupta,meera.gupta.66@nykaa.demo,9200000066,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00067,Kabir,Nair,kabir.nair.67@nykaa.demo,9200000067,Bangalore,Karnataka,EMAIL,BRONZE,True,True,True,False
+NYK-CUST-00068,Aditi,Kapoor,aditi.kapoor.68@nykaa.demo,9200000068,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00069,Tanya,Sharma,tanya.sharma.69@nykaa.demo,9200000069,Bangalore,Karnataka,EMAIL,GOLD,True,True,True,False
+NYK-CUST-00070,Tanya,Das,tanya.das.70@nykaa.demo,9200000070,Kolkata,West Bengal,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00071,Pooja,Nair,pooja.nair.71@nykaa.demo,9200000071,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,False,False
+NYK-CUST-00072,Aditi,Bose,aditi.bose.72@nykaa.demo,9200000072,Chennai,Tamil Nadu,SMS,BRONZE,True,True,True,True
+NYK-CUST-00073,Nisha,Verma,nisha.verma.73@nykaa.demo,9200000073,Mumbai,Maharashtra,EMAIL,BRONZE,True,False,True,False
+NYK-CUST-00074,Pooja,Reddy,pooja.reddy.74@nykaa.demo,9200000074,Pune,Maharashtra,WHATSAPP,GOLD,True,False,True,True
+NYK-CUST-00075,Neha,Reddy,neha.reddy.75@nykaa.demo,9200000075,Ahmedabad,Gujarat,EMAIL,PLATINUM,False,True,False,False
+NYK-CUST-00076,Varun,Saxena,varun.saxena.76@nykaa.demo,9200000076,Bangalore,Karnataka,SMS,SILVER,False,True,True,False
+NYK-CUST-00077,Neha,Sharma,neha.sharma.77@nykaa.demo,9200000077,Pune,Maharashtra,WHATSAPP,PLATINUM,True,True,True,False
+NYK-CUST-00078,Aditi,Singh,aditi.singh.78@nykaa.demo,9200000078,Chennai,Tamil Nadu,EMAIL,GOLD,True,True,True,True
+NYK-CUST-00079,Priya,Kumar,priya.kumar.79@nykaa.demo,9200000079,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,False,False
+NYK-CUST-00080,Samar,Singh,samar.singh.80@nykaa.demo,9200000080,Delhi,Delhi,WHATSAPP,PLATINUM,True,True,True,True
+NYK-CUST-00081,Rohan,Kapoor,rohan.kapoor.81@nykaa.demo,9200000081,Ahmedabad,Gujarat,SMS,BRONZE,True,True,False,True
+NYK-CUST-00082,Pooja,Mehta,pooja.mehta.82@nykaa.demo,9200000082,Mumbai,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00083,Rahul,Singh,rahul.singh.83@nykaa.demo,9200000083,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,False,True
+NYK-CUST-00084,Aditi,Patel,aditi.patel.84@nykaa.demo,9200000084,Chennai,Tamil Nadu,EMAIL,GOLD,False,True,False,False
+NYK-CUST-00085,Karan,Sharma,karan.sharma.85@nykaa.demo,9200000085,Kolkata,West Bengal,EMAIL,SILVER,True,True,True,True
+NYK-CUST-00086,Rahul,Saxena,rahul.saxena.86@nykaa.demo,9200000086,Bangalore,Karnataka,WHATSAPP,BRONZE,False,True,True,True
+NYK-CUST-00087,Neha,Saxena,neha.saxena.87@nykaa.demo,9200000087,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,False,True,False
+NYK-CUST-00088,Pooja,Nair,pooja.nair.88@nykaa.demo,9200000088,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00089,Karan,Saxena,karan.saxena.89@nykaa.demo,9200000089,Delhi,Delhi,EMAIL,PLATINUM,True,True,False,True
+NYK-CUST-00090,Nisha,Mehta,nisha.mehta.90@nykaa.demo,9200000090,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00091,Karan,Iyer,karan.iyer.91@nykaa.demo,9200000091,Chennai,Tamil Nadu,EMAIL,BRONZE,True,True,True,True
+NYK-CUST-00092,Nisha,Singh,nisha.singh.92@nykaa.demo,9200000092,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00093,Kiara,Gupta,kiara.gupta.93@nykaa.demo,9200000093,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00094,Karan,Reddy,karan.reddy.94@nykaa.demo,9200000094,Kolkata,West Bengal,WHATSAPP,SILVER,False,True,True,False
+NYK-CUST-00095,Kabir,Kapoor,kabir.kapoor.95@nykaa.demo,9200000095,Hyderabad,Telangana,EMAIL,GOLD,True,True,True,False
+NYK-CUST-00096,Nisha,Kapoor,nisha.kapoor.96@nykaa.demo,9200000096,Ahmedabad,Gujarat,EMAIL,BRONZE,True,False,True,True
+NYK-CUST-00097,Neha,Reddy,neha.reddy.97@nykaa.demo,9200000097,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,False,True
+NYK-CUST-00098,Ishaan,Patel,ishaan.patel.98@nykaa.demo,9200000098,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,True
+NYK-CUST-00099,Dev,Saxena,dev.saxena.99@nykaa.demo,9200000099,Hyderabad,Telangana,SMS,GOLD,True,True,True,False
+NYK-CUST-00100,Dev,Singh,dev.singh.100@nykaa.demo,9200000100,Pune,Maharashtra,EMAIL,BRONZE,True,True,True,False
+NYK-CUST-00101,Sneha,Kapoor,sneha.kapoor.101@nykaa.demo,9200000101,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,True,True
+NYK-CUST-00102,Ishaan,Kumar,ishaan.kumar.102@nykaa.demo,9200000102,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00103,Tanya,Das,tanya.das.103@nykaa.demo,9200000103,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00104,Pooja,Das,pooja.das.104@nykaa.demo,9200000104,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00105,Priya,Malhotra,priya.malhotra.105@nykaa.demo,9200000105,Ahmedabad,Gujarat,EMAIL,BRONZE,True,True,True,False
+NYK-CUST-00106,Tanya,Kumar,tanya.kumar.106@nykaa.demo,9200000106,Hyderabad,Telangana,SMS,SILVER,True,True,True,False
+NYK-CUST-00107,Rahul,Patel,rahul.patel.107@nykaa.demo,9200000107,Pune,Maharashtra,EMAIL,BRONZE,True,True,True,False
+NYK-CUST-00108,Tanya,Reddy,tanya.reddy.108@nykaa.demo,9200000108,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,False,True
+NYK-CUST-00109,Dev,Saxena,dev.saxena.109@nykaa.demo,9200000109,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00110,Yash,Jain,yash.jain.110@nykaa.demo,9200000110,Pune,Maharashtra,WHATSAPP,PLATINUM,True,True,True,True
+NYK-CUST-00111,Simran,Malhotra,simran.malhotra.111@nykaa.demo,9200000111,Bangalore,Karnataka,WHATSAPP,GOLD,True,True,True,True
+NYK-CUST-00112,Meera,Bose,meera.bose.112@nykaa.demo,9200000112,Bangalore,Karnataka,EMAIL,BRONZE,True,True,True,False
+NYK-CUST-00113,Rohan,Singh,rohan.singh.113@nykaa.demo,9200000113,Kolkata,West Bengal,SMS,SILVER,True,True,True,False
+NYK-CUST-00114,Kiara,Kumar,kiara.kumar.114@nykaa.demo,9200000114,Pune,Maharashtra,EMAIL,SILVER,False,False,True,False
+NYK-CUST-00115,Dev,Malhotra,dev.malhotra.115@nykaa.demo,9200000115,Pune,Maharashtra,SMS,SILVER,True,True,False,False
+NYK-CUST-00116,Aditi,Kumar,aditi.kumar.116@nykaa.demo,9200000116,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00117,Yash,Malhotra,yash.malhotra.117@nykaa.demo,9200000117,Kolkata,West Bengal,WHATSAPP,BRONZE,True,False,True,False
+NYK-CUST-00118,Aryan,Bose,aryan.bose.118@nykaa.demo,9200000118,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,False,False
+NYK-CUST-00119,Yash,Kumar,yash.kumar.119@nykaa.demo,9200000119,Hyderabad,Telangana,WHATSAPP,PLATINUM,True,True,True,True
+NYK-CUST-00120,Aditi,Kapoor,aditi.kapoor.120@nykaa.demo,9200000120,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00121,Pooja,Gupta,pooja.gupta.121@nykaa.demo,9200000121,Delhi,Delhi,EMAIL,BRONZE,True,True,True,True
+NYK-CUST-00122,Pooja,Sharma,pooja.sharma.122@nykaa.demo,9200000122,Kolkata,West Bengal,SMS,BRONZE,True,True,True,False
+NYK-CUST-00123,Aman,Nair,aman.nair.123@nykaa.demo,9200000123,Mumbai,Maharashtra,SMS,BRONZE,True,True,True,False
+NYK-CUST-00124,Riya,Verma,riya.verma.124@nykaa.demo,9200000124,Delhi,Delhi,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00125,Simran,Verma,simran.verma.125@nykaa.demo,9200000125,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,False,False
+NYK-CUST-00126,Yash,Gupta,yash.gupta.126@nykaa.demo,9200000126,Ahmedabad,Gujarat,RCS,PLATINUM,True,True,True,False
+NYK-CUST-00127,Arjun,Gupta,arjun.gupta.127@nykaa.demo,9200000127,Hyderabad,Telangana,WHATSAPP,PLATINUM,False,True,True,False
+NYK-CUST-00128,Kiara,Bose,kiara.bose.128@nykaa.demo,9200000128,Mumbai,Maharashtra,SMS,BRONZE,True,True,False,False
+NYK-CUST-00129,Aditi,Gupta,aditi.gupta.129@nykaa.demo,9200000129,Chennai,Tamil Nadu,EMAIL,SILVER,True,True,True,False
+NYK-CUST-00130,Aman,Singh,aman.singh.130@nykaa.demo,9200000130,Delhi,Delhi,EMAIL,BRONZE,True,True,True,True
+NYK-CUST-00131,Priya,Iyer,priya.iyer.131@nykaa.demo,9200000131,Hyderabad,Telangana,WHATSAPP,BRONZE,True,False,True,False
+NYK-CUST-00132,Rahul,Saxena,rahul.saxena.132@nykaa.demo,9200000132,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,False,False
+NYK-CUST-00133,Priya,Bose,priya.bose.133@nykaa.demo,9200000133,Ahmedabad,Gujarat,WHATSAPP,PLATINUM,True,False,False,True
+NYK-CUST-00134,Rahul,Saxena,rahul.saxena.134@nykaa.demo,9200000134,Mumbai,Maharashtra,EMAIL,PLATINUM,True,True,True,False
+NYK-CUST-00135,Rohan,Saxena,rohan.saxena.135@nykaa.demo,9200000135,Kolkata,West Bengal,SMS,SILVER,True,True,True,True
+NYK-CUST-00136,Yash,Bose,yash.bose.136@nykaa.demo,9200000136,Ahmedabad,Gujarat,EMAIL,PLATINUM,True,True,True,True
+NYK-CUST-00137,Ananya,Reddy,ananya.reddy.137@nykaa.demo,9200000137,Kolkata,West Bengal,EMAIL,SILVER,True,True,False,True
+NYK-CUST-00138,Arjun,Das,arjun.das.138@nykaa.demo,9200000138,Kolkata,West Bengal,WHATSAPP,PLATINUM,True,False,True,True
+NYK-CUST-00139,Pooja,Saxena,pooja.saxena.139@nykaa.demo,9200000139,Kolkata,West Bengal,WHATSAPP,PLATINUM,True,True,True,True
+NYK-CUST-00140,Nisha,Reddy,nisha.reddy.140@nykaa.demo,9200000140,Bangalore,Karnataka,EMAIL,BRONZE,True,True,False,True
+NYK-CUST-00141,Meera,Kapoor,meera.kapoor.141@nykaa.demo,9200000141,Delhi,Delhi,WHATSAPP,GOLD,True,True,False,False
+NYK-CUST-00142,Ananya,Iyer,ananya.iyer.142@nykaa.demo,9200000142,Chennai,Tamil Nadu,SMS,GOLD,True,True,True,False
+NYK-CUST-00143,Neha,Nair,neha.nair.143@nykaa.demo,9200000143,Chennai,Tamil Nadu,EMAIL,BRONZE,True,False,False,False
+NYK-CUST-00144,Neha,Kapoor,neha.kapoor.144@nykaa.demo,9200000144,Pune,Maharashtra,EMAIL,GOLD,False,True,True,True
+NYK-CUST-00145,Pooja,Singh,pooja.singh.145@nykaa.demo,9200000145,Mumbai,Maharashtra,RCS,GOLD,True,True,True,False
+NYK-CUST-00146,Simran,Kapoor,simran.kapoor.146@nykaa.demo,9200000146,Ahmedabad,Gujarat,RCS,GOLD,True,True,True,False
+NYK-CUST-00147,Rahul,Kapoor,rahul.kapoor.147@nykaa.demo,9200000147,Ahmedabad,Gujarat,EMAIL,GOLD,True,False,True,False
+NYK-CUST-00148,Sneha,Saxena,sneha.saxena.148@nykaa.demo,9200000148,Ahmedabad,Gujarat,SMS,SILVER,True,True,False,False
+NYK-CUST-00149,Nisha,Reddy,nisha.reddy.149@nykaa.demo,9200000149,Mumbai,Maharashtra,EMAIL,PLATINUM,True,False,True,True
+NYK-CUST-00150,Riya,Das,riya.das.150@nykaa.demo,9200000150,Pune,Maharashtra,WHATSAPP,SILVER,False,True,False,True
+NYK-CUST-00151,Yash,Mehta,yash.mehta.151@nykaa.demo,9200000151,Pune,Maharashtra,WHATSAPP,PLATINUM,True,True,True,True
+NYK-CUST-00152,Varun,Gupta,varun.gupta.152@nykaa.demo,9200000152,Hyderabad,Telangana,EMAIL,BRONZE,True,False,True,False
+NYK-CUST-00153,Sneha,Reddy,sneha.reddy.153@nykaa.demo,9200000153,Mumbai,Maharashtra,RCS,BRONZE,True,True,True,True
+NYK-CUST-00154,Neha,Sharma,neha.sharma.154@nykaa.demo,9200000154,Hyderabad,Telangana,SMS,GOLD,True,True,True,True
+NYK-CUST-00155,Aman,Patel,aman.patel.155@nykaa.demo,9200000155,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00156,Priya,Nair,priya.nair.156@nykaa.demo,9200000156,Ahmedabad,Gujarat,WHATSAPP,PLATINUM,True,True,True,True
+NYK-CUST-00157,Meera,Nair,meera.nair.157@nykaa.demo,9200000157,Delhi,Delhi,SMS,PLATINUM,True,False,True,False
+NYK-CUST-00158,Varun,Kapoor,varun.kapoor.158@nykaa.demo,9200000158,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00159,Pooja,Iyer,pooja.iyer.159@nykaa.demo,9200000159,Hyderabad,Telangana,SMS,BRONZE,True,True,False,False
+NYK-CUST-00160,Rohan,Malhotra,rohan.malhotra.160@nykaa.demo,9200000160,Delhi,Delhi,SMS,SILVER,True,False,False,True
+NYK-CUST-00161,Neha,Sharma,neha.sharma.161@nykaa.demo,9200000161,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00162,Kabir,Kapoor,kabir.kapoor.162@nykaa.demo,9200000162,Chennai,Tamil Nadu,SMS,GOLD,True,True,True,True
+NYK-CUST-00163,Riya,Reddy,riya.reddy.163@nykaa.demo,9200000163,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00164,Yash,Patel,yash.patel.164@nykaa.demo,9200000164,Mumbai,Maharashtra,EMAIL,BRONZE,True,False,True,False
+NYK-CUST-00165,Aman,Bose,aman.bose.165@nykaa.demo,9200000165,Ahmedabad,Gujarat,EMAIL,BRONZE,True,True,True,False
+NYK-CUST-00166,Riya,Kapoor,riya.kapoor.166@nykaa.demo,9200000166,Ahmedabad,Gujarat,RCS,BRONZE,True,True,True,False
+NYK-CUST-00167,Arjun,Verma,arjun.verma.167@nykaa.demo,9200000167,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00168,Ishaan,Bose,ishaan.bose.168@nykaa.demo,9200000168,Delhi,Delhi,EMAIL,SILVER,False,True,True,True
+NYK-CUST-00169,Ananya,Nair,ananya.nair.169@nykaa.demo,9200000169,Kolkata,West Bengal,SMS,SILVER,True,True,False,False
+NYK-CUST-00170,Kiara,Singh,kiara.singh.170@nykaa.demo,9200000170,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00171,Pooja,Iyer,pooja.iyer.171@nykaa.demo,9200000171,Chennai,Tamil Nadu,SMS,GOLD,True,True,False,True
+NYK-CUST-00172,Ananya,Sharma,ananya.sharma.172@nykaa.demo,9200000172,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,False,True,False
+NYK-CUST-00173,Ishaan,Kapoor,ishaan.kapoor.173@nykaa.demo,9200000173,Hyderabad,Telangana,WHATSAPP,GOLD,True,False,True,True
+NYK-CUST-00174,Aman,Bose,aman.bose.174@nykaa.demo,9200000174,Bangalore,Karnataka,SMS,PLATINUM,False,True,True,False
+NYK-CUST-00175,Kabir,Kumar,kabir.kumar.175@nykaa.demo,9200000175,Kolkata,West Bengal,WHATSAPP,BRONZE,True,False,True,False
+NYK-CUST-00176,Riya,Mehta,riya.mehta.176@nykaa.demo,9200000176,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00177,Ishaan,Patel,ishaan.patel.177@nykaa.demo,9200000177,Pune,Maharashtra,WHATSAPP,SILVER,True,False,True,False
+NYK-CUST-00178,Samar,Verma,samar.verma.178@nykaa.demo,9200000178,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00179,Varun,Singh,varun.singh.179@nykaa.demo,9200000179,Bangalore,Karnataka,WHATSAPP,SILVER,True,False,True,False
+NYK-CUST-00180,Nisha,Das,nisha.das.180@nykaa.demo,9200000180,Hyderabad,Telangana,WHATSAPP,SILVER,True,False,True,True
+NYK-CUST-00181,Pooja,Sharma,pooja.sharma.181@nykaa.demo,9200000181,Bangalore,Karnataka,WHATSAPP,PLATINUM,True,True,True,False
+NYK-CUST-00182,Varun,Bose,varun.bose.182@nykaa.demo,9200000182,Kolkata,West Bengal,EMAIL,SILVER,True,True,True,False
+NYK-CUST-00183,Sneha,Bose,sneha.bose.183@nykaa.demo,9200000183,Kolkata,West Bengal,SMS,PLATINUM,True,True,True,False
+NYK-CUST-00184,Ananya,Das,ananya.das.184@nykaa.demo,9200000184,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00185,Sneha,Bose,sneha.bose.185@nykaa.demo,9200000185,Pune,Maharashtra,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00186,Neha,Kumar,neha.kumar.186@nykaa.demo,9200000186,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00187,Tanya,Gupta,tanya.gupta.187@nykaa.demo,9200000187,Mumbai,Maharashtra,RCS,BRONZE,False,True,True,True
+NYK-CUST-00188,Meera,Singh,meera.singh.188@nykaa.demo,9200000188,Pune,Maharashtra,SMS,BRONZE,True,True,True,True
+NYK-CUST-00189,Aryan,Iyer,aryan.iyer.189@nykaa.demo,9200000189,Delhi,Delhi,WHATSAPP,SILVER,True,False,True,False
+NYK-CUST-00190,Nisha,Jain,nisha.jain.190@nykaa.demo,9200000190,Delhi,Delhi,WHATSAPP,PLATINUM,True,True,False,False
+NYK-CUST-00191,Dev,Nair,dev.nair.191@nykaa.demo,9200000191,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,True
+NYK-CUST-00192,Aman,Reddy,aman.reddy.192@nykaa.demo,9200000192,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,True,False,False
+NYK-CUST-00193,Rohan,Reddy,rohan.reddy.193@nykaa.demo,9200000193,Delhi,Delhi,WHATSAPP,GOLD,True,False,False,False
+NYK-CUST-00194,Pooja,Bose,pooja.bose.194@nykaa.demo,9200000194,Kolkata,West Bengal,SMS,PLATINUM,True,True,True,False
+NYK-CUST-00195,Sneha,Singh,sneha.singh.195@nykaa.demo,9200000195,Delhi,Delhi,WHATSAPP,SILVER,True,True,False,False
+NYK-CUST-00196,Dev,Das,dev.das.196@nykaa.demo,9200000196,Bangalore,Karnataka,RCS,BRONZE,False,False,False,False
+NYK-CUST-00197,Aditi,Verma,aditi.verma.197@nykaa.demo,9200000197,Ahmedabad,Gujarat,WHATSAPP,PLATINUM,True,True,True,False
+NYK-CUST-00198,Nisha,Kapoor,nisha.kapoor.198@nykaa.demo,9200000198,Ahmedabad,Gujarat,RCS,BRONZE,True,True,True,False
+NYK-CUST-00199,Varun,Kumar,varun.kumar.199@nykaa.demo,9200000199,Ahmedabad,Gujarat,SMS,BRONZE,True,True,True,False
+NYK-CUST-00200,Rahul,Nair,rahul.nair.200@nykaa.demo,9200000200,Delhi,Delhi,SMS,GOLD,True,True,False,True
+NYK-CUST-00201,Yash,Kumar,yash.kumar.201@nykaa.demo,9200000201,Ahmedabad,Gujarat,WHATSAPP,PLATINUM,True,False,True,False
+NYK-CUST-00202,Yash,Gupta,yash.gupta.202@nykaa.demo,9200000202,Chennai,Tamil Nadu,WHATSAPP,PLATINUM,True,True,True,False
+NYK-CUST-00203,Aryan,Singh,aryan.singh.203@nykaa.demo,9200000203,Mumbai,Maharashtra,EMAIL,SILVER,True,True,False,True
+NYK-CUST-00204,Arjun,Patel,arjun.patel.204@nykaa.demo,9200000204,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00205,Sneha,Saxena,sneha.saxena.205@nykaa.demo,9200000205,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,False,True
+NYK-CUST-00206,Dev,Patel,dev.patel.206@nykaa.demo,9200000206,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00207,Kiara,Nair,kiara.nair.207@nykaa.demo,9200000207,Hyderabad,Telangana,WHATSAPP,BRONZE,True,False,False,True
+NYK-CUST-00208,Kabir,Das,kabir.das.208@nykaa.demo,9200000208,Pune,Maharashtra,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00209,Arjun,Bose,arjun.bose.209@nykaa.demo,9200000209,Delhi,Delhi,SMS,BRONZE,True,False,True,False
+NYK-CUST-00210,Varun,Iyer,varun.iyer.210@nykaa.demo,9200000210,Bangalore,Karnataka,SMS,SILVER,True,True,False,False
+NYK-CUST-00211,Karan,Saxena,karan.saxena.211@nykaa.demo,9200000211,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00212,Rahul,Iyer,rahul.iyer.212@nykaa.demo,9200000212,Hyderabad,Telangana,SMS,GOLD,False,True,False,False
+NYK-CUST-00213,Samar,Saxena,samar.saxena.213@nykaa.demo,9200000213,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00214,Samar,Mehta,samar.mehta.214@nykaa.demo,9200000214,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00215,Ananya,Reddy,ananya.reddy.215@nykaa.demo,9200000215,Bangalore,Karnataka,EMAIL,BRONZE,True,True,False,False
+NYK-CUST-00216,Kiara,Singh,kiara.singh.216@nykaa.demo,9200000216,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00217,Sneha,Gupta,sneha.gupta.217@nykaa.demo,9200000217,Bangalore,Karnataka,SMS,GOLD,True,True,False,False
+NYK-CUST-00218,Aman,Patel,aman.patel.218@nykaa.demo,9200000218,Delhi,Delhi,SMS,SILVER,False,True,False,True
+NYK-CUST-00219,Priya,Gupta,priya.gupta.219@nykaa.demo,9200000219,Delhi,Delhi,EMAIL,GOLD,True,True,True,False
+NYK-CUST-00220,Priya,Mehta,priya.mehta.220@nykaa.demo,9200000220,Hyderabad,Telangana,RCS,BRONZE,True,True,True,True
+NYK-CUST-00221,Karan,Reddy,karan.reddy.221@nykaa.demo,9200000221,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00222,Ishaan,Iyer,ishaan.iyer.222@nykaa.demo,9200000222,Delhi,Delhi,EMAIL,SILVER,False,True,True,False
+NYK-CUST-00223,Karan,Gupta,karan.gupta.223@nykaa.demo,9200000223,Ahmedabad,Gujarat,SMS,GOLD,True,True,False,False
+NYK-CUST-00224,Aditi,Bose,aditi.bose.224@nykaa.demo,9200000224,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,True
+NYK-CUST-00225,Tanya,Malhotra,tanya.malhotra.225@nykaa.demo,9200000225,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00226,Aditi,Mehta,aditi.mehta.226@nykaa.demo,9200000226,Hyderabad,Telangana,WHATSAPP,GOLD,True,False,False,True
+NYK-CUST-00227,Rohan,Sharma,rohan.sharma.227@nykaa.demo,9200000227,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,False,True
+NYK-CUST-00228,Aman,Malhotra,aman.malhotra.228@nykaa.demo,9200000228,Kolkata,West Bengal,WHATSAPP,BRONZE,False,True,True,True
+NYK-CUST-00229,Aditi,Mehta,aditi.mehta.229@nykaa.demo,9200000229,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00230,Aryan,Mehta,aryan.mehta.230@nykaa.demo,9200000230,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,True,True
+NYK-CUST-00231,Nisha,Bose,nisha.bose.231@nykaa.demo,9200000231,Delhi,Delhi,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00232,Pooja,Malhotra,pooja.malhotra.232@nykaa.demo,9200000232,Delhi,Delhi,EMAIL,GOLD,False,True,True,True
+NYK-CUST-00233,Simran,Patel,simran.patel.233@nykaa.demo,9200000233,Delhi,Delhi,EMAIL,BRONZE,True,True,False,False
+NYK-CUST-00234,Yash,Reddy,yash.reddy.234@nykaa.demo,9200000234,Bangalore,Karnataka,EMAIL,BRONZE,True,True,True,True
+NYK-CUST-00235,Ishaan,Mehta,ishaan.mehta.235@nykaa.demo,9200000235,Pune,Maharashtra,EMAIL,BRONZE,True,True,True,False
+NYK-CUST-00236,Tanya,Gupta,tanya.gupta.236@nykaa.demo,9200000236,Hyderabad,Telangana,SMS,PLATINUM,True,True,True,True
+NYK-CUST-00237,Neha,Nair,neha.nair.237@nykaa.demo,9200000237,Pune,Maharashtra,WHATSAPP,SILVER,True,True,False,True
+NYK-CUST-00238,Riya,Kapoor,riya.kapoor.238@nykaa.demo,9200000238,Mumbai,Maharashtra,SMS,GOLD,True,True,True,False
+NYK-CUST-00239,Dev,Kumar,dev.kumar.239@nykaa.demo,9200000239,Bangalore,Karnataka,EMAIL,SILVER,True,True,True,False
+NYK-CUST-00240,Meera,Singh,meera.singh.240@nykaa.demo,9200000240,Ahmedabad,Gujarat,WHATSAPP,SILVER,False,True,False,False
+NYK-CUST-00241,Arjun,Singh,arjun.singh.241@nykaa.demo,9200000241,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00242,Pooja,Iyer,pooja.iyer.242@nykaa.demo,9200000242,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00243,Rahul,Sharma,rahul.sharma.243@nykaa.demo,9200000243,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,True
+NYK-CUST-00244,Rahul,Bose,rahul.bose.244@nykaa.demo,9200000244,Chennai,Tamil Nadu,SMS,BRONZE,True,True,True,True
+NYK-CUST-00245,Rahul,Mehta,rahul.mehta.245@nykaa.demo,9200000245,Delhi,Delhi,WHATSAPP,BRONZE,True,True,False,False
+NYK-CUST-00246,Simran,Gupta,simran.gupta.246@nykaa.demo,9200000246,Ahmedabad,Gujarat,SMS,PLATINUM,True,False,True,False
+NYK-CUST-00247,Aman,Kapoor,aman.kapoor.247@nykaa.demo,9200000247,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00248,Meera,Verma,meera.verma.248@nykaa.demo,9200000248,Bangalore,Karnataka,SMS,SILVER,True,True,True,True
+NYK-CUST-00249,Yash,Saxena,yash.saxena.249@nykaa.demo,9200000249,Mumbai,Maharashtra,WHATSAPP,PLATINUM,True,True,True,False
+NYK-CUST-00250,Nisha,Iyer,nisha.iyer.250@nykaa.demo,9200000250,Pune,Maharashtra,SMS,BRONZE,True,False,True,False
+NYK-CUST-00251,Priya,Kumar,priya.kumar.251@nykaa.demo,9200000251,Hyderabad,Telangana,SMS,BRONZE,True,False,True,True
+NYK-CUST-00252,Tanya,Nair,tanya.nair.252@nykaa.demo,9200000252,Bangalore,Karnataka,EMAIL,GOLD,False,True,False,False
+NYK-CUST-00253,Ishaan,Nair,ishaan.nair.253@nykaa.demo,9200000253,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00254,Rahul,Iyer,rahul.iyer.254@nykaa.demo,9200000254,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00255,Arjun,Verma,arjun.verma.255@nykaa.demo,9200000255,Hyderabad,Telangana,EMAIL,BRONZE,True,True,False,False
+NYK-CUST-00256,Priya,Verma,priya.verma.256@nykaa.demo,9200000256,Kolkata,West Bengal,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00257,Simran,Sharma,simran.sharma.257@nykaa.demo,9200000257,Chennai,Tamil Nadu,EMAIL,GOLD,True,True,True,True
+NYK-CUST-00258,Riya,Jain,riya.jain.258@nykaa.demo,9200000258,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00259,Arjun,Singh,arjun.singh.259@nykaa.demo,9200000259,Bangalore,Karnataka,EMAIL,PLATINUM,True,False,False,False
+NYK-CUST-00260,Rahul,Singh,rahul.singh.260@nykaa.demo,9200000260,Mumbai,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00261,Sneha,Mehta,sneha.mehta.261@nykaa.demo,9200000261,Chennai,Tamil Nadu,SMS,BRONZE,True,True,True,False
+NYK-CUST-00262,Priya,Sharma,priya.sharma.262@nykaa.demo,9200000262,Bangalore,Karnataka,WHATSAPP,BRONZE,False,False,True,False
+NYK-CUST-00263,Simran,Reddy,simran.reddy.263@nykaa.demo,9200000263,Delhi,Delhi,SMS,GOLD,True,True,True,False
+NYK-CUST-00264,Samar,Verma,samar.verma.264@nykaa.demo,9200000264,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,True,True,True
+NYK-CUST-00265,Nisha,Sharma,nisha.sharma.265@nykaa.demo,9200000265,Bangalore,Karnataka,RCS,BRONZE,True,False,True,False
+NYK-CUST-00266,Yash,Singh,yash.singh.266@nykaa.demo,9200000266,Hyderabad,Telangana,EMAIL,GOLD,True,True,True,False
+NYK-CUST-00267,Dev,Patel,dev.patel.267@nykaa.demo,9200000267,Hyderabad,Telangana,SMS,BRONZE,True,True,True,False
+NYK-CUST-00268,Sneha,Verma,sneha.verma.268@nykaa.demo,9200000268,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00269,Ishaan,Mehta,ishaan.mehta.269@nykaa.demo,9200000269,Mumbai,Maharashtra,RCS,SILVER,True,True,True,False
+NYK-CUST-00270,Kiara,Sharma,kiara.sharma.270@nykaa.demo,9200000270,Kolkata,West Bengal,SMS,BRONZE,True,True,False,False
+NYK-CUST-00271,Aditi,Kumar,aditi.kumar.271@nykaa.demo,9200000271,Chennai,Tamil Nadu,EMAIL,BRONZE,True,True,False,False
+NYK-CUST-00272,Rahul,Jain,rahul.jain.272@nykaa.demo,9200000272,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00273,Varun,Verma,varun.verma.273@nykaa.demo,9200000273,Chennai,Tamil Nadu,SMS,SILVER,True,True,True,False
+NYK-CUST-00274,Varun,Kapoor,varun.kapoor.274@nykaa.demo,9200000274,Pune,Maharashtra,EMAIL,BRONZE,True,True,True,True
+NYK-CUST-00275,Pooja,Das,pooja.das.275@nykaa.demo,9200000275,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00276,Neha,Bose,neha.bose.276@nykaa.demo,9200000276,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00277,Tanya,Reddy,tanya.reddy.277@nykaa.demo,9200000277,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,False,True,True
+NYK-CUST-00278,Ishaan,Das,ishaan.das.278@nykaa.demo,9200000278,Chennai,Tamil Nadu,EMAIL,BRONZE,True,True,True,False
+NYK-CUST-00279,Varun,Sharma,varun.sharma.279@nykaa.demo,9200000279,Pune,Maharashtra,EMAIL,BRONZE,False,False,True,False
+NYK-CUST-00280,Pooja,Iyer,pooja.iyer.280@nykaa.demo,9200000280,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,True
+NYK-CUST-00281,Simran,Saxena,simran.saxena.281@nykaa.demo,9200000281,Bangalore,Karnataka,SMS,SILVER,True,True,True,True
+NYK-CUST-00282,Yash,Verma,yash.verma.282@nykaa.demo,9200000282,Bangalore,Karnataka,EMAIL,GOLD,False,True,True,False
+NYK-CUST-00283,Sneha,Verma,sneha.verma.283@nykaa.demo,9200000283,Pune,Maharashtra,WHATSAPP,BRONZE,False,True,True,False
+NYK-CUST-00284,Karan,Kapoor,karan.kapoor.284@nykaa.demo,9200000284,Bangalore,Karnataka,EMAIL,GOLD,True,True,False,False
+NYK-CUST-00285,Priya,Reddy,priya.reddy.285@nykaa.demo,9200000285,Mumbai,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00286,Dev,Saxena,dev.saxena.286@nykaa.demo,9200000286,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,False,False
+NYK-CUST-00287,Kiara,Verma,kiara.verma.287@nykaa.demo,9200000287,Ahmedabad,Gujarat,RCS,BRONZE,True,True,True,False
+NYK-CUST-00288,Sneha,Kumar,sneha.kumar.288@nykaa.demo,9200000288,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,False,True,False
+NYK-CUST-00289,Sneha,Das,sneha.das.289@nykaa.demo,9200000289,Ahmedabad,Gujarat,RCS,BRONZE,True,True,True,True
+NYK-CUST-00290,Aditi,Gupta,aditi.gupta.290@nykaa.demo,9200000290,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00291,Nisha,Das,nisha.das.291@nykaa.demo,9200000291,Mumbai,Maharashtra,EMAIL,BRONZE,True,True,False,False
+NYK-CUST-00292,Aman,Malhotra,aman.malhotra.292@nykaa.demo,9200000292,Hyderabad,Telangana,WHATSAPP,GOLD,False,True,True,True
+NYK-CUST-00293,Kiara,Mehta,kiara.mehta.293@nykaa.demo,9200000293,Ahmedabad,Gujarat,EMAIL,GOLD,False,True,True,False
+NYK-CUST-00294,Aryan,Sharma,aryan.sharma.294@nykaa.demo,9200000294,Kolkata,West Bengal,EMAIL,GOLD,True,True,True,False
+NYK-CUST-00295,Simran,Verma,simran.verma.295@nykaa.demo,9200000295,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00296,Kiara,Singh,kiara.singh.296@nykaa.demo,9200000296,Ahmedabad,Gujarat,RCS,PLATINUM,True,True,True,False
+NYK-CUST-00297,Samar,Saxena,samar.saxena.297@nykaa.demo,9200000297,Hyderabad,Telangana,WHATSAPP,GOLD,False,True,False,False
+NYK-CUST-00298,Simran,Reddy,simran.reddy.298@nykaa.demo,9200000298,Bangalore,Karnataka,WHATSAPP,GOLD,True,False,False,True
+NYK-CUST-00299,Aman,Reddy,aman.reddy.299@nykaa.demo,9200000299,Kolkata,West Bengal,SMS,GOLD,True,True,True,False
+NYK-CUST-00300,Kiara,Bose,kiara.bose.300@nykaa.demo,9200000300,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00301,Kabir,Das,kabir.das.301@nykaa.demo,9200000301,Pune,Maharashtra,RCS,BRONZE,False,False,True,False
+NYK-CUST-00302,Kabir,Nair,kabir.nair.302@nykaa.demo,9200000302,Bangalore,Karnataka,WHATSAPP,BRONZE,True,False,True,False
+NYK-CUST-00303,Samar,Saxena,samar.saxena.303@nykaa.demo,9200000303,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00304,Riya,Bose,riya.bose.304@nykaa.demo,9200000304,Pune,Maharashtra,WHATSAPP,SILVER,False,True,True,True
+NYK-CUST-00305,Sneha,Singh,sneha.singh.305@nykaa.demo,9200000305,Delhi,Delhi,WHATSAPP,PLATINUM,True,True,True,False
+NYK-CUST-00306,Sneha,Patel,sneha.patel.306@nykaa.demo,9200000306,Kolkata,West Bengal,SMS,BRONZE,False,True,False,False
+NYK-CUST-00307,Simran,Kumar,simran.kumar.307@nykaa.demo,9200000307,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00308,Dev,Patel,dev.patel.308@nykaa.demo,9200000308,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00309,Ananya,Verma,ananya.verma.309@nykaa.demo,9200000309,Kolkata,West Bengal,RCS,SILVER,True,False,True,True
+NYK-CUST-00310,Arjun,Kumar,arjun.kumar.310@nykaa.demo,9200000310,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,False,False
+NYK-CUST-00311,Sneha,Nair,sneha.nair.311@nykaa.demo,9200000311,Bangalore,Karnataka,SMS,SILVER,True,True,True,True
+NYK-CUST-00312,Karan,Kapoor,karan.kapoor.312@nykaa.demo,9200000312,Pune,Maharashtra,SMS,GOLD,True,True,True,False
+NYK-CUST-00313,Riya,Iyer,riya.iyer.313@nykaa.demo,9200000313,Hyderabad,Telangana,SMS,GOLD,True,True,True,True
+NYK-CUST-00314,Karan,Gupta,karan.gupta.314@nykaa.demo,9200000314,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00315,Aditi,Das,aditi.das.315@nykaa.demo,9200000315,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00316,Aryan,Saxena,aryan.saxena.316@nykaa.demo,9200000316,Ahmedabad,Gujarat,EMAIL,BRONZE,True,False,True,False
+NYK-CUST-00317,Rahul,Reddy,rahul.reddy.317@nykaa.demo,9200000317,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,False,False
+NYK-CUST-00318,Priya,Iyer,priya.iyer.318@nykaa.demo,9200000318,Chennai,Tamil Nadu,WHATSAPP,PLATINUM,True,False,True,True
+NYK-CUST-00319,Varun,Jain,varun.jain.319@nykaa.demo,9200000319,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,True,True,True
+NYK-CUST-00320,Meera,Iyer,meera.iyer.320@nykaa.demo,9200000320,Bangalore,Karnataka,WHATSAPP,BRONZE,True,False,True,False
+NYK-CUST-00321,Yash,Patel,yash.patel.321@nykaa.demo,9200000321,Delhi,Delhi,EMAIL,SILVER,True,True,False,True
+NYK-CUST-00322,Rohan,Nair,rohan.nair.322@nykaa.demo,9200000322,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,True,True
+NYK-CUST-00323,Ishaan,Jain,ishaan.jain.323@nykaa.demo,9200000323,Kolkata,West Bengal,EMAIL,GOLD,True,False,False,True
+NYK-CUST-00324,Yash,Patel,yash.patel.324@nykaa.demo,9200000324,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00325,Arjun,Das,arjun.das.325@nykaa.demo,9200000325,Ahmedabad,Gujarat,EMAIL,GOLD,True,False,True,False
+NYK-CUST-00326,Varun,Kumar,varun.kumar.326@nykaa.demo,9200000326,Hyderabad,Telangana,EMAIL,SILVER,True,True,True,False
+NYK-CUST-00327,Kiara,Jain,kiara.jain.327@nykaa.demo,9200000327,Delhi,Delhi,WHATSAPP,BRONZE,True,False,False,False
+NYK-CUST-00328,Aditi,Iyer,aditi.iyer.328@nykaa.demo,9200000328,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00329,Priya,Kumar,priya.kumar.329@nykaa.demo,9200000329,Mumbai,Maharashtra,WHATSAPP,GOLD,True,True,False,True
+NYK-CUST-00330,Tanya,Das,tanya.das.330@nykaa.demo,9200000330,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00331,Nisha,Kumar,nisha.kumar.331@nykaa.demo,9200000331,Kolkata,West Bengal,SMS,BRONZE,True,True,True,True
+NYK-CUST-00332,Rahul,Malhotra,rahul.malhotra.332@nykaa.demo,9200000332,Hyderabad,Telangana,EMAIL,BRONZE,True,False,False,False
+NYK-CUST-00333,Priya,Verma,priya.verma.333@nykaa.demo,9200000333,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00334,Rahul,Malhotra,rahul.malhotra.334@nykaa.demo,9200000334,Hyderabad,Telangana,EMAIL,GOLD,True,True,True,False
+NYK-CUST-00335,Varun,Gupta,varun.gupta.335@nykaa.demo,9200000335,Hyderabad,Telangana,WHATSAPP,SILVER,False,True,True,True
+NYK-CUST-00336,Ishaan,Jain,ishaan.jain.336@nykaa.demo,9200000336,Delhi,Delhi,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00337,Pooja,Mehta,pooja.mehta.337@nykaa.demo,9200000337,Chennai,Tamil Nadu,RCS,SILVER,True,True,True,True
+NYK-CUST-00338,Ishaan,Malhotra,ishaan.malhotra.338@nykaa.demo,9200000338,Kolkata,West Bengal,SMS,BRONZE,True,True,True,False
+NYK-CUST-00339,Varun,Bose,varun.bose.339@nykaa.demo,9200000339,Kolkata,West Bengal,SMS,PLATINUM,True,True,True,False
+NYK-CUST-00340,Kabir,Bose,kabir.bose.340@nykaa.demo,9200000340,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00341,Sneha,Patel,sneha.patel.341@nykaa.demo,9200000341,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,False,True
+NYK-CUST-00342,Samar,Mehta,samar.mehta.342@nykaa.demo,9200000342,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,False,True,False
+NYK-CUST-00343,Karan,Gupta,karan.gupta.343@nykaa.demo,9200000343,Kolkata,West Bengal,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00344,Simran,Saxena,simran.saxena.344@nykaa.demo,9200000344,Bangalore,Karnataka,SMS,SILVER,True,False,False,True
+NYK-CUST-00345,Kabir,Kumar,kabir.kumar.345@nykaa.demo,9200000345,Chennai,Tamil Nadu,SMS,SILVER,True,True,True,True
+NYK-CUST-00346,Riya,Iyer,riya.iyer.346@nykaa.demo,9200000346,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,False,False
+NYK-CUST-00347,Riya,Saxena,riya.saxena.347@nykaa.demo,9200000347,Hyderabad,Telangana,EMAIL,SILVER,True,True,True,False
+NYK-CUST-00348,Nisha,Saxena,nisha.saxena.348@nykaa.demo,9200000348,Chennai,Tamil Nadu,SMS,SILVER,True,False,True,False
+NYK-CUST-00349,Arjun,Patel,arjun.patel.349@nykaa.demo,9200000349,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00350,Simran,Reddy,simran.reddy.350@nykaa.demo,9200000350,Kolkata,West Bengal,EMAIL,SILVER,True,False,False,False
+NYK-CUST-00351,Kabir,Patel,kabir.patel.351@nykaa.demo,9200000351,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00352,Kiara,Bose,kiara.bose.352@nykaa.demo,9200000352,Pune,Maharashtra,RCS,BRONZE,True,True,False,False
+NYK-CUST-00353,Rohan,Nair,rohan.nair.353@nykaa.demo,9200000353,Bangalore,Karnataka,WHATSAPP,BRONZE,False,True,True,False
+NYK-CUST-00354,Yash,Jain,yash.jain.354@nykaa.demo,9200000354,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,True,False,False
+NYK-CUST-00355,Ananya,Bose,ananya.bose.355@nykaa.demo,9200000355,Ahmedabad,Gujarat,EMAIL,BRONZE,False,False,True,True
+NYK-CUST-00356,Neha,Nair,neha.nair.356@nykaa.demo,9200000356,Ahmedabad,Gujarat,EMAIL,BRONZE,False,True,True,False
+NYK-CUST-00357,Samar,Patel,samar.patel.357@nykaa.demo,9200000357,Bangalore,Karnataka,EMAIL,SILVER,True,True,True,False
+NYK-CUST-00358,Priya,Nair,priya.nair.358@nykaa.demo,9200000358,Delhi,Delhi,EMAIL,PLATINUM,True,True,True,True
+NYK-CUST-00359,Aditi,Singh,aditi.singh.359@nykaa.demo,9200000359,Hyderabad,Telangana,SMS,SILVER,True,True,True,True
+NYK-CUST-00360,Rahul,Jain,rahul.jain.360@nykaa.demo,9200000360,Chennai,Tamil Nadu,EMAIL,BRONZE,True,True,False,False
+NYK-CUST-00361,Aman,Mehta,aman.mehta.361@nykaa.demo,9200000361,Ahmedabad,Gujarat,RCS,BRONZE,True,True,False,False
+NYK-CUST-00362,Meera,Iyer,meera.iyer.362@nykaa.demo,9200000362,Ahmedabad,Gujarat,WHATSAPP,SILVER,False,True,True,False
+NYK-CUST-00363,Aditi,Malhotra,aditi.malhotra.363@nykaa.demo,9200000363,Chennai,Tamil Nadu,EMAIL,BRONZE,True,True,False,True
+NYK-CUST-00364,Rohan,Patel,rohan.patel.364@nykaa.demo,9200000364,Chennai,Tamil Nadu,RCS,BRONZE,True,True,True,False
+NYK-CUST-00365,Aditi,Iyer,aditi.iyer.365@nykaa.demo,9200000365,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00366,Neha,Bose,neha.bose.366@nykaa.demo,9200000366,Hyderabad,Telangana,WHATSAPP,BRONZE,False,False,False,True
+NYK-CUST-00367,Dev,Mehta,dev.mehta.367@nykaa.demo,9200000367,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,True,True
+NYK-CUST-00368,Dev,Iyer,dev.iyer.368@nykaa.demo,9200000368,Mumbai,Maharashtra,SMS,BRONZE,False,True,True,False
+NYK-CUST-00369,Ananya,Gupta,ananya.gupta.369@nykaa.demo,9200000369,Bangalore,Karnataka,SMS,SILVER,True,True,True,True
+NYK-CUST-00370,Sneha,Kumar,sneha.kumar.370@nykaa.demo,9200000370,Delhi,Delhi,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00371,Sneha,Malhotra,sneha.malhotra.371@nykaa.demo,9200000371,Chennai,Tamil Nadu,EMAIL,BRONZE,True,True,True,True
+NYK-CUST-00372,Aman,Sharma,aman.sharma.372@nykaa.demo,9200000372,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,False,False
+NYK-CUST-00373,Arjun,Iyer,arjun.iyer.373@nykaa.demo,9200000373,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00374,Samar,Saxena,samar.saxena.374@nykaa.demo,9200000374,Delhi,Delhi,EMAIL,BRONZE,True,False,True,True
+NYK-CUST-00375,Arjun,Gupta,arjun.gupta.375@nykaa.demo,9200000375,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00376,Priya,Singh,priya.singh.376@nykaa.demo,9200000376,Kolkata,West Bengal,SMS,GOLD,True,True,True,True
+NYK-CUST-00377,Rohan,Malhotra,rohan.malhotra.377@nykaa.demo,9200000377,Kolkata,West Bengal,WHATSAPP,BRONZE,False,True,False,False
+NYK-CUST-00378,Priya,Singh,priya.singh.378@nykaa.demo,9200000378,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00379,Sneha,Nair,sneha.nair.379@nykaa.demo,9200000379,Ahmedabad,Gujarat,SMS,GOLD,False,True,False,True
+NYK-CUST-00380,Sneha,Kumar,sneha.kumar.380@nykaa.demo,9200000380,Mumbai,Maharashtra,WHATSAPP,SILVER,False,True,False,False
+NYK-CUST-00381,Priya,Verma,priya.verma.381@nykaa.demo,9200000381,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00382,Kiara,Malhotra,kiara.malhotra.382@nykaa.demo,9200000382,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,True,False,False
+NYK-CUST-00383,Karan,Bose,karan.bose.383@nykaa.demo,9200000383,Mumbai,Maharashtra,WHATSAPP,SILVER,True,False,True,False
+NYK-CUST-00384,Tanya,Jain,tanya.jain.384@nykaa.demo,9200000384,Kolkata,West Bengal,RCS,GOLD,True,True,False,False
+NYK-CUST-00385,Arjun,Saxena,arjun.saxena.385@nykaa.demo,9200000385,Pune,Maharashtra,RCS,BRONZE,True,True,True,True
+NYK-CUST-00386,Pooja,Saxena,pooja.saxena.386@nykaa.demo,9200000386,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,False,False
+NYK-CUST-00387,Dev,Sharma,dev.sharma.387@nykaa.demo,9200000387,Kolkata,West Bengal,WHATSAPP,GOLD,True,False,False,False
+NYK-CUST-00388,Samar,Reddy,samar.reddy.388@nykaa.demo,9200000388,Hyderabad,Telangana,EMAIL,BRONZE,True,True,True,False
+NYK-CUST-00389,Samar,Gupta,samar.gupta.389@nykaa.demo,9200000389,Bangalore,Karnataka,RCS,BRONZE,True,True,True,False
+NYK-CUST-00390,Pooja,Verma,pooja.verma.390@nykaa.demo,9200000390,Pune,Maharashtra,WHATSAPP,SILVER,True,True,False,True
+NYK-CUST-00391,Rahul,Patel,rahul.patel.391@nykaa.demo,9200000391,Bangalore,Karnataka,WHATSAPP,GOLD,True,True,True,True
+NYK-CUST-00392,Yash,Kapoor,yash.kapoor.392@nykaa.demo,9200000392,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,False,False
+NYK-CUST-00393,Aryan,Jain,aryan.jain.393@nykaa.demo,9200000393,Chennai,Tamil Nadu,WHATSAPP,PLATINUM,True,True,True,False
+NYK-CUST-00394,Varun,Gupta,varun.gupta.394@nykaa.demo,9200000394,Chennai,Tamil Nadu,EMAIL,BRONZE,True,True,False,False
+NYK-CUST-00395,Arjun,Iyer,arjun.iyer.395@nykaa.demo,9200000395,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00396,Kabir,Jain,kabir.jain.396@nykaa.demo,9200000396,Mumbai,Maharashtra,WHATSAPP,GOLD,True,True,False,False
+NYK-CUST-00397,Simran,Bose,simran.bose.397@nykaa.demo,9200000397,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,False,True
+NYK-CUST-00398,Tanya,Sharma,tanya.sharma.398@nykaa.demo,9200000398,Delhi,Delhi,WHATSAPP,BRONZE,True,False,True,True
+NYK-CUST-00399,Aditi,Das,aditi.das.399@nykaa.demo,9200000399,Mumbai,Maharashtra,EMAIL,SILVER,True,True,True,True
+NYK-CUST-00400,Rohan,Singh,rohan.singh.400@nykaa.demo,9200000400,Hyderabad,Telangana,EMAIL,BRONZE,True,False,True,False
+NYK-CUST-00401,Simran,Gupta,simran.gupta.401@nykaa.demo,9200000401,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,True,True
+NYK-CUST-00402,Ananya,Bose,ananya.bose.402@nykaa.demo,9200000402,Mumbai,Maharashtra,RCS,BRONZE,True,True,True,True
+NYK-CUST-00403,Pooja,Kumar,pooja.kumar.403@nykaa.demo,9200000403,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00404,Varun,Mehta,varun.mehta.404@nykaa.demo,9200000404,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,False,False
+NYK-CUST-00405,Ananya,Reddy,ananya.reddy.405@nykaa.demo,9200000405,Delhi,Delhi,WHATSAPP,BRONZE,True,False,True,False
+NYK-CUST-00406,Rohan,Singh,rohan.singh.406@nykaa.demo,9200000406,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,False,True
+NYK-CUST-00407,Neha,Kapoor,neha.kapoor.407@nykaa.demo,9200000407,Hyderabad,Telangana,WHATSAPP,GOLD,True,False,True,True
+NYK-CUST-00408,Dev,Nair,dev.nair.408@nykaa.demo,9200000408,Bangalore,Karnataka,WHATSAPP,PLATINUM,True,True,False,True
+NYK-CUST-00409,Samar,Nair,samar.nair.409@nykaa.demo,9200000409,Delhi,Delhi,WHATSAPP,BRONZE,True,True,False,True
+NYK-CUST-00410,Ananya,Saxena,ananya.saxena.410@nykaa.demo,9200000410,Pune,Maharashtra,SMS,SILVER,True,True,True,False
+NYK-CUST-00411,Rahul,Reddy,rahul.reddy.411@nykaa.demo,9200000411,Mumbai,Maharashtra,EMAIL,GOLD,False,False,True,True
+NYK-CUST-00412,Karan,Singh,karan.singh.412@nykaa.demo,9200000412,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,False,True
+NYK-CUST-00413,Neha,Bose,neha.bose.413@nykaa.demo,9200000413,Delhi,Delhi,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00414,Riya,Reddy,riya.reddy.414@nykaa.demo,9200000414,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,False,False
+NYK-CUST-00415,Arjun,Jain,arjun.jain.415@nykaa.demo,9200000415,Pune,Maharashtra,WHATSAPP,PLATINUM,True,True,False,False
+NYK-CUST-00416,Sneha,Gupta,sneha.gupta.416@nykaa.demo,9200000416,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,True
+NYK-CUST-00417,Ishaan,Verma,ishaan.verma.417@nykaa.demo,9200000417,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,True
+NYK-CUST-00418,Ishaan,Reddy,ishaan.reddy.418@nykaa.demo,9200000418,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00419,Aryan,Reddy,aryan.reddy.419@nykaa.demo,9200000419,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,False,True,True
+NYK-CUST-00420,Kiara,Sharma,kiara.sharma.420@nykaa.demo,9200000420,Mumbai,Maharashtra,EMAIL,BRONZE,True,False,True,False
+NYK-CUST-00421,Sneha,Bose,sneha.bose.421@nykaa.demo,9200000421,Kolkata,West Bengal,WHATSAPP,PLATINUM,True,False,True,False
+NYK-CUST-00422,Varun,Reddy,varun.reddy.422@nykaa.demo,9200000422,Delhi,Delhi,WHATSAPP,GOLD,True,False,True,False
+NYK-CUST-00423,Neha,Kumar,neha.kumar.423@nykaa.demo,9200000423,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00424,Arjun,Singh,arjun.singh.424@nykaa.demo,9200000424,Kolkata,West Bengal,WHATSAPP,PLATINUM,True,True,True,False
+NYK-CUST-00425,Aryan,Gupta,aryan.gupta.425@nykaa.demo,9200000425,Chennai,Tamil Nadu,WHATSAPP,SILVER,False,True,False,True
+NYK-CUST-00426,Yash,Patel,yash.patel.426@nykaa.demo,9200000426,Bangalore,Karnataka,RCS,GOLD,True,True,True,True
+NYK-CUST-00427,Rohan,Reddy,rohan.reddy.427@nykaa.demo,9200000427,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,False,False
+NYK-CUST-00428,Aditi,Reddy,aditi.reddy.428@nykaa.demo,9200000428,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,False,True
+NYK-CUST-00429,Neha,Sharma,neha.sharma.429@nykaa.demo,9200000429,Bangalore,Karnataka,SMS,BRONZE,True,True,True,True
+NYK-CUST-00430,Aryan,Das,aryan.das.430@nykaa.demo,9200000430,Mumbai,Maharashtra,WHATSAPP,GOLD,True,True,False,True
+NYK-CUST-00431,Nisha,Verma,nisha.verma.431@nykaa.demo,9200000431,Hyderabad,Telangana,SMS,SILVER,False,True,True,True
+NYK-CUST-00432,Meera,Singh,meera.singh.432@nykaa.demo,9200000432,Bangalore,Karnataka,EMAIL,SILVER,True,True,True,False
+NYK-CUST-00433,Meera,Bose,meera.bose.433@nykaa.demo,9200000433,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,True,True
+NYK-CUST-00434,Aryan,Sharma,aryan.sharma.434@nykaa.demo,9200000434,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00435,Priya,Kapoor,priya.kapoor.435@nykaa.demo,9200000435,Hyderabad,Telangana,RCS,BRONZE,True,False,True,False
+NYK-CUST-00436,Ishaan,Malhotra,ishaan.malhotra.436@nykaa.demo,9200000436,Hyderabad,Telangana,EMAIL,SILVER,True,True,False,True
+NYK-CUST-00437,Nisha,Sharma,nisha.sharma.437@nykaa.demo,9200000437,Hyderabad,Telangana,EMAIL,GOLD,True,True,True,True
+NYK-CUST-00438,Priya,Patel,priya.patel.438@nykaa.demo,9200000438,Delhi,Delhi,WHATSAPP,SILVER,False,False,True,False
+NYK-CUST-00439,Rahul,Bose,rahul.bose.439@nykaa.demo,9200000439,Hyderabad,Telangana,SMS,GOLD,True,True,False,False
+NYK-CUST-00440,Rahul,Malhotra,rahul.malhotra.440@nykaa.demo,9200000440,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00441,Nisha,Iyer,nisha.iyer.441@nykaa.demo,9200000441,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00442,Sneha,Kapoor,sneha.kapoor.442@nykaa.demo,9200000442,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00443,Rahul,Bose,rahul.bose.443@nykaa.demo,9200000443,Delhi,Delhi,WHATSAPP,SILVER,True,True,False,False
+NYK-CUST-00444,Varun,Nair,varun.nair.444@nykaa.demo,9200000444,Hyderabad,Telangana,WHATSAPP,SILVER,True,False,True,False
+NYK-CUST-00445,Ananya,Kapoor,ananya.kapoor.445@nykaa.demo,9200000445,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00446,Varun,Bose,varun.bose.446@nykaa.demo,9200000446,Chennai,Tamil Nadu,EMAIL,BRONZE,True,True,False,True
+NYK-CUST-00447,Simran,Reddy,simran.reddy.447@nykaa.demo,9200000447,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00448,Arjun,Nair,arjun.nair.448@nykaa.demo,9200000448,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00449,Ananya,Saxena,ananya.saxena.449@nykaa.demo,9200000449,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00450,Riya,Sharma,riya.sharma.450@nykaa.demo,9200000450,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00451,Riya,Mehta,riya.mehta.451@nykaa.demo,9200000451,Chennai,Tamil Nadu,EMAIL,SILVER,True,True,True,False
+NYK-CUST-00452,Pooja,Iyer,pooja.iyer.452@nykaa.demo,9200000452,Delhi,Delhi,WHATSAPP,SILVER,True,True,True,True
+NYK-CUST-00453,Ananya,Nair,ananya.nair.453@nykaa.demo,9200000453,Chennai,Tamil Nadu,SMS,BRONZE,True,True,False,True
+NYK-CUST-00454,Meera,Kumar,meera.kumar.454@nykaa.demo,9200000454,Bangalore,Karnataka,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00455,Priya,Kumar,priya.kumar.455@nykaa.demo,9200000455,Hyderabad,Telangana,SMS,SILVER,True,True,True,False
+NYK-CUST-00456,Neha,Kumar,neha.kumar.456@nykaa.demo,9200000456,Hyderabad,Telangana,SMS,SILVER,True,True,False,True
+NYK-CUST-00457,Aditi,Sharma,aditi.sharma.457@nykaa.demo,9200000457,Hyderabad,Telangana,EMAIL,SILVER,True,False,True,True
+NYK-CUST-00458,Priya,Kapoor,priya.kapoor.458@nykaa.demo,9200000458,Bangalore,Karnataka,SMS,PLATINUM,True,True,True,True
+NYK-CUST-00459,Aditi,Jain,aditi.jain.459@nykaa.demo,9200000459,Hyderabad,Telangana,EMAIL,SILVER,True,False,True,False
+NYK-CUST-00460,Simran,Singh,simran.singh.460@nykaa.demo,9200000460,Mumbai,Maharashtra,SMS,SILVER,True,True,True,False
+NYK-CUST-00461,Dev,Iyer,dev.iyer.461@nykaa.demo,9200000461,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00462,Rohan,Mehta,rohan.mehta.462@nykaa.demo,9200000462,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00463,Aditi,Malhotra,aditi.malhotra.463@nykaa.demo,9200000463,Bangalore,Karnataka,SMS,PLATINUM,True,True,True,False
+NYK-CUST-00464,Varun,Saxena,varun.saxena.464@nykaa.demo,9200000464,Pune,Maharashtra,SMS,SILVER,True,False,True,False
+NYK-CUST-00465,Meera,Verma,meera.verma.465@nykaa.demo,9200000465,Delhi,Delhi,EMAIL,PLATINUM,True,True,False,False
+NYK-CUST-00466,Rahul,Sharma,rahul.sharma.466@nykaa.demo,9200000466,Mumbai,Maharashtra,WHATSAPP,PLATINUM,True,True,True,False
+NYK-CUST-00467,Tanya,Verma,tanya.verma.467@nykaa.demo,9200000467,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,True
+NYK-CUST-00468,Ananya,Iyer,ananya.iyer.468@nykaa.demo,9200000468,Delhi,Delhi,EMAIL,SILVER,True,True,False,False
+NYK-CUST-00469,Ishaan,Gupta,ishaan.gupta.469@nykaa.demo,9200000469,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00470,Tanya,Kapoor,tanya.kapoor.470@nykaa.demo,9200000470,Chennai,Tamil Nadu,SMS,GOLD,False,False,False,False
+NYK-CUST-00471,Neha,Kumar,neha.kumar.471@nykaa.demo,9200000471,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00472,Samar,Reddy,samar.reddy.472@nykaa.demo,9200000472,Delhi,Delhi,EMAIL,GOLD,False,True,True,False
+NYK-CUST-00473,Simran,Iyer,simran.iyer.473@nykaa.demo,9200000473,Delhi,Delhi,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00474,Aryan,Nair,aryan.nair.474@nykaa.demo,9200000474,Bangalore,Karnataka,EMAIL,GOLD,True,True,False,True
+NYK-CUST-00475,Nisha,Kumar,nisha.kumar.475@nykaa.demo,9200000475,Chennai,Tamil Nadu,EMAIL,BRONZE,False,True,True,True
+NYK-CUST-00476,Simran,Bose,simran.bose.476@nykaa.demo,9200000476,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00477,Priya,Iyer,priya.iyer.477@nykaa.demo,9200000477,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,True,True
+NYK-CUST-00478,Ananya,Bose,ananya.bose.478@nykaa.demo,9200000478,Bangalore,Karnataka,WHATSAPP,GOLD,True,True,True,False
+NYK-CUST-00479,Meera,Sharma,meera.sharma.479@nykaa.demo,9200000479,Kolkata,West Bengal,SMS,GOLD,True,True,False,False
+NYK-CUST-00480,Rohan,Das,rohan.das.480@nykaa.demo,9200000480,Bangalore,Karnataka,SMS,SILVER,True,True,True,True
+NYK-CUST-00481,Aman,Nair,aman.nair.481@nykaa.demo,9200000481,Mumbai,Maharashtra,WHATSAPP,SILVER,False,True,True,False
+NYK-CUST-00482,Simran,Iyer,simran.iyer.482@nykaa.demo,9200000482,Chennai,Tamil Nadu,EMAIL,SILVER,True,True,False,True
+NYK-CUST-00483,Simran,Kapoor,simran.kapoor.483@nykaa.demo,9200000483,Mumbai,Maharashtra,EMAIL,SILVER,True,True,True,False
+NYK-CUST-00484,Rohan,Mehta,rohan.mehta.484@nykaa.demo,9200000484,Ahmedabad,Gujarat,SMS,PLATINUM,True,True,True,False
+NYK-CUST-00485,Varun,Verma,varun.verma.485@nykaa.demo,9200000485,Ahmedabad,Gujarat,SMS,SILVER,True,True,True,False
+NYK-CUST-00486,Sneha,Nair,sneha.nair.486@nykaa.demo,9200000486,Kolkata,West Bengal,SMS,BRONZE,False,True,True,False
+NYK-CUST-00487,Sneha,Sharma,sneha.sharma.487@nykaa.demo,9200000487,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,False,True,False
+NYK-CUST-00488,Sneha,Iyer,sneha.iyer.488@nykaa.demo,9200000488,Kolkata,West Bengal,SMS,GOLD,True,False,True,False
+NYK-CUST-00489,Aditi,Sharma,aditi.sharma.489@nykaa.demo,9200000489,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,False,True,False
+NYK-CUST-00490,Nisha,Patel,nisha.patel.490@nykaa.demo,9200000490,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,False
+NYK-CUST-00491,Ananya,Gupta,ananya.gupta.491@nykaa.demo,9200000491,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,False,True,True
+NYK-CUST-00492,Aditi,Verma,aditi.verma.492@nykaa.demo,9200000492,Delhi,Delhi,WHATSAPP,PLATINUM,True,True,True,False
+NYK-CUST-00493,Dev,Kapoor,dev.kapoor.493@nykaa.demo,9200000493,Delhi,Delhi,SMS,SILVER,True,True,True,True
+NYK-CUST-00494,Rahul,Nair,rahul.nair.494@nykaa.demo,9200000494,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,True
+NYK-CUST-00495,Varun,Mehta,varun.mehta.495@nykaa.demo,9200000495,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+NYK-CUST-00496,Arjun,Mehta,arjun.mehta.496@nykaa.demo,9200000496,Hyderabad,Telangana,EMAIL,BRONZE,True,True,True,True
+NYK-CUST-00497,Karan,Sharma,karan.sharma.497@nykaa.demo,9200000497,Kolkata,West Bengal,SMS,BRONZE,True,True,True,False
+NYK-CUST-00498,Ananya,Patel,ananya.patel.498@nykaa.demo,9200000498,Kolkata,West Bengal,SMS,GOLD,True,True,True,False
+NYK-CUST-00499,Aditi,Das,aditi.das.499@nykaa.demo,9200000499,Kolkata,West Bengal,EMAIL,SILVER,True,False,True,True
+NYK-CUST-00500,Varun,Verma,varun.verma.500@nykaa.demo,9200000500,Bangalore,Karnataka,WHATSAPP,GOLD,True,True,True,False

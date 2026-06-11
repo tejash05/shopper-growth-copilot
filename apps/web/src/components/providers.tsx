@@ -2,6 +2,8 @@
 
 import * as React from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { BrandProvider } from '@/contexts/brand-context';
+import { OnboardingProvider } from '@/contexts/onboarding-context';
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const [client] = React.useState(
@@ -12,5 +14,11 @@ export function Providers({ children }: { children: React.ReactNode }) {
         },
       }),
   );
-  return <QueryClientProvider client={client}>{children}</QueryClientProvider>;
+  return (
+    <QueryClientProvider client={client}>
+      <BrandProvider>
+        <OnboardingProvider>{children}</OnboardingProvider>
+      </BrandProvider>
+    </QueryClientProvider>
+  );
 }

@@ -1,0 +1,33 @@
+{
+    "customers": [
+      {
+        "externalCustomerId": "CUST001",
+        "firstName": "Priya",
+        "lastName": "Sharma",
+        "email": "priya@example.com",
+        "phone": "9876543210",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "preferredChannel": "WHATSAPP",
+        "loyaltyTier": "GOLD",
+        "consentWhatsApp": true,
+        "consentSms": true,
+        "consentEmail": true,
+        "consentRcs": false
+      }
+    ],
+    "orders": [
+      {
+        "externalOrderId": "ORD001",
+        "externalCustomerId": "CUST001",
+        "customerEmail": "priya@example.com",
+        "orderDate": "2026-05-20",
+        "orderValue": 2499,
+        "currency": "INR",
+        "category": "Dresses",
+        "productName": "Summer Floral Dress",
+        "quantity": 1,
+        "status": "COMPLETED"
+      }
+    ]
+  }

@@ -1,0 +1,501 @@
+externalCustomerId,firstName,lastName,email,phone,city,state,preferredChannel,loyaltyTier,consentWhatsApp,consentSms,consentEmail,consentRcs
+ADI-CUST-00001,Kiara,Mehta,kiara.mehta.1@adidas.demo,9100000001,Bangalore,Karnataka,SMS,BRONZE,True,True,True,False
+ADI-CUST-00002,Dev,Kumar,dev.kumar.2@adidas.demo,9100000002,Pune,Maharashtra,WHATSAPP,PLATINUM,True,True,True,False
+ADI-CUST-00003,Kabir,Gupta,kabir.gupta.3@adidas.demo,9100000003,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00004,Kiara,Patel,kiara.patel.4@adidas.demo,9100000004,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00005,Varun,Patel,varun.patel.5@adidas.demo,9100000005,Pune,Maharashtra,RCS,GOLD,True,True,True,False
+ADI-CUST-00006,Kabir,Das,kabir.das.6@adidas.demo,9100000006,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,True,True
+ADI-CUST-00007,Yash,Iyer,yash.iyer.7@adidas.demo,9100000007,Delhi,Delhi,SMS,PLATINUM,True,True,True,False
+ADI-CUST-00008,Ishaan,Singh,ishaan.singh.8@adidas.demo,9100000008,Bangalore,Karnataka,EMAIL,BRONZE,True,True,True,True
+ADI-CUST-00009,Ishaan,Kapoor,ishaan.kapoor.9@adidas.demo,9100000009,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,False,True
+ADI-CUST-00010,Aman,Verma,aman.verma.10@adidas.demo,9100000010,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,False,True,False
+ADI-CUST-00011,Ishaan,Gupta,ishaan.gupta.11@adidas.demo,9100000011,Mumbai,Maharashtra,EMAIL,SILVER,True,True,True,False
+ADI-CUST-00012,Sneha,Jain,sneha.jain.12@adidas.demo,9100000012,Mumbai,Maharashtra,EMAIL,BRONZE,True,False,True,False
+ADI-CUST-00013,Aman,Sharma,aman.sharma.13@adidas.demo,9100000013,Chennai,Tamil Nadu,EMAIL,SILVER,True,True,True,False
+ADI-CUST-00014,Yash,Verma,yash.verma.14@adidas.demo,9100000014,Chennai,Tamil Nadu,SMS,BRONZE,True,True,False,False
+ADI-CUST-00015,Kabir,Gupta,kabir.gupta.15@adidas.demo,9100000015,Bangalore,Karnataka,EMAIL,BRONZE,True,True,True,False
+ADI-CUST-00016,Karan,Gupta,karan.gupta.16@adidas.demo,9100000016,Chennai,Tamil Nadu,EMAIL,BRONZE,False,True,False,True
+ADI-CUST-00017,Dev,Mehta,dev.mehta.17@adidas.demo,9100000017,Kolkata,West Bengal,EMAIL,BRONZE,True,True,True,False
+ADI-CUST-00018,Yash,Sharma,yash.sharma.18@adidas.demo,9100000018,Pune,Maharashtra,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00019,Aryan,Kumar,aryan.kumar.19@adidas.demo,9100000019,Mumbai,Maharashtra,EMAIL,GOLD,True,True,True,True
+ADI-CUST-00020,Pooja,Gupta,pooja.gupta.20@adidas.demo,9100000020,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,False,False,False
+ADI-CUST-00021,Kiara,Malhotra,kiara.malhotra.21@adidas.demo,9100000021,Ahmedabad,Gujarat,SMS,BRONZE,True,True,True,True
+ADI-CUST-00022,Rohan,Sharma,rohan.sharma.22@adidas.demo,9100000022,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,False,True,False
+ADI-CUST-00023,Nisha,Kumar,nisha.kumar.23@adidas.demo,9100000023,Kolkata,West Bengal,WHATSAPP,PLATINUM,True,False,True,False
+ADI-CUST-00024,Aman,Sharma,aman.sharma.24@adidas.demo,9100000024,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00025,Kabir,Reddy,kabir.reddy.25@adidas.demo,9100000025,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,False,False
+ADI-CUST-00026,Kabir,Bose,kabir.bose.26@adidas.demo,9100000026,Chennai,Tamil Nadu,SMS,GOLD,True,True,True,False
+ADI-CUST-00027,Meera,Patel,meera.patel.27@adidas.demo,9100000027,Hyderabad,Telangana,EMAIL,SILVER,True,True,True,True
+ADI-CUST-00028,Yash,Nair,yash.nair.28@adidas.demo,9100000028,Ahmedabad,Gujarat,SMS,SILVER,True,True,True,False
+ADI-CUST-00029,Meera,Nair,meera.nair.29@adidas.demo,9100000029,Mumbai,Maharashtra,SMS,BRONZE,True,False,True,True
+ADI-CUST-00030,Priya,Das,priya.das.30@adidas.demo,9100000030,Ahmedabad,Gujarat,WHATSAPP,BRONZE,False,True,False,True
+ADI-CUST-00031,Aryan,Verma,aryan.verma.31@adidas.demo,9100000031,Delhi,Delhi,WHATSAPP,SILVER,True,False,True,False
+ADI-CUST-00032,Ishaan,Reddy,ishaan.reddy.32@adidas.demo,9100000032,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,True,True
+ADI-CUST-00033,Sneha,Malhotra,sneha.malhotra.33@adidas.demo,9100000033,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00034,Meera,Saxena,meera.saxena.34@adidas.demo,9100000034,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00035,Nisha,Bose,nisha.bose.35@adidas.demo,9100000035,Ahmedabad,Gujarat,WHATSAPP,PLATINUM,True,True,True,True
+ADI-CUST-00036,Rohan,Patel,rohan.patel.36@adidas.demo,9100000036,Bangalore,Karnataka,WHATSAPP,SILVER,False,True,True,True
+ADI-CUST-00037,Varun,Iyer,varun.iyer.37@adidas.demo,9100000037,Mumbai,Maharashtra,WHATSAPP,GOLD,True,False,True,False
+ADI-CUST-00038,Tanya,Patel,tanya.patel.38@adidas.demo,9100000038,Chennai,Tamil Nadu,EMAIL,PLATINUM,True,True,False,False
+ADI-CUST-00039,Kabir,Patel,kabir.patel.39@adidas.demo,9100000039,Bangalore,Karnataka,SMS,SILVER,True,True,True,False
+ADI-CUST-00040,Yash,Verma,yash.verma.40@adidas.demo,9100000040,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00041,Meera,Patel,meera.patel.41@adidas.demo,9100000041,Pune,Maharashtra,SMS,GOLD,True,True,True,True
+ADI-CUST-00042,Karan,Das,karan.das.42@adidas.demo,9100000042,Pune,Maharashtra,WHATSAPP,GOLD,True,True,False,False
+ADI-CUST-00043,Ishaan,Jain,ishaan.jain.43@adidas.demo,9100000043,Hyderabad,Telangana,SMS,SILVER,True,True,True,False
+ADI-CUST-00044,Samar,Kumar,samar.kumar.44@adidas.demo,9100000044,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00045,Kabir,Nair,kabir.nair.45@adidas.demo,9100000045,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,False,True,True
+ADI-CUST-00046,Karan,Kapoor,karan.kapoor.46@adidas.demo,9100000046,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,False,True,False
+ADI-CUST-00047,Nisha,Iyer,nisha.iyer.47@adidas.demo,9100000047,Bangalore,Karnataka,WHATSAPP,PLATINUM,False,True,False,True
+ADI-CUST-00048,Aman,Saxena,aman.saxena.48@adidas.demo,9100000048,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,False,True
+ADI-CUST-00049,Varun,Das,varun.das.49@adidas.demo,9100000049,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00050,Kabir,Jain,kabir.jain.50@adidas.demo,9100000050,Delhi,Delhi,SMS,SILVER,True,True,True,False
+ADI-CUST-00051,Varun,Sharma,varun.sharma.51@adidas.demo,9100000051,Pune,Maharashtra,WHATSAPP,BRONZE,True,False,True,True
+ADI-CUST-00052,Tanya,Bose,tanya.bose.52@adidas.demo,9100000052,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00053,Aryan,Singh,aryan.singh.53@adidas.demo,9100000053,Pune,Maharashtra,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00054,Priya,Kapoor,priya.kapoor.54@adidas.demo,9100000054,Pune,Maharashtra,EMAIL,GOLD,True,True,True,False
+ADI-CUST-00055,Nisha,Bose,nisha.bose.55@adidas.demo,9100000055,Kolkata,West Bengal,SMS,SILVER,True,True,True,False
+ADI-CUST-00056,Simran,Kapoor,simran.kapoor.56@adidas.demo,9100000056,Chennai,Tamil Nadu,WHATSAPP,PLATINUM,True,True,True,True
+ADI-CUST-00057,Aditi,Patel,aditi.patel.57@adidas.demo,9100000057,Chennai,Tamil Nadu,EMAIL,SILVER,True,True,True,True
+ADI-CUST-00058,Riya,Gupta,riya.gupta.58@adidas.demo,9100000058,Ahmedabad,Gujarat,SMS,PLATINUM,True,True,False,False
+ADI-CUST-00059,Pooja,Singh,pooja.singh.59@adidas.demo,9100000059,Delhi,Delhi,WHATSAPP,GOLD,False,True,True,False
+ADI-CUST-00060,Aryan,Gupta,aryan.gupta.60@adidas.demo,9100000060,Pune,Maharashtra,WHATSAPP,GOLD,False,True,True,True
+ADI-CUST-00061,Rahul,Kapoor,rahul.kapoor.61@adidas.demo,9100000061,Chennai,Tamil Nadu,EMAIL,SILVER,True,True,True,False
+ADI-CUST-00062,Simran,Verma,simran.verma.62@adidas.demo,9100000062,Chennai,Tamil Nadu,EMAIL,SILVER,True,True,True,False
+ADI-CUST-00063,Aditi,Patel,aditi.patel.63@adidas.demo,9100000063,Pune,Maharashtra,EMAIL,SILVER,True,True,True,False
+ADI-CUST-00064,Ishaan,Sharma,ishaan.sharma.64@adidas.demo,9100000064,Chennai,Tamil Nadu,EMAIL,GOLD,True,True,True,True
+ADI-CUST-00065,Varun,Sharma,varun.sharma.65@adidas.demo,9100000065,Hyderabad,Telangana,SMS,BRONZE,True,True,True,True
+ADI-CUST-00066,Sneha,Verma,sneha.verma.66@adidas.demo,9100000066,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00067,Nisha,Malhotra,nisha.malhotra.67@adidas.demo,9100000067,Mumbai,Maharashtra,EMAIL,SILVER,True,True,False,True
+ADI-CUST-00068,Riya,Bose,riya.bose.68@adidas.demo,9100000068,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00069,Simran,Reddy,simran.reddy.69@adidas.demo,9100000069,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00070,Sneha,Jain,sneha.jain.70@adidas.demo,9100000070,Kolkata,West Bengal,WHATSAPP,BRONZE,False,True,True,False
+ADI-CUST-00071,Yash,Das,yash.das.71@adidas.demo,9100000071,Pune,Maharashtra,EMAIL,GOLD,False,True,False,False
+ADI-CUST-00072,Priya,Jain,priya.jain.72@adidas.demo,9100000072,Chennai,Tamil Nadu,WHATSAPP,PLATINUM,True,False,True,False
+ADI-CUST-00073,Simran,Iyer,simran.iyer.73@adidas.demo,9100000073,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,False,False
+ADI-CUST-00074,Dev,Sharma,dev.sharma.74@adidas.demo,9100000074,Ahmedabad,Gujarat,EMAIL,SILVER,True,True,True,False
+ADI-CUST-00075,Karan,Mehta,karan.mehta.75@adidas.demo,9100000075,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00076,Arjun,Sharma,arjun.sharma.76@adidas.demo,9100000076,Mumbai,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00077,Ananya,Gupta,ananya.gupta.77@adidas.demo,9100000077,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00078,Aryan,Mehta,aryan.mehta.78@adidas.demo,9100000078,Kolkata,West Bengal,SMS,GOLD,True,True,True,False
+ADI-CUST-00079,Dev,Saxena,dev.saxena.79@adidas.demo,9100000079,Bangalore,Karnataka,SMS,SILVER,True,False,True,False
+ADI-CUST-00080,Meera,Das,meera.das.80@adidas.demo,9100000080,Hyderabad,Telangana,EMAIL,PLATINUM,True,True,True,False
+ADI-CUST-00081,Karan,Patel,karan.patel.81@adidas.demo,9100000081,Pune,Maharashtra,SMS,BRONZE,True,True,True,True
+ADI-CUST-00082,Aman,Nair,aman.nair.82@adidas.demo,9100000082,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,True,True
+ADI-CUST-00083,Aman,Gupta,aman.gupta.83@adidas.demo,9100000083,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,True,True,True
+ADI-CUST-00084,Nisha,Das,nisha.das.84@adidas.demo,9100000084,Hyderabad,Telangana,WHATSAPP,GOLD,True,False,True,True
+ADI-CUST-00085,Aryan,Das,aryan.das.85@adidas.demo,9100000085,Mumbai,Maharashtra,SMS,PLATINUM,True,True,False,False
+ADI-CUST-00086,Karan,Singh,karan.singh.86@adidas.demo,9100000086,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,True,True
+ADI-CUST-00087,Samar,Sharma,samar.sharma.87@adidas.demo,9100000087,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00088,Yash,Gupta,yash.gupta.88@adidas.demo,9100000088,Delhi,Delhi,SMS,BRONZE,True,True,True,False
+ADI-CUST-00089,Aman,Patel,aman.patel.89@adidas.demo,9100000089,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00090,Nisha,Nair,nisha.nair.90@adidas.demo,9100000090,Pune,Maharashtra,EMAIL,PLATINUM,True,True,True,False
+ADI-CUST-00091,Ishaan,Das,ishaan.das.91@adidas.demo,9100000091,Delhi,Delhi,EMAIL,PLATINUM,True,False,True,True
+ADI-CUST-00092,Samar,Kapoor,samar.kapoor.92@adidas.demo,9100000092,Bangalore,Karnataka,WHATSAPP,SILVER,True,False,True,False
+ADI-CUST-00093,Meera,Jain,meera.jain.93@adidas.demo,9100000093,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,True,True,True
+ADI-CUST-00094,Ananya,Kumar,ananya.kumar.94@adidas.demo,9100000094,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,True,True
+ADI-CUST-00095,Ananya,Patel,ananya.patel.95@adidas.demo,9100000095,Chennai,Tamil Nadu,WHATSAPP,SILVER,False,False,True,True
+ADI-CUST-00096,Tanya,Singh,tanya.singh.96@adidas.demo,9100000096,Chennai,Tamil Nadu,RCS,SILVER,True,True,True,False
+ADI-CUST-00097,Yash,Saxena,yash.saxena.97@adidas.demo,9100000097,Bangalore,Karnataka,SMS,GOLD,True,False,True,True
+ADI-CUST-00098,Nisha,Gupta,nisha.gupta.98@adidas.demo,9100000098,Delhi,Delhi,EMAIL,SILVER,True,True,True,True
+ADI-CUST-00099,Kiara,Malhotra,kiara.malhotra.99@adidas.demo,9100000099,Ahmedabad,Gujarat,WHATSAPP,BRONZE,False,True,True,False
+ADI-CUST-00100,Riya,Singh,riya.singh.100@adidas.demo,9100000100,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,True
+ADI-CUST-00101,Kabir,Iyer,kabir.iyer.101@adidas.demo,9100000101,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00102,Priya,Das,priya.das.102@adidas.demo,9100000102,Kolkata,West Bengal,WHATSAPP,BRONZE,False,False,False,False
+ADI-CUST-00103,Dev,Malhotra,dev.malhotra.103@adidas.demo,9100000103,Kolkata,West Bengal,WHATSAPP,GOLD,True,False,True,False
+ADI-CUST-00104,Ananya,Saxena,ananya.saxena.104@adidas.demo,9100000104,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00105,Meera,Iyer,meera.iyer.105@adidas.demo,9100000105,Kolkata,West Bengal,EMAIL,BRONZE,False,True,True,False
+ADI-CUST-00106,Simran,Nair,simran.nair.106@adidas.demo,9100000106,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00107,Aditi,Patel,aditi.patel.107@adidas.demo,9100000107,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00108,Riya,Mehta,riya.mehta.108@adidas.demo,9100000108,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00109,Arjun,Singh,arjun.singh.109@adidas.demo,9100000109,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00110,Rohan,Iyer,rohan.iyer.110@adidas.demo,9100000110,Hyderabad,Telangana,EMAIL,PLATINUM,True,True,True,False
+ADI-CUST-00111,Aditi,Kapoor,aditi.kapoor.111@adidas.demo,9100000111,Kolkata,West Bengal,WHATSAPP,GOLD,True,True,False,False
+ADI-CUST-00112,Dev,Reddy,dev.reddy.112@adidas.demo,9100000112,Delhi,Delhi,EMAIL,GOLD,True,True,True,False
+ADI-CUST-00113,Kabir,Iyer,kabir.iyer.113@adidas.demo,9100000113,Kolkata,West Bengal,EMAIL,PLATINUM,True,True,False,True
+ADI-CUST-00114,Priya,Singh,priya.singh.114@adidas.demo,9100000114,Ahmedabad,Gujarat,SMS,SILVER,True,True,True,False
+ADI-CUST-00115,Karan,Malhotra,karan.malhotra.115@adidas.demo,9100000115,Mumbai,Maharashtra,WHATSAPP,PLATINUM,True,True,True,False
+ADI-CUST-00116,Neha,Nair,neha.nair.116@adidas.demo,9100000116,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,False,True,True
+ADI-CUST-00117,Kabir,Kumar,kabir.kumar.117@adidas.demo,9100000117,Chennai,Tamil Nadu,EMAIL,BRONZE,True,True,True,False
+ADI-CUST-00118,Kiara,Iyer,kiara.iyer.118@adidas.demo,9100000118,Kolkata,West Bengal,SMS,SILVER,True,False,True,True
+ADI-CUST-00119,Aman,Nair,aman.nair.119@adidas.demo,9100000119,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,False,True
+ADI-CUST-00120,Riya,Sharma,riya.sharma.120@adidas.demo,9100000120,Pune,Maharashtra,WHATSAPP,PLATINUM,False,True,True,False
+ADI-CUST-00121,Arjun,Reddy,arjun.reddy.121@adidas.demo,9100000121,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00122,Aryan,Mehta,aryan.mehta.122@adidas.demo,9100000122,Hyderabad,Telangana,SMS,BRONZE,True,True,True,False
+ADI-CUST-00123,Samar,Kumar,samar.kumar.123@adidas.demo,9100000123,Pune,Maharashtra,EMAIL,SILVER,True,True,True,True
+ADI-CUST-00124,Rohan,Kapoor,rohan.kapoor.124@adidas.demo,9100000124,Hyderabad,Telangana,WHATSAPP,PLATINUM,True,True,True,False
+ADI-CUST-00125,Samar,Das,samar.das.125@adidas.demo,9100000125,Mumbai,Maharashtra,WHATSAPP,PLATINUM,True,False,False,True
+ADI-CUST-00126,Kiara,Gupta,kiara.gupta.126@adidas.demo,9100000126,Mumbai,Maharashtra,SMS,BRONZE,True,True,True,False
+ADI-CUST-00127,Arjun,Verma,arjun.verma.127@adidas.demo,9100000127,Hyderabad,Telangana,EMAIL,BRONZE,True,True,True,False
+ADI-CUST-00128,Priya,Singh,priya.singh.128@adidas.demo,9100000128,Hyderabad,Telangana,EMAIL,SILVER,True,False,False,True
+ADI-CUST-00129,Dev,Gupta,dev.gupta.129@adidas.demo,9100000129,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,True
+ADI-CUST-00130,Rohan,Verma,rohan.verma.130@adidas.demo,9100000130,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,False,True,False
+ADI-CUST-00131,Aryan,Nair,aryan.nair.131@adidas.demo,9100000131,Pune,Maharashtra,WHATSAPP,GOLD,True,True,False,False
+ADI-CUST-00132,Priya,Saxena,priya.saxena.132@adidas.demo,9100000132,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00133,Ishaan,Reddy,ishaan.reddy.133@adidas.demo,9100000133,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,False,False
+ADI-CUST-00134,Riya,Kumar,riya.kumar.134@adidas.demo,9100000134,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,False,False
+ADI-CUST-00135,Dev,Saxena,dev.saxena.135@adidas.demo,9100000135,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00136,Riya,Kumar,riya.kumar.136@adidas.demo,9100000136,Delhi,Delhi,EMAIL,BRONZE,True,False,False,True
+ADI-CUST-00137,Tanya,Saxena,tanya.saxena.137@adidas.demo,9100000137,Delhi,Delhi,WHATSAPP,BRONZE,True,False,True,False
+ADI-CUST-00138,Riya,Saxena,riya.saxena.138@adidas.demo,9100000138,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00139,Ishaan,Malhotra,ishaan.malhotra.139@adidas.demo,9100000139,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,False,False
+ADI-CUST-00140,Sneha,Verma,sneha.verma.140@adidas.demo,9100000140,Kolkata,West Bengal,WHATSAPP,SILVER,True,False,True,False
+ADI-CUST-00141,Simran,Bose,simran.bose.141@adidas.demo,9100000141,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,False,False
+ADI-CUST-00142,Tanya,Kumar,tanya.kumar.142@adidas.demo,9100000142,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00143,Dev,Singh,dev.singh.143@adidas.demo,9100000143,Hyderabad,Telangana,WHATSAPP,PLATINUM,True,True,True,False
+ADI-CUST-00144,Pooja,Gupta,pooja.gupta.144@adidas.demo,9100000144,Delhi,Delhi,EMAIL,SILVER,True,True,False,True
+ADI-CUST-00145,Pooja,Kapoor,pooja.kapoor.145@adidas.demo,9100000145,Pune,Maharashtra,WHATSAPP,SILVER,True,False,True,True
+ADI-CUST-00146,Ananya,Nair,ananya.nair.146@adidas.demo,9100000146,Hyderabad,Telangana,SMS,BRONZE,True,True,False,False
+ADI-CUST-00147,Priya,Nair,priya.nair.147@adidas.demo,9100000147,Pune,Maharashtra,SMS,PLATINUM,True,True,True,False
+ADI-CUST-00148,Arjun,Kapoor,arjun.kapoor.148@adidas.demo,9100000148,Delhi,Delhi,WHATSAPP,BRONZE,True,False,False,False
+ADI-CUST-00149,Nisha,Nair,nisha.nair.149@adidas.demo,9100000149,Ahmedabad,Gujarat,EMAIL,SILVER,True,False,False,False
+ADI-CUST-00150,Aryan,Kumar,aryan.kumar.150@adidas.demo,9100000150,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,False,False
+ADI-CUST-00151,Neha,Patel,neha.patel.151@adidas.demo,9100000151,Delhi,Delhi,WHATSAPP,GOLD,True,True,True,True
+ADI-CUST-00152,Ananya,Sharma,ananya.sharma.152@adidas.demo,9100000152,Bangalore,Karnataka,SMS,BRONZE,True,True,True,False
+ADI-CUST-00153,Ishaan,Iyer,ishaan.iyer.153@adidas.demo,9100000153,Hyderabad,Telangana,SMS,SILVER,True,True,True,True
+ADI-CUST-00154,Aryan,Malhotra,aryan.malhotra.154@adidas.demo,9100000154,Delhi,Delhi,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00155,Priya,Sharma,priya.sharma.155@adidas.demo,9100000155,Mumbai,Maharashtra,EMAIL,GOLD,True,True,True,False
+ADI-CUST-00156,Rahul,Kumar,rahul.kumar.156@adidas.demo,9100000156,Chennai,Tamil Nadu,EMAIL,PLATINUM,True,True,True,True
+ADI-CUST-00157,Pooja,Saxena,pooja.saxena.157@adidas.demo,9100000157,Kolkata,West Bengal,SMS,GOLD,True,True,True,False
+ADI-CUST-00158,Varun,Sharma,varun.sharma.158@adidas.demo,9100000158,Delhi,Delhi,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00159,Neha,Nair,neha.nair.159@adidas.demo,9100000159,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00160,Ishaan,Singh,ishaan.singh.160@adidas.demo,9100000160,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00161,Varun,Saxena,varun.saxena.161@adidas.demo,9100000161,Chennai,Tamil Nadu,SMS,BRONZE,True,True,True,False
+ADI-CUST-00162,Sneha,Saxena,sneha.saxena.162@adidas.demo,9100000162,Bangalore,Karnataka,WHATSAPP,BRONZE,False,False,True,False
+ADI-CUST-00163,Nisha,Gupta,nisha.gupta.163@adidas.demo,9100000163,Kolkata,West Bengal,RCS,PLATINUM,True,True,False,False
+ADI-CUST-00164,Aryan,Iyer,aryan.iyer.164@adidas.demo,9100000164,Delhi,Delhi,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00165,Aman,Das,aman.das.165@adidas.demo,9100000165,Hyderabad,Telangana,EMAIL,BRONZE,True,True,False,False
+ADI-CUST-00166,Karan,Kapoor,karan.kapoor.166@adidas.demo,9100000166,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00167,Kiara,Das,kiara.das.167@adidas.demo,9100000167,Ahmedabad,Gujarat,EMAIL,SILVER,True,True,True,False
+ADI-CUST-00168,Priya,Mehta,priya.mehta.168@adidas.demo,9100000168,Chennai,Tamil Nadu,WHATSAPP,PLATINUM,True,True,False,False
+ADI-CUST-00169,Rohan,Verma,rohan.verma.169@adidas.demo,9100000169,Pune,Maharashtra,EMAIL,BRONZE,True,False,True,False
+ADI-CUST-00170,Aman,Singh,aman.singh.170@adidas.demo,9100000170,Mumbai,Maharashtra,WHATSAPP,GOLD,True,True,True,True
+ADI-CUST-00171,Karan,Mehta,karan.mehta.171@adidas.demo,9100000171,Pune,Maharashtra,EMAIL,BRONZE,True,True,True,False
+ADI-CUST-00172,Arjun,Kapoor,arjun.kapoor.172@adidas.demo,9100000172,Chennai,Tamil Nadu,WHATSAPP,PLATINUM,True,True,True,False
+ADI-CUST-00173,Aryan,Singh,aryan.singh.173@adidas.demo,9100000173,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00174,Nisha,Saxena,nisha.saxena.174@adidas.demo,9100000174,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00175,Kiara,Singh,kiara.singh.175@adidas.demo,9100000175,Pune,Maharashtra,EMAIL,BRONZE,True,True,False,True
+ADI-CUST-00176,Neha,Gupta,neha.gupta.176@adidas.demo,9100000176,Hyderabad,Telangana,EMAIL,SILVER,True,False,True,False
+ADI-CUST-00177,Aryan,Nair,aryan.nair.177@adidas.demo,9100000177,Delhi,Delhi,EMAIL,BRONZE,True,True,True,False
+ADI-CUST-00178,Aman,Kapoor,aman.kapoor.178@adidas.demo,9100000178,Chennai,Tamil Nadu,WHATSAPP,PLATINUM,True,True,True,True
+ADI-CUST-00179,Rohan,Saxena,rohan.saxena.179@adidas.demo,9100000179,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00180,Kabir,Saxena,kabir.saxena.180@adidas.demo,9100000180,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,True
+ADI-CUST-00181,Rohan,Reddy,rohan.reddy.181@adidas.demo,9100000181,Hyderabad,Telangana,EMAIL,SILVER,True,False,True,False
+ADI-CUST-00182,Simran,Bose,simran.bose.182@adidas.demo,9100000182,Delhi,Delhi,SMS,BRONZE,False,True,False,False
+ADI-CUST-00183,Arjun,Bose,arjun.bose.183@adidas.demo,9100000183,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,True
+ADI-CUST-00184,Yash,Saxena,yash.saxena.184@adidas.demo,9100000184,Pune,Maharashtra,RCS,SILVER,True,True,True,False
+ADI-CUST-00185,Kabir,Kapoor,kabir.kapoor.185@adidas.demo,9100000185,Kolkata,West Bengal,EMAIL,GOLD,True,True,True,False
+ADI-CUST-00186,Kiara,Saxena,kiara.saxena.186@adidas.demo,9100000186,Ahmedabad,Gujarat,WHATSAPP,GOLD,False,True,True,False
+ADI-CUST-00187,Riya,Singh,riya.singh.187@adidas.demo,9100000187,Pune,Maharashtra,SMS,SILVER,True,True,False,True
+ADI-CUST-00188,Riya,Das,riya.das.188@adidas.demo,9100000188,Chennai,Tamil Nadu,EMAIL,GOLD,False,False,False,False
+ADI-CUST-00189,Ishaan,Das,ishaan.das.189@adidas.demo,9100000189,Mumbai,Maharashtra,WHATSAPP,GOLD,True,True,True,True
+ADI-CUST-00190,Samar,Nair,samar.nair.190@adidas.demo,9100000190,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00191,Aman,Saxena,aman.saxena.191@adidas.demo,9100000191,Chennai,Tamil Nadu,SMS,SILVER,False,False,False,False
+ADI-CUST-00192,Karan,Malhotra,karan.malhotra.192@adidas.demo,9100000192,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00193,Sneha,Nair,sneha.nair.193@adidas.demo,9100000193,Mumbai,Maharashtra,SMS,GOLD,True,False,True,False
+ADI-CUST-00194,Kiara,Mehta,kiara.mehta.194@adidas.demo,9100000194,Ahmedabad,Gujarat,SMS,BRONZE,True,True,False,True
+ADI-CUST-00195,Riya,Gupta,riya.gupta.195@adidas.demo,9100000195,Pune,Maharashtra,WHATSAPP,PLATINUM,True,True,False,False
+ADI-CUST-00196,Rahul,Sharma,rahul.sharma.196@adidas.demo,9100000196,Delhi,Delhi,SMS,SILVER,False,True,True,True
+ADI-CUST-00197,Priya,Gupta,priya.gupta.197@adidas.demo,9100000197,Mumbai,Maharashtra,WHATSAPP,SILVER,True,False,True,True
+ADI-CUST-00198,Kiara,Bose,kiara.bose.198@adidas.demo,9100000198,Pune,Maharashtra,EMAIL,SILVER,True,True,True,False
+ADI-CUST-00199,Pooja,Saxena,pooja.saxena.199@adidas.demo,9100000199,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,True,False,False
+ADI-CUST-00200,Tanya,Nair,tanya.nair.200@adidas.demo,9100000200,Pune,Maharashtra,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00201,Aditi,Malhotra,aditi.malhotra.201@adidas.demo,9100000201,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00202,Karan,Patel,karan.patel.202@adidas.demo,9100000202,Bangalore,Karnataka,WHATSAPP,GOLD,False,True,True,True
+ADI-CUST-00203,Simran,Kapoor,simran.kapoor.203@adidas.demo,9100000203,Ahmedabad,Gujarat,WHATSAPP,PLATINUM,False,True,True,False
+ADI-CUST-00204,Priya,Verma,priya.verma.204@adidas.demo,9100000204,Ahmedabad,Gujarat,SMS,BRONZE,True,True,True,False
+ADI-CUST-00205,Karan,Patel,karan.patel.205@adidas.demo,9100000205,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00206,Aditi,Sharma,aditi.sharma.206@adidas.demo,9100000206,Kolkata,West Bengal,SMS,GOLD,True,True,True,True
+ADI-CUST-00207,Aryan,Saxena,aryan.saxena.207@adidas.demo,9100000207,Delhi,Delhi,SMS,BRONZE,True,True,True,True
+ADI-CUST-00208,Karan,Verma,karan.verma.208@adidas.demo,9100000208,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00209,Simran,Nair,simran.nair.209@adidas.demo,9100000209,Delhi,Delhi,SMS,SILVER,True,True,True,False
+ADI-CUST-00210,Ananya,Gupta,ananya.gupta.210@adidas.demo,9100000210,Pune,Maharashtra,WHATSAPP,SILVER,False,True,True,True
+ADI-CUST-00211,Ishaan,Kapoor,ishaan.kapoor.211@adidas.demo,9100000211,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00212,Rahul,Saxena,rahul.saxena.212@adidas.demo,9100000212,Mumbai,Maharashtra,SMS,BRONZE,True,True,True,True
+ADI-CUST-00213,Simran,Singh,simran.singh.213@adidas.demo,9100000213,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00214,Dev,Kumar,dev.kumar.214@adidas.demo,9100000214,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00215,Samar,Kapoor,samar.kapoor.215@adidas.demo,9100000215,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,False,False
+ADI-CUST-00216,Kiara,Gupta,kiara.gupta.216@adidas.demo,9100000216,Hyderabad,Telangana,RCS,SILVER,True,False,True,False
+ADI-CUST-00217,Pooja,Sharma,pooja.sharma.217@adidas.demo,9100000217,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,True
+ADI-CUST-00218,Meera,Nair,meera.nair.218@adidas.demo,9100000218,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00219,Yash,Mehta,yash.mehta.219@adidas.demo,9100000219,Delhi,Delhi,WHATSAPP,GOLD,True,True,False,False
+ADI-CUST-00220,Ishaan,Nair,ishaan.nair.220@adidas.demo,9100000220,Hyderabad,Telangana,SMS,BRONZE,True,True,True,False
+ADI-CUST-00221,Ishaan,Bose,ishaan.bose.221@adidas.demo,9100000221,Kolkata,West Bengal,EMAIL,SILVER,True,True,True,False
+ADI-CUST-00222,Arjun,Das,arjun.das.222@adidas.demo,9100000222,Ahmedabad,Gujarat,WHATSAPP,BRONZE,False,True,False,False
+ADI-CUST-00223,Kabir,Patel,kabir.patel.223@adidas.demo,9100000223,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,False,True,True
+ADI-CUST-00224,Sneha,Kapoor,sneha.kapoor.224@adidas.demo,9100000224,Bangalore,Karnataka,SMS,BRONZE,True,False,True,True
+ADI-CUST-00225,Aman,Reddy,aman.reddy.225@adidas.demo,9100000225,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00226,Aditi,Jain,aditi.jain.226@adidas.demo,9100000226,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00227,Pooja,Das,pooja.das.227@adidas.demo,9100000227,Kolkata,West Bengal,SMS,BRONZE,True,False,True,True
+ADI-CUST-00228,Aman,Kumar,aman.kumar.228@adidas.demo,9100000228,Chennai,Tamil Nadu,SMS,SILVER,True,True,True,False
+ADI-CUST-00229,Ananya,Kumar,ananya.kumar.229@adidas.demo,9100000229,Chennai,Tamil Nadu,EMAIL,SILVER,True,True,True,True
+ADI-CUST-00230,Riya,Iyer,riya.iyer.230@adidas.demo,9100000230,Pune,Maharashtra,EMAIL,BRONZE,True,True,True,False
+ADI-CUST-00231,Riya,Saxena,riya.saxena.231@adidas.demo,9100000231,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00232,Rohan,Iyer,rohan.iyer.232@adidas.demo,9100000232,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00233,Aman,Patel,aman.patel.233@adidas.demo,9100000233,Kolkata,West Bengal,SMS,SILVER,True,False,True,False
+ADI-CUST-00234,Aryan,Das,aryan.das.234@adidas.demo,9100000234,Bangalore,Karnataka,SMS,BRONZE,True,True,True,True
+ADI-CUST-00235,Karan,Kumar,karan.kumar.235@adidas.demo,9100000235,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00236,Pooja,Patel,pooja.patel.236@adidas.demo,9100000236,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00237,Rohan,Patel,rohan.patel.237@adidas.demo,9100000237,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00238,Yash,Patel,yash.patel.238@adidas.demo,9100000238,Kolkata,West Bengal,SMS,BRONZE,True,True,True,True
+ADI-CUST-00239,Aryan,Singh,aryan.singh.239@adidas.demo,9100000239,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,True
+ADI-CUST-00240,Sneha,Iyer,sneha.iyer.240@adidas.demo,9100000240,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00241,Priya,Nair,priya.nair.241@adidas.demo,9100000241,Kolkata,West Bengal,SMS,BRONZE,True,True,True,False
+ADI-CUST-00242,Pooja,Bose,pooja.bose.242@adidas.demo,9100000242,Delhi,Delhi,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00243,Simran,Malhotra,simran.malhotra.243@adidas.demo,9100000243,Kolkata,West Bengal,EMAIL,SILVER,True,True,True,False
+ADI-CUST-00244,Arjun,Verma,arjun.verma.244@adidas.demo,9100000244,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,False,True,True
+ADI-CUST-00245,Rahul,Verma,rahul.verma.245@adidas.demo,9100000245,Pune,Maharashtra,EMAIL,SILVER,True,True,True,False
+ADI-CUST-00246,Aditi,Jain,aditi.jain.246@adidas.demo,9100000246,Delhi,Delhi,WHATSAPP,GOLD,True,True,False,True
+ADI-CUST-00247,Dev,Gupta,dev.gupta.247@adidas.demo,9100000247,Hyderabad,Telangana,SMS,GOLD,True,True,False,True
+ADI-CUST-00248,Rohan,Malhotra,rohan.malhotra.248@adidas.demo,9100000248,Delhi,Delhi,WHATSAPP,SILVER,True,True,True,True
+ADI-CUST-00249,Simran,Kumar,simran.kumar.249@adidas.demo,9100000249,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00250,Pooja,Reddy,pooja.reddy.250@adidas.demo,9100000250,Pune,Maharashtra,WHATSAPP,SILVER,True,True,False,False
+ADI-CUST-00251,Ananya,Mehta,ananya.mehta.251@adidas.demo,9100000251,Ahmedabad,Gujarat,SMS,BRONZE,True,True,True,False
+ADI-CUST-00252,Riya,Nair,riya.nair.252@adidas.demo,9100000252,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00253,Kiara,Kapoor,kiara.kapoor.253@adidas.demo,9100000253,Delhi,Delhi,SMS,PLATINUM,True,True,True,True
+ADI-CUST-00254,Samar,Verma,samar.verma.254@adidas.demo,9100000254,Kolkata,West Bengal,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00255,Varun,Verma,varun.verma.255@adidas.demo,9100000255,Hyderabad,Telangana,SMS,BRONZE,True,True,True,False
+ADI-CUST-00256,Nisha,Mehta,nisha.mehta.256@adidas.demo,9100000256,Delhi,Delhi,WHATSAPP,PLATINUM,True,True,True,True
+ADI-CUST-00257,Varun,Gupta,varun.gupta.257@adidas.demo,9100000257,Delhi,Delhi,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00258,Varun,Verma,varun.verma.258@adidas.demo,9100000258,Delhi,Delhi,SMS,SILVER,True,False,True,False
+ADI-CUST-00259,Rahul,Verma,rahul.verma.259@adidas.demo,9100000259,Bangalore,Karnataka,SMS,BRONZE,True,True,False,False
+ADI-CUST-00260,Rahul,Reddy,rahul.reddy.260@adidas.demo,9100000260,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00261,Ananya,Gupta,ananya.gupta.261@adidas.demo,9100000261,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00262,Nisha,Iyer,nisha.iyer.262@adidas.demo,9100000262,Bangalore,Karnataka,SMS,BRONZE,True,False,True,True
+ADI-CUST-00263,Neha,Saxena,neha.saxena.263@adidas.demo,9100000263,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00264,Dev,Kapoor,dev.kapoor.264@adidas.demo,9100000264,Delhi,Delhi,WHATSAPP,BRONZE,False,True,True,True
+ADI-CUST-00265,Riya,Gupta,riya.gupta.265@adidas.demo,9100000265,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00266,Kabir,Gupta,kabir.gupta.266@adidas.demo,9100000266,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00267,Yash,Das,yash.das.267@adidas.demo,9100000267,Ahmedabad,Gujarat,SMS,GOLD,False,True,False,True
+ADI-CUST-00268,Dev,Iyer,dev.iyer.268@adidas.demo,9100000268,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00269,Rohan,Patel,rohan.patel.269@adidas.demo,9100000269,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00270,Pooja,Iyer,pooja.iyer.270@adidas.demo,9100000270,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00271,Arjun,Saxena,arjun.saxena.271@adidas.demo,9100000271,Pune,Maharashtra,RCS,GOLD,False,True,False,False
+ADI-CUST-00272,Varun,Kapoor,varun.kapoor.272@adidas.demo,9100000272,Hyderabad,Telangana,EMAIL,GOLD,True,True,False,False
+ADI-CUST-00273,Varun,Verma,varun.verma.273@adidas.demo,9100000273,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,True,True,True
+ADI-CUST-00274,Samar,Bose,samar.bose.274@adidas.demo,9100000274,Delhi,Delhi,EMAIL,SILVER,True,True,False,False
+ADI-CUST-00275,Neha,Iyer,neha.iyer.275@adidas.demo,9100000275,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,False,False
+ADI-CUST-00276,Kiara,Das,kiara.das.276@adidas.demo,9100000276,Kolkata,West Bengal,WHATSAPP,PLATINUM,True,True,True,False
+ADI-CUST-00277,Neha,Bose,neha.bose.277@adidas.demo,9100000277,Pune,Maharashtra,SMS,SILVER,True,True,True,False
+ADI-CUST-00278,Arjun,Malhotra,arjun.malhotra.278@adidas.demo,9100000278,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00279,Dev,Patel,dev.patel.279@adidas.demo,9100000279,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00280,Riya,Bose,riya.bose.280@adidas.demo,9100000280,Mumbai,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00281,Meera,Jain,meera.jain.281@adidas.demo,9100000281,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,True
+ADI-CUST-00282,Tanya,Bose,tanya.bose.282@adidas.demo,9100000282,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00283,Dev,Das,dev.das.283@adidas.demo,9100000283,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00284,Meera,Malhotra,meera.malhotra.284@adidas.demo,9100000284,Kolkata,West Bengal,WHATSAPP,SILVER,False,False,True,True
+ADI-CUST-00285,Nisha,Iyer,nisha.iyer.285@adidas.demo,9100000285,Pune,Maharashtra,SMS,BRONZE,True,True,True,False
+ADI-CUST-00286,Yash,Sharma,yash.sharma.286@adidas.demo,9100000286,Bangalore,Karnataka,RCS,GOLD,True,True,False,False
+ADI-CUST-00287,Pooja,Reddy,pooja.reddy.287@adidas.demo,9100000287,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00288,Karan,Sharma,karan.sharma.288@adidas.demo,9100000288,Chennai,Tamil Nadu,WHATSAPP,SILVER,False,True,True,True
+ADI-CUST-00289,Rahul,Sharma,rahul.sharma.289@adidas.demo,9100000289,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,True
+ADI-CUST-00290,Nisha,Reddy,nisha.reddy.290@adidas.demo,9100000290,Pune,Maharashtra,WHATSAPP,SILVER,True,False,False,False
+ADI-CUST-00291,Kiara,Das,kiara.das.291@adidas.demo,9100000291,Pune,Maharashtra,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00292,Dev,Bose,dev.bose.292@adidas.demo,9100000292,Chennai,Tamil Nadu,EMAIL,PLATINUM,True,False,True,True
+ADI-CUST-00293,Ishaan,Das,ishaan.das.293@adidas.demo,9100000293,Ahmedabad,Gujarat,WHATSAPP,PLATINUM,True,False,True,True
+ADI-CUST-00294,Yash,Reddy,yash.reddy.294@adidas.demo,9100000294,Bangalore,Karnataka,RCS,SILVER,True,False,True,False
+ADI-CUST-00295,Samar,Nair,samar.nair.295@adidas.demo,9100000295,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00296,Nisha,Bose,nisha.bose.296@adidas.demo,9100000296,Ahmedabad,Gujarat,SMS,PLATINUM,True,False,True,False
+ADI-CUST-00297,Kiara,Kumar,kiara.kumar.297@adidas.demo,9100000297,Kolkata,West Bengal,EMAIL,BRONZE,True,True,True,False
+ADI-CUST-00298,Rahul,Nair,rahul.nair.298@adidas.demo,9100000298,Delhi,Delhi,EMAIL,SILVER,True,True,True,False
+ADI-CUST-00299,Ishaan,Sharma,ishaan.sharma.299@adidas.demo,9100000299,Bangalore,Karnataka,EMAIL,SILVER,True,False,False,True
+ADI-CUST-00300,Arjun,Saxena,arjun.saxena.300@adidas.demo,9100000300,Kolkata,West Bengal,WHATSAPP,GOLD,True,False,True,False
+ADI-CUST-00301,Nisha,Gupta,nisha.gupta.301@adidas.demo,9100000301,Hyderabad,Telangana,SMS,GOLD,True,True,True,True
+ADI-CUST-00302,Arjun,Gupta,arjun.gupta.302@adidas.demo,9100000302,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00303,Samar,Jain,samar.jain.303@adidas.demo,9100000303,Kolkata,West Bengal,WHATSAPP,GOLD,True,True,True,True
+ADI-CUST-00304,Aman,Kapoor,aman.kapoor.304@adidas.demo,9100000304,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00305,Meera,Kapoor,meera.kapoor.305@adidas.demo,9100000305,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00306,Pooja,Saxena,pooja.saxena.306@adidas.demo,9100000306,Ahmedabad,Gujarat,SMS,BRONZE,True,True,True,False
+ADI-CUST-00307,Tanya,Malhotra,tanya.malhotra.307@adidas.demo,9100000307,Delhi,Delhi,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00308,Rohan,Patel,rohan.patel.308@adidas.demo,9100000308,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,False,False
+ADI-CUST-00309,Riya,Saxena,riya.saxena.309@adidas.demo,9100000309,Pune,Maharashtra,WHATSAPP,BRONZE,False,False,True,True
+ADI-CUST-00310,Simran,Bose,simran.bose.310@adidas.demo,9100000310,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,True,True
+ADI-CUST-00311,Rahul,Kapoor,rahul.kapoor.311@adidas.demo,9100000311,Delhi,Delhi,WHATSAPP,PLATINUM,True,True,True,True
+ADI-CUST-00312,Aryan,Gupta,aryan.gupta.312@adidas.demo,9100000312,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00313,Ishaan,Bose,ishaan.bose.313@adidas.demo,9100000313,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00314,Samar,Saxena,samar.saxena.314@adidas.demo,9100000314,Hyderabad,Telangana,SMS,SILVER,True,True,True,False
+ADI-CUST-00315,Neha,Kumar,neha.kumar.315@adidas.demo,9100000315,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,False,False,False
+ADI-CUST-00316,Karan,Reddy,karan.reddy.316@adidas.demo,9100000316,Delhi,Delhi,EMAIL,GOLD,True,True,True,False
+ADI-CUST-00317,Karan,Verma,karan.verma.317@adidas.demo,9100000317,Pune,Maharashtra,EMAIL,GOLD,True,True,True,True
+ADI-CUST-00318,Rahul,Das,rahul.das.318@adidas.demo,9100000318,Ahmedabad,Gujarat,EMAIL,SILVER,True,True,True,False
+ADI-CUST-00319,Ishaan,Saxena,ishaan.saxena.319@adidas.demo,9100000319,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00320,Dev,Patel,dev.patel.320@adidas.demo,9100000320,Chennai,Tamil Nadu,EMAIL,SILVER,True,True,True,True
+ADI-CUST-00321,Aryan,Das,aryan.das.321@adidas.demo,9100000321,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00322,Pooja,Gupta,pooja.gupta.322@adidas.demo,9100000322,Ahmedabad,Gujarat,SMS,GOLD,True,True,True,True
+ADI-CUST-00323,Dev,Mehta,dev.mehta.323@adidas.demo,9100000323,Bangalore,Karnataka,EMAIL,BRONZE,True,True,True,False
+ADI-CUST-00324,Aryan,Iyer,aryan.iyer.324@adidas.demo,9100000324,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,False,False
+ADI-CUST-00325,Riya,Singh,riya.singh.325@adidas.demo,9100000325,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00326,Kabir,Kapoor,kabir.kapoor.326@adidas.demo,9100000326,Ahmedabad,Gujarat,WHATSAPP,GOLD,False,True,False,False
+ADI-CUST-00327,Dev,Verma,dev.verma.327@adidas.demo,9100000327,Pune,Maharashtra,EMAIL,BRONZE,True,True,True,True
+ADI-CUST-00328,Ishaan,Gupta,ishaan.gupta.328@adidas.demo,9100000328,Chennai,Tamil Nadu,WHATSAPP,PLATINUM,True,True,True,False
+ADI-CUST-00329,Meera,Kapoor,meera.kapoor.329@adidas.demo,9100000329,Hyderabad,Telangana,EMAIL,GOLD,True,True,True,True
+ADI-CUST-00330,Arjun,Bose,arjun.bose.330@adidas.demo,9100000330,Delhi,Delhi,WHATSAPP,PLATINUM,True,True,True,True
+ADI-CUST-00331,Neha,Nair,neha.nair.331@adidas.demo,9100000331,Ahmedabad,Gujarat,WHATSAPP,SILVER,False,True,True,False
+ADI-CUST-00332,Priya,Malhotra,priya.malhotra.332@adidas.demo,9100000332,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,True,True
+ADI-CUST-00333,Tanya,Jain,tanya.jain.333@adidas.demo,9100000333,Hyderabad,Telangana,SMS,SILVER,True,True,True,True
+ADI-CUST-00334,Nisha,Kapoor,nisha.kapoor.334@adidas.demo,9100000334,Ahmedabad,Gujarat,RCS,BRONZE,False,True,False,False
+ADI-CUST-00335,Pooja,Saxena,pooja.saxena.335@adidas.demo,9100000335,Kolkata,West Bengal,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00336,Pooja,Nair,pooja.nair.336@adidas.demo,9100000336,Hyderabad,Telangana,RCS,PLATINUM,True,True,True,False
+ADI-CUST-00337,Meera,Saxena,meera.saxena.337@adidas.demo,9100000337,Delhi,Delhi,SMS,SILVER,True,True,True,True
+ADI-CUST-00338,Ananya,Sharma,ananya.sharma.338@adidas.demo,9100000338,Pune,Maharashtra,SMS,GOLD,True,True,True,False
+ADI-CUST-00339,Arjun,Singh,arjun.singh.339@adidas.demo,9100000339,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,False,False
+ADI-CUST-00340,Varun,Patel,varun.patel.340@adidas.demo,9100000340,Mumbai,Maharashtra,SMS,SILVER,True,True,True,True
+ADI-CUST-00341,Kiara,Sharma,kiara.sharma.341@adidas.demo,9100000341,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00342,Arjun,Jain,arjun.jain.342@adidas.demo,9100000342,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,False,False
+ADI-CUST-00343,Ananya,Singh,ananya.singh.343@adidas.demo,9100000343,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00344,Samar,Gupta,samar.gupta.344@adidas.demo,9100000344,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00345,Arjun,Reddy,arjun.reddy.345@adidas.demo,9100000345,Hyderabad,Telangana,EMAIL,GOLD,True,True,True,True
+ADI-CUST-00346,Karan,Kumar,karan.kumar.346@adidas.demo,9100000346,Kolkata,West Bengal,RCS,BRONZE,True,True,True,False
+ADI-CUST-00347,Pooja,Saxena,pooja.saxena.347@adidas.demo,9100000347,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,True
+ADI-CUST-00348,Karan,Malhotra,karan.malhotra.348@adidas.demo,9100000348,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00349,Kiara,Singh,kiara.singh.349@adidas.demo,9100000349,Pune,Maharashtra,EMAIL,BRONZE,True,True,True,True
+ADI-CUST-00350,Arjun,Jain,arjun.jain.350@adidas.demo,9100000350,Kolkata,West Bengal,EMAIL,GOLD,True,True,True,False
+ADI-CUST-00351,Yash,Patel,yash.patel.351@adidas.demo,9100000351,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,False,False
+ADI-CUST-00352,Tanya,Das,tanya.das.352@adidas.demo,9100000352,Chennai,Tamil Nadu,SMS,SILVER,True,True,False,False
+ADI-CUST-00353,Rahul,Verma,rahul.verma.353@adidas.demo,9100000353,Ahmedabad,Gujarat,WHATSAPP,BRONZE,False,True,True,True
+ADI-CUST-00354,Pooja,Saxena,pooja.saxena.354@adidas.demo,9100000354,Delhi,Delhi,SMS,PLATINUM,True,True,True,True
+ADI-CUST-00355,Varun,Nair,varun.nair.355@adidas.demo,9100000355,Chennai,Tamil Nadu,EMAIL,GOLD,True,True,True,True
+ADI-CUST-00356,Rahul,Mehta,rahul.mehta.356@adidas.demo,9100000356,Kolkata,West Bengal,SMS,BRONZE,True,True,False,False
+ADI-CUST-00357,Aditi,Gupta,aditi.gupta.357@adidas.demo,9100000357,Chennai,Tamil Nadu,SMS,GOLD,True,True,True,False
+ADI-CUST-00358,Rahul,Sharma,rahul.sharma.358@adidas.demo,9100000358,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00359,Kiara,Mehta,kiara.mehta.359@adidas.demo,9100000359,Kolkata,West Bengal,SMS,SILVER,True,True,True,True
+ADI-CUST-00360,Aryan,Singh,aryan.singh.360@adidas.demo,9100000360,Hyderabad,Telangana,RCS,BRONZE,True,True,True,True
+ADI-CUST-00361,Ananya,Patel,ananya.patel.361@adidas.demo,9100000361,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,True,True
+ADI-CUST-00362,Pooja,Iyer,pooja.iyer.362@adidas.demo,9100000362,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,False,True,True
+ADI-CUST-00363,Kiara,Nair,kiara.nair.363@adidas.demo,9100000363,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00364,Arjun,Sharma,arjun.sharma.364@adidas.demo,9100000364,Hyderabad,Telangana,EMAIL,BRONZE,True,True,False,False
+ADI-CUST-00365,Rohan,Singh,rohan.singh.365@adidas.demo,9100000365,Hyderabad,Telangana,WHATSAPP,PLATINUM,False,True,True,False
+ADI-CUST-00366,Dev,Iyer,dev.iyer.366@adidas.demo,9100000366,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,False,False
+ADI-CUST-00367,Yash,Saxena,yash.saxena.367@adidas.demo,9100000367,Mumbai,Maharashtra,WHATSAPP,GOLD,True,False,True,False
+ADI-CUST-00368,Pooja,Jain,pooja.jain.368@adidas.demo,9100000368,Bangalore,Karnataka,SMS,PLATINUM,True,True,True,False
+ADI-CUST-00369,Meera,Das,meera.das.369@adidas.demo,9100000369,Kolkata,West Bengal,SMS,GOLD,True,False,False,True
+ADI-CUST-00370,Dev,Reddy,dev.reddy.370@adidas.demo,9100000370,Delhi,Delhi,WHATSAPP,GOLD,True,True,False,False
+ADI-CUST-00371,Priya,Verma,priya.verma.371@adidas.demo,9100000371,Pune,Maharashtra,EMAIL,BRONZE,True,False,True,False
+ADI-CUST-00372,Rohan,Saxena,rohan.saxena.372@adidas.demo,9100000372,Chennai,Tamil Nadu,SMS,BRONZE,True,True,True,True
+ADI-CUST-00373,Kabir,Malhotra,kabir.malhotra.373@adidas.demo,9100000373,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,True,True
+ADI-CUST-00374,Neha,Verma,neha.verma.374@adidas.demo,9100000374,Delhi,Delhi,WHATSAPP,BRONZE,True,False,False,False
+ADI-CUST-00375,Ishaan,Malhotra,ishaan.malhotra.375@adidas.demo,9100000375,Ahmedabad,Gujarat,RCS,SILVER,True,False,True,False
+ADI-CUST-00376,Tanya,Sharma,tanya.sharma.376@adidas.demo,9100000376,Pune,Maharashtra,WHATSAPP,SILVER,True,False,True,False
+ADI-CUST-00377,Pooja,Mehta,pooja.mehta.377@adidas.demo,9100000377,Pune,Maharashtra,RCS,GOLD,True,False,True,False
+ADI-CUST-00378,Priya,Gupta,priya.gupta.378@adidas.demo,9100000378,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00379,Kiara,Reddy,kiara.reddy.379@adidas.demo,9100000379,Delhi,Delhi,WHATSAPP,SILVER,True,True,False,True
+ADI-CUST-00380,Tanya,Nair,tanya.nair.380@adidas.demo,9100000380,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00381,Pooja,Bose,pooja.bose.381@adidas.demo,9100000381,Pune,Maharashtra,SMS,BRONZE,True,False,False,True
+ADI-CUST-00382,Kiara,Reddy,kiara.reddy.382@adidas.demo,9100000382,Mumbai,Maharashtra,SMS,GOLD,True,False,True,False
+ADI-CUST-00383,Aman,Nair,aman.nair.383@adidas.demo,9100000383,Bangalore,Karnataka,WHATSAPP,BRONZE,True,False,True,True
+ADI-CUST-00384,Aryan,Bose,aryan.bose.384@adidas.demo,9100000384,Delhi,Delhi,WHATSAPP,BRONZE,True,False,True,True
+ADI-CUST-00385,Varun,Nair,varun.nair.385@adidas.demo,9100000385,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,True,True
+ADI-CUST-00386,Samar,Das,samar.das.386@adidas.demo,9100000386,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00387,Karan,Gupta,karan.gupta.387@adidas.demo,9100000387,Ahmedabad,Gujarat,SMS,BRONZE,True,True,True,True
+ADI-CUST-00388,Arjun,Bose,arjun.bose.388@adidas.demo,9100000388,Chennai,Tamil Nadu,EMAIL,SILVER,True,True,True,False
+ADI-CUST-00389,Dev,Iyer,dev.iyer.389@adidas.demo,9100000389,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,True
+ADI-CUST-00390,Aryan,Verma,aryan.verma.390@adidas.demo,9100000390,Ahmedabad,Gujarat,RCS,SILVER,True,True,True,True
+ADI-CUST-00391,Varun,Saxena,varun.saxena.391@adidas.demo,9100000391,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00392,Sneha,Bose,sneha.bose.392@adidas.demo,9100000392,Mumbai,Maharashtra,EMAIL,BRONZE,True,True,True,False
+ADI-CUST-00393,Priya,Jain,priya.jain.393@adidas.demo,9100000393,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00394,Aryan,Nair,aryan.nair.394@adidas.demo,9100000394,Bangalore,Karnataka,SMS,BRONZE,False,True,True,True
+ADI-CUST-00395,Pooja,Mehta,pooja.mehta.395@adidas.demo,9100000395,Delhi,Delhi,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00396,Ishaan,Kumar,ishaan.kumar.396@adidas.demo,9100000396,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,True,True
+ADI-CUST-00397,Varun,Mehta,varun.mehta.397@adidas.demo,9100000397,Kolkata,West Bengal,WHATSAPP,PLATINUM,True,True,True,True
+ADI-CUST-00398,Ananya,Kapoor,ananya.kapoor.398@adidas.demo,9100000398,Ahmedabad,Gujarat,EMAIL,BRONZE,True,True,True,False
+ADI-CUST-00399,Yash,Jain,yash.jain.399@adidas.demo,9100000399,Chennai,Tamil Nadu,WHATSAPP,GOLD,False,True,True,False
+ADI-CUST-00400,Tanya,Gupta,tanya.gupta.400@adidas.demo,9100000400,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00401,Kiara,Nair,kiara.nair.401@adidas.demo,9100000401,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00402,Kiara,Kapoor,kiara.kapoor.402@adidas.demo,9100000402,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00403,Rahul,Kapoor,rahul.kapoor.403@adidas.demo,9100000403,Ahmedabad,Gujarat,EMAIL,BRONZE,True,True,False,False
+ADI-CUST-00404,Meera,Iyer,meera.iyer.404@adidas.demo,9100000404,Bangalore,Karnataka,EMAIL,BRONZE,True,True,False,False
+ADI-CUST-00405,Aditi,Reddy,aditi.reddy.405@adidas.demo,9100000405,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00406,Kabir,Jain,kabir.jain.406@adidas.demo,9100000406,Mumbai,Maharashtra,EMAIL,SILVER,True,True,True,False
+ADI-CUST-00407,Meera,Singh,meera.singh.407@adidas.demo,9100000407,Bangalore,Karnataka,EMAIL,PLATINUM,True,True,True,False
+ADI-CUST-00408,Yash,Saxena,yash.saxena.408@adidas.demo,9100000408,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00409,Pooja,Iyer,pooja.iyer.409@adidas.demo,9100000409,Kolkata,West Bengal,SMS,SILVER,True,True,True,False
+ADI-CUST-00410,Simran,Das,simran.das.410@adidas.demo,9100000410,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00411,Varun,Verma,varun.verma.411@adidas.demo,9100000411,Hyderabad,Telangana,WHATSAPP,GOLD,False,True,True,False
+ADI-CUST-00412,Priya,Nair,priya.nair.412@adidas.demo,9100000412,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,False,True
+ADI-CUST-00413,Aman,Verma,aman.verma.413@adidas.demo,9100000413,Chennai,Tamil Nadu,WHATSAPP,BRONZE,False,True,False,False
+ADI-CUST-00414,Priya,Gupta,priya.gupta.414@adidas.demo,9100000414,Ahmedabad,Gujarat,SMS,GOLD,True,True,True,False
+ADI-CUST-00415,Sneha,Reddy,sneha.reddy.415@adidas.demo,9100000415,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,False,True
+ADI-CUST-00416,Karan,Jain,karan.jain.416@adidas.demo,9100000416,Mumbai,Maharashtra,WHATSAPP,GOLD,True,False,False,False
+ADI-CUST-00417,Karan,Singh,karan.singh.417@adidas.demo,9100000417,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00418,Tanya,Bose,tanya.bose.418@adidas.demo,9100000418,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00419,Rohan,Iyer,rohan.iyer.419@adidas.demo,9100000419,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,False,False
+ADI-CUST-00420,Simran,Kapoor,simran.kapoor.420@adidas.demo,9100000420,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,False,True
+ADI-CUST-00421,Neha,Gupta,neha.gupta.421@adidas.demo,9100000421,Bangalore,Karnataka,SMS,GOLD,True,True,True,True
+ADI-CUST-00422,Varun,Gupta,varun.gupta.422@adidas.demo,9100000422,Hyderabad,Telangana,WHATSAPP,PLATINUM,False,True,True,False
+ADI-CUST-00423,Pooja,Saxena,pooja.saxena.423@adidas.demo,9100000423,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,False,True
+ADI-CUST-00424,Arjun,Bose,arjun.bose.424@adidas.demo,9100000424,Pune,Maharashtra,SMS,PLATINUM,False,True,True,False
+ADI-CUST-00425,Samar,Mehta,samar.mehta.425@adidas.demo,9100000425,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,False,True,False
+ADI-CUST-00426,Meera,Das,meera.das.426@adidas.demo,9100000426,Kolkata,West Bengal,SMS,BRONZE,False,True,True,False
+ADI-CUST-00427,Simran,Mehta,simran.mehta.427@adidas.demo,9100000427,Kolkata,West Bengal,EMAIL,SILVER,True,True,False,True
+ADI-CUST-00428,Sneha,Sharma,sneha.sharma.428@adidas.demo,9100000428,Mumbai,Maharashtra,SMS,BRONZE,True,False,True,False
+ADI-CUST-00429,Meera,Verma,meera.verma.429@adidas.demo,9100000429,Pune,Maharashtra,WHATSAPP,BRONZE,True,False,False,True
+ADI-CUST-00430,Kiara,Patel,kiara.patel.430@adidas.demo,9100000430,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00431,Priya,Iyer,priya.iyer.431@adidas.demo,9100000431,Hyderabad,Telangana,EMAIL,BRONZE,True,True,True,False
+ADI-CUST-00432,Aditi,Saxena,aditi.saxena.432@adidas.demo,9100000432,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00433,Samar,Malhotra,samar.malhotra.433@adidas.demo,9100000433,Chennai,Tamil Nadu,SMS,SILVER,True,True,True,False
+ADI-CUST-00434,Neha,Bose,neha.bose.434@adidas.demo,9100000434,Pune,Maharashtra,SMS,GOLD,False,True,True,True
+ADI-CUST-00435,Yash,Malhotra,yash.malhotra.435@adidas.demo,9100000435,Mumbai,Maharashtra,SMS,SILVER,True,True,False,True
+ADI-CUST-00436,Kabir,Mehta,kabir.mehta.436@adidas.demo,9100000436,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00437,Pooja,Patel,pooja.patel.437@adidas.demo,9100000437,Ahmedabad,Gujarat,EMAIL,PLATINUM,True,True,True,True
+ADI-CUST-00438,Samar,Bose,samar.bose.438@adidas.demo,9100000438,Hyderabad,Telangana,WHATSAPP,BRONZE,False,True,False,False
+ADI-CUST-00439,Simran,Nair,simran.nair.439@adidas.demo,9100000439,Ahmedabad,Gujarat,SMS,PLATINUM,True,True,True,True
+ADI-CUST-00440,Aditi,Gupta,aditi.gupta.440@adidas.demo,9100000440,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00441,Tanya,Kapoor,tanya.kapoor.441@adidas.demo,9100000441,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,False,True,True
+ADI-CUST-00442,Rahul,Malhotra,rahul.malhotra.442@adidas.demo,9100000442,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00443,Kabir,Verma,kabir.verma.443@adidas.demo,9100000443,Kolkata,West Bengal,SMS,SILVER,True,True,True,False
+ADI-CUST-00444,Pooja,Gupta,pooja.gupta.444@adidas.demo,9100000444,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,True
+ADI-CUST-00445,Simran,Saxena,simran.saxena.445@adidas.demo,9100000445,Pune,Maharashtra,EMAIL,SILVER,True,True,True,True
+ADI-CUST-00446,Rohan,Nair,rohan.nair.446@adidas.demo,9100000446,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,False,False,False
+ADI-CUST-00447,Yash,Malhotra,yash.malhotra.447@adidas.demo,9100000447,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00448,Kiara,Patel,kiara.patel.448@adidas.demo,9100000448,Delhi,Delhi,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00449,Arjun,Mehta,arjun.mehta.449@adidas.demo,9100000449,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,False,False
+ADI-CUST-00450,Sneha,Singh,sneha.singh.450@adidas.demo,9100000450,Pune,Maharashtra,WHATSAPP,GOLD,True,False,True,True
+ADI-CUST-00451,Dev,Kumar,dev.kumar.451@adidas.demo,9100000451,Delhi,Delhi,SMS,BRONZE,True,True,True,True
+ADI-CUST-00452,Priya,Bose,priya.bose.452@adidas.demo,9100000452,Mumbai,Maharashtra,EMAIL,SILVER,True,True,True,True
+ADI-CUST-00453,Pooja,Kumar,pooja.kumar.453@adidas.demo,9100000453,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00454,Ananya,Mehta,ananya.mehta.454@adidas.demo,9100000454,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,False,True,False
+ADI-CUST-00455,Dev,Iyer,dev.iyer.455@adidas.demo,9100000455,Bangalore,Karnataka,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00456,Priya,Das,priya.das.456@adidas.demo,9100000456,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00457,Kiara,Iyer,kiara.iyer.457@adidas.demo,9100000457,Chennai,Tamil Nadu,SMS,SILVER,True,False,True,False
+ADI-CUST-00458,Rahul,Nair,rahul.nair.458@adidas.demo,9100000458,Mumbai,Maharashtra,SMS,SILVER,True,True,True,False
+ADI-CUST-00459,Ananya,Kapoor,ananya.kapoor.459@adidas.demo,9100000459,Pune,Maharashtra,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00460,Riya,Patel,riya.patel.460@adidas.demo,9100000460,Kolkata,West Bengal,SMS,GOLD,True,True,True,True
+ADI-CUST-00461,Simran,Das,simran.das.461@adidas.demo,9100000461,Kolkata,West Bengal,SMS,SILVER,True,True,False,False
+ADI-CUST-00462,Varun,Singh,varun.singh.462@adidas.demo,9100000462,Ahmedabad,Gujarat,EMAIL,BRONZE,True,True,True,False
+ADI-CUST-00463,Tanya,Iyer,tanya.iyer.463@adidas.demo,9100000463,Kolkata,West Bengal,SMS,SILVER,True,True,True,False
+ADI-CUST-00464,Neha,Verma,neha.verma.464@adidas.demo,9100000464,Bangalore,Karnataka,EMAIL,BRONZE,True,True,True,True
+ADI-CUST-00465,Yash,Kapoor,yash.kapoor.465@adidas.demo,9100000465,Ahmedabad,Gujarat,SMS,GOLD,True,False,True,True
+ADI-CUST-00466,Pooja,Saxena,pooja.saxena.466@adidas.demo,9100000466,Pune,Maharashtra,WHATSAPP,PLATINUM,True,True,True,False
+ADI-CUST-00467,Aman,Nair,aman.nair.467@adidas.demo,9100000467,Ahmedabad,Gujarat,SMS,SILVER,True,True,True,True
+ADI-CUST-00468,Aman,Das,aman.das.468@adidas.demo,9100000468,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,False,False
+ADI-CUST-00469,Samar,Das,samar.das.469@adidas.demo,9100000469,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,True,False,False
+ADI-CUST-00470,Arjun,Kumar,arjun.kumar.470@adidas.demo,9100000470,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00471,Meera,Reddy,meera.reddy.471@adidas.demo,9100000471,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,False,True,False
+ADI-CUST-00472,Aditi,Reddy,aditi.reddy.472@adidas.demo,9100000472,Pune,Maharashtra,EMAIL,BRONZE,True,True,True,True
+ADI-CUST-00473,Aman,Nair,aman.nair.473@adidas.demo,9100000473,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00474,Neha,Jain,neha.jain.474@adidas.demo,9100000474,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00475,Yash,Bose,yash.bose.475@adidas.demo,9100000475,Mumbai,Maharashtra,EMAIL,SILVER,True,True,True,False
+ADI-CUST-00476,Pooja,Nair,pooja.nair.476@adidas.demo,9100000476,Ahmedabad,Gujarat,SMS,GOLD,True,True,True,False
+ADI-CUST-00477,Kiara,Kapoor,kiara.kapoor.477@adidas.demo,9100000477,Delhi,Delhi,EMAIL,BRONZE,True,True,True,False
+ADI-CUST-00478,Varun,Mehta,varun.mehta.478@adidas.demo,9100000478,Bangalore,Karnataka,WHATSAPP,PLATINUM,False,False,True,False
+ADI-CUST-00479,Nisha,Patel,nisha.patel.479@adidas.demo,9100000479,Delhi,Delhi,WHATSAPP,SILVER,False,True,True,True
+ADI-CUST-00480,Rahul,Mehta,rahul.mehta.480@adidas.demo,9100000480,Pune,Maharashtra,WHATSAPP,SILVER,True,True,False,False
+ADI-CUST-00481,Pooja,Mehta,pooja.mehta.481@adidas.demo,9100000481,Ahmedabad,Gujarat,EMAIL,SILVER,True,True,True,False
+ADI-CUST-00482,Aryan,Singh,aryan.singh.482@adidas.demo,9100000482,Chennai,Tamil Nadu,EMAIL,BRONZE,True,True,True,True
+ADI-CUST-00483,Samar,Kapoor,samar.kapoor.483@adidas.demo,9100000483,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00484,Kabir,Nair,kabir.nair.484@adidas.demo,9100000484,Mumbai,Maharashtra,RCS,GOLD,True,True,True,True
+ADI-CUST-00485,Arjun,Malhotra,arjun.malhotra.485@adidas.demo,9100000485,Hyderabad,Telangana,EMAIL,GOLD,True,True,True,True
+ADI-CUST-00486,Kabir,Kumar,kabir.kumar.486@adidas.demo,9100000486,Delhi,Delhi,SMS,BRONZE,True,True,True,False
+ADI-CUST-00487,Rahul,Jain,rahul.jain.487@adidas.demo,9100000487,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,False,False
+ADI-CUST-00488,Riya,Singh,riya.singh.488@adidas.demo,9100000488,Mumbai,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+ADI-CUST-00489,Nisha,Bose,nisha.bose.489@adidas.demo,9100000489,Bangalore,Karnataka,WHATSAPP,SILVER,True,False,True,False
+ADI-CUST-00490,Kabir,Patel,kabir.patel.490@adidas.demo,9100000490,Hyderabad,Telangana,SMS,BRONZE,True,True,True,True
+ADI-CUST-00491,Varun,Saxena,varun.saxena.491@adidas.demo,9100000491,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,False,True
+ADI-CUST-00492,Sneha,Sharma,sneha.sharma.492@adidas.demo,9100000492,Delhi,Delhi,WHATSAPP,BRONZE,True,False,True,False
+ADI-CUST-00493,Neha,Reddy,neha.reddy.493@adidas.demo,9100000493,Delhi,Delhi,WHATSAPP,SILVER,True,False,True,False
+ADI-CUST-00494,Ananya,Kapoor,ananya.kapoor.494@adidas.demo,9100000494,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+ADI-CUST-00495,Samar,Kapoor,samar.kapoor.495@adidas.demo,9100000495,Pune,Maharashtra,WHATSAPP,SILVER,True,True,True,False
+ADI-CUST-00496,Sneha,Patel,sneha.patel.496@adidas.demo,9100000496,Kolkata,West Bengal,SMS,BRONZE,True,True,True,False
+ADI-CUST-00497,Rohan,Malhotra,rohan.malhotra.497@adidas.demo,9100000497,Mumbai,Maharashtra,SMS,SILVER,True,True,True,False
+ADI-CUST-00498,Kiara,Saxena,kiara.saxena.498@adidas.demo,9100000498,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,False,False
+ADI-CUST-00499,Meera,Kapoor,meera.kapoor.499@adidas.demo,9100000499,Bangalore,Karnataka,WHATSAPP,SILVER,True,False,True,False
+ADI-CUST-00500,Arjun,Malhotra,arjun.malhotra.500@adidas.demo,9100000500,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,False,True

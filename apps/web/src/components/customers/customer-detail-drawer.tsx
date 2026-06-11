@@ -5,6 +5,7 @@ import { Mail, Phone, ShoppingBag, Sparkles } from 'lucide-react';
 import { formatInr, formatPercent } from '@scp/shared';
 import { api } from '@/lib/api';
 import type { CustomerDetail } from '@/lib/types';
+import { useBrand } from '@/contexts/brand-context';
 import { Sheet } from '@/components/ui/sheet';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Separator } from '@/components/ui/misc';
@@ -18,10 +19,11 @@ export function CustomerDetailDrawer({
   customerId: string | null;
   onClose: () => void;
 }) {
+  const { selectedBrandId } = useBrand();
   const { data, isLoading } = useQuery<CustomerDetail>({
-    queryKey: ['customer', customerId],
+    queryKey: ['customer', selectedBrandId, customerId],
     queryFn: () => api.customer(customerId!),
-    enabled: !!customerId,
+    enabled: !!customerId && !!selectedBrandId,
   });
 
   const c = data?.customer;

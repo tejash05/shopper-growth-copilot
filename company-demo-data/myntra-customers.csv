@@ -1,0 +1,501 @@
+externalCustomerId,firstName,lastName,email,phone,city,state,preferredChannel,loyaltyTier,consentWhatsApp,consentSms,consentEmail,consentRcs
+MYN-CUST-00001,Aryan,Saxena,aryan.saxena.1@myntra.demo,9300000001,Pune,Maharashtra,SMS,BRONZE,True,True,True,False
+MYN-CUST-00002,Pooja,Jain,pooja.jain.2@myntra.demo,9300000002,Bangalore,Karnataka,WHATSAPP,GOLD,True,False,True,True
+MYN-CUST-00003,Dev,Saxena,dev.saxena.3@myntra.demo,9300000003,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00004,Simran,Kumar,simran.kumar.4@myntra.demo,9300000004,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00005,Aryan,Kapoor,aryan.kapoor.5@myntra.demo,9300000005,Hyderabad,Telangana,EMAIL,GOLD,True,True,True,True
+MYN-CUST-00006,Samar,Mehta,samar.mehta.6@myntra.demo,9300000006,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00007,Sneha,Iyer,sneha.iyer.7@myntra.demo,9300000007,Delhi,Delhi,WHATSAPP,BRONZE,True,False,True,True
+MYN-CUST-00008,Aman,Singh,aman.singh.8@myntra.demo,9300000008,Mumbai,Maharashtra,EMAIL,BRONZE,True,True,True,True
+MYN-CUST-00009,Meera,Kumar,meera.kumar.9@myntra.demo,9300000009,Kolkata,West Bengal,SMS,BRONZE,True,True,True,False
+MYN-CUST-00010,Aman,Jain,aman.jain.10@myntra.demo,9300000010,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,False,True
+MYN-CUST-00011,Kiara,Verma,kiara.verma.11@myntra.demo,9300000011,Kolkata,West Bengal,WHATSAPP,BRONZE,True,False,True,False
+MYN-CUST-00012,Yash,Kumar,yash.kumar.12@myntra.demo,9300000012,Hyderabad,Telangana,WHATSAPP,BRONZE,False,True,True,False
+MYN-CUST-00013,Dev,Kapoor,dev.kapoor.13@myntra.demo,9300000013,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00014,Neha,Saxena,neha.saxena.14@myntra.demo,9300000014,Hyderabad,Telangana,SMS,GOLD,True,True,True,True
+MYN-CUST-00015,Yash,Sharma,yash.sharma.15@myntra.demo,9300000015,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00016,Tanya,Malhotra,tanya.malhotra.16@myntra.demo,9300000016,Mumbai,Maharashtra,RCS,BRONZE,True,True,True,True
+MYN-CUST-00017,Karan,Sharma,karan.sharma.17@myntra.demo,9300000017,Mumbai,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00018,Ananya,Saxena,ananya.saxena.18@myntra.demo,9300000018,Kolkata,West Bengal,EMAIL,SILVER,True,True,True,True
+MYN-CUST-00019,Riya,Verma,riya.verma.19@myntra.demo,9300000019,Mumbai,Maharashtra,EMAIL,SILVER,True,True,True,False
+MYN-CUST-00020,Pooja,Singh,pooja.singh.20@myntra.demo,9300000020,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,False,True
+MYN-CUST-00021,Meera,Iyer,meera.iyer.21@myntra.demo,9300000021,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00022,Kabir,Das,kabir.das.22@myntra.demo,9300000022,Bangalore,Karnataka,RCS,BRONZE,True,False,True,False
+MYN-CUST-00023,Tanya,Das,tanya.das.23@myntra.demo,9300000023,Kolkata,West Bengal,WHATSAPP,BRONZE,True,False,True,False
+MYN-CUST-00024,Riya,Nair,riya.nair.24@myntra.demo,9300000024,Mumbai,Maharashtra,EMAIL,BRONZE,True,True,True,False
+MYN-CUST-00025,Samar,Singh,samar.singh.25@myntra.demo,9300000025,Ahmedabad,Gujarat,SMS,SILVER,True,True,False,False
+MYN-CUST-00026,Ananya,Jain,ananya.jain.26@myntra.demo,9300000026,Chennai,Tamil Nadu,EMAIL,BRONZE,True,False,True,False
+MYN-CUST-00027,Meera,Mehta,meera.mehta.27@myntra.demo,9300000027,Hyderabad,Telangana,WHATSAPP,GOLD,True,False,True,True
+MYN-CUST-00028,Priya,Sharma,priya.sharma.28@myntra.demo,9300000028,Kolkata,West Bengal,WHATSAPP,SILVER,True,False,False,True
+MYN-CUST-00029,Kabir,Jain,kabir.jain.29@myntra.demo,9300000029,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00030,Samar,Malhotra,samar.malhotra.30@myntra.demo,9300000030,Ahmedabad,Gujarat,SMS,BRONZE,True,True,True,False
+MYN-CUST-00031,Dev,Das,dev.das.31@myntra.demo,9300000031,Mumbai,Maharashtra,SMS,PLATINUM,True,True,False,False
+MYN-CUST-00032,Sneha,Mehta,sneha.mehta.32@myntra.demo,9300000032,Pune,Maharashtra,WHATSAPP,SILVER,True,True,False,True
+MYN-CUST-00033,Yash,Nair,yash.nair.33@myntra.demo,9300000033,Bangalore,Karnataka,WHATSAPP,GOLD,True,False,True,False
+MYN-CUST-00034,Neha,Das,neha.das.34@myntra.demo,9300000034,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,False,False
+MYN-CUST-00035,Ishaan,Nair,ishaan.nair.35@myntra.demo,9300000035,Ahmedabad,Gujarat,EMAIL,BRONZE,True,True,True,False
+MYN-CUST-00036,Arjun,Verma,arjun.verma.36@myntra.demo,9300000036,Delhi,Delhi,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00037,Rahul,Kumar,rahul.kumar.37@myntra.demo,9300000037,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,True
+MYN-CUST-00038,Tanya,Reddy,tanya.reddy.38@myntra.demo,9300000038,Ahmedabad,Gujarat,SMS,BRONZE,True,True,True,True
+MYN-CUST-00039,Kabir,Saxena,kabir.saxena.39@myntra.demo,9300000039,Pune,Maharashtra,RCS,SILVER,True,True,True,False
+MYN-CUST-00040,Kabir,Verma,kabir.verma.40@myntra.demo,9300000040,Mumbai,Maharashtra,SMS,SILVER,True,True,True,False
+MYN-CUST-00041,Samar,Jain,samar.jain.41@myntra.demo,9300000041,Chennai,Tamil Nadu,RCS,BRONZE,True,True,True,False
+MYN-CUST-00042,Ishaan,Singh,ishaan.singh.42@myntra.demo,9300000042,Kolkata,West Bengal,SMS,SILVER,False,True,True,True
+MYN-CUST-00043,Aryan,Mehta,aryan.mehta.43@myntra.demo,9300000043,Mumbai,Maharashtra,SMS,PLATINUM,True,True,True,True
+MYN-CUST-00044,Rahul,Singh,rahul.singh.44@myntra.demo,9300000044,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00045,Tanya,Saxena,tanya.saxena.45@myntra.demo,9300000045,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00046,Karan,Bose,karan.bose.46@myntra.demo,9300000046,Hyderabad,Telangana,EMAIL,BRONZE,True,True,True,True
+MYN-CUST-00047,Ishaan,Iyer,ishaan.iyer.47@myntra.demo,9300000047,Hyderabad,Telangana,SMS,BRONZE,True,True,True,False
+MYN-CUST-00048,Karan,Reddy,karan.reddy.48@myntra.demo,9300000048,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00049,Karan,Nair,karan.nair.49@myntra.demo,9300000049,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00050,Nisha,Sharma,nisha.sharma.50@myntra.demo,9300000050,Kolkata,West Bengal,SMS,PLATINUM,True,True,False,False
+MYN-CUST-00051,Varun,Nair,varun.nair.51@myntra.demo,9300000051,Chennai,Tamil Nadu,SMS,SILVER,True,True,True,True
+MYN-CUST-00052,Priya,Reddy,priya.reddy.52@myntra.demo,9300000052,Delhi,Delhi,EMAIL,BRONZE,True,True,False,False
+MYN-CUST-00053,Aryan,Iyer,aryan.iyer.53@myntra.demo,9300000053,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,False,False
+MYN-CUST-00054,Aryan,Iyer,aryan.iyer.54@myntra.demo,9300000054,Kolkata,West Bengal,WHATSAPP,BRONZE,False,False,False,True
+MYN-CUST-00055,Ananya,Gupta,ananya.gupta.55@myntra.demo,9300000055,Bangalore,Karnataka,EMAIL,SILVER,True,False,False,False
+MYN-CUST-00056,Priya,Singh,priya.singh.56@myntra.demo,9300000056,Mumbai,Maharashtra,EMAIL,BRONZE,True,True,False,False
+MYN-CUST-00057,Ananya,Kumar,ananya.kumar.57@myntra.demo,9300000057,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00058,Rohan,Patel,rohan.patel.58@myntra.demo,9300000058,Pune,Maharashtra,WHATSAPP,PLATINUM,True,True,True,False
+MYN-CUST-00059,Kiara,Kapoor,kiara.kapoor.59@myntra.demo,9300000059,Ahmedabad,Gujarat,SMS,SILVER,True,True,True,False
+MYN-CUST-00060,Priya,Kumar,priya.kumar.60@myntra.demo,9300000060,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00061,Dev,Bose,dev.bose.61@myntra.demo,9300000061,Ahmedabad,Gujarat,SMS,BRONZE,True,True,True,False
+MYN-CUST-00062,Karan,Verma,karan.verma.62@myntra.demo,9300000062,Delhi,Delhi,WHATSAPP,GOLD,True,True,True,True
+MYN-CUST-00063,Kiara,Gupta,kiara.gupta.63@myntra.demo,9300000063,Hyderabad,Telangana,WHATSAPP,SILVER,True,False,True,True
+MYN-CUST-00064,Aryan,Verma,aryan.verma.64@myntra.demo,9300000064,Chennai,Tamil Nadu,SMS,SILVER,True,True,False,True
+MYN-CUST-00065,Aryan,Gupta,aryan.gupta.65@myntra.demo,9300000065,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,True,True
+MYN-CUST-00066,Nisha,Saxena,nisha.saxena.66@myntra.demo,9300000066,Mumbai,Maharashtra,WHATSAPP,PLATINUM,True,True,True,False
+MYN-CUST-00067,Neha,Gupta,neha.gupta.67@myntra.demo,9300000067,Ahmedabad,Gujarat,SMS,GOLD,True,False,True,False
+MYN-CUST-00068,Rohan,Iyer,rohan.iyer.68@myntra.demo,9300000068,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,True
+MYN-CUST-00069,Tanya,Kapoor,tanya.kapoor.69@myntra.demo,9300000069,Bangalore,Karnataka,EMAIL,SILVER,True,True,False,False
+MYN-CUST-00070,Aman,Verma,aman.verma.70@myntra.demo,9300000070,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,False,False
+MYN-CUST-00071,Aditi,Bose,aditi.bose.71@myntra.demo,9300000071,Kolkata,West Bengal,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00072,Ananya,Patel,ananya.patel.72@myntra.demo,9300000072,Pune,Maharashtra,RCS,BRONZE,True,True,True,False
+MYN-CUST-00073,Yash,Kapoor,yash.kapoor.73@myntra.demo,9300000073,Kolkata,West Bengal,EMAIL,SILVER,True,True,True,True
+MYN-CUST-00074,Rahul,Reddy,rahul.reddy.74@myntra.demo,9300000074,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,True
+MYN-CUST-00075,Yash,Jain,yash.jain.75@myntra.demo,9300000075,Bangalore,Karnataka,WHATSAPP,PLATINUM,False,False,True,False
+MYN-CUST-00076,Ananya,Singh,ananya.singh.76@myntra.demo,9300000076,Delhi,Delhi,SMS,PLATINUM,True,True,False,False
+MYN-CUST-00077,Pooja,Reddy,pooja.reddy.77@myntra.demo,9300000077,Ahmedabad,Gujarat,SMS,GOLD,True,True,True,True
+MYN-CUST-00078,Kabir,Iyer,kabir.iyer.78@myntra.demo,9300000078,Chennai,Tamil Nadu,SMS,BRONZE,True,False,True,True
+MYN-CUST-00079,Ananya,Sharma,ananya.sharma.79@myntra.demo,9300000079,Delhi,Delhi,EMAIL,GOLD,False,True,True,True
+MYN-CUST-00080,Kiara,Das,kiara.das.80@myntra.demo,9300000080,Pune,Maharashtra,EMAIL,BRONZE,True,True,True,False
+MYN-CUST-00081,Ananya,Bose,ananya.bose.81@myntra.demo,9300000081,Kolkata,West Bengal,EMAIL,SILVER,True,True,True,False
+MYN-CUST-00082,Ananya,Malhotra,ananya.malhotra.82@myntra.demo,9300000082,Pune,Maharashtra,WHATSAPP,PLATINUM,True,True,True,False
+MYN-CUST-00083,Tanya,Patel,tanya.patel.83@myntra.demo,9300000083,Delhi,Delhi,SMS,BRONZE,True,True,False,False
+MYN-CUST-00084,Kiara,Sharma,kiara.sharma.84@myntra.demo,9300000084,Pune,Maharashtra,RCS,BRONZE,True,True,True,True
+MYN-CUST-00085,Aryan,Nair,aryan.nair.85@myntra.demo,9300000085,Hyderabad,Telangana,EMAIL,SILVER,True,True,True,False
+MYN-CUST-00086,Neha,Sharma,neha.sharma.86@myntra.demo,9300000086,Pune,Maharashtra,RCS,BRONZE,True,False,False,True
+MYN-CUST-00087,Arjun,Kumar,arjun.kumar.87@myntra.demo,9300000087,Mumbai,Maharashtra,WHATSAPP,GOLD,False,True,False,False
+MYN-CUST-00088,Dev,Patel,dev.patel.88@myntra.demo,9300000088,Hyderabad,Telangana,WHATSAPP,BRONZE,True,False,False,False
+MYN-CUST-00089,Ishaan,Sharma,ishaan.sharma.89@myntra.demo,9300000089,Hyderabad,Telangana,EMAIL,SILVER,False,True,True,True
+MYN-CUST-00090,Ishaan,Mehta,ishaan.mehta.90@myntra.demo,9300000090,Delhi,Delhi,RCS,BRONZE,True,False,True,False
+MYN-CUST-00091,Arjun,Iyer,arjun.iyer.91@myntra.demo,9300000091,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00092,Arjun,Malhotra,arjun.malhotra.92@myntra.demo,9300000092,Hyderabad,Telangana,EMAIL,SILVER,True,True,True,False
+MYN-CUST-00093,Kabir,Kumar,kabir.kumar.93@myntra.demo,9300000093,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,True
+MYN-CUST-00094,Dev,Saxena,dev.saxena.94@myntra.demo,9300000094,Mumbai,Maharashtra,EMAIL,BRONZE,True,True,True,False
+MYN-CUST-00095,Rahul,Sharma,rahul.sharma.95@myntra.demo,9300000095,Delhi,Delhi,EMAIL,BRONZE,True,True,True,False
+MYN-CUST-00096,Aditi,Gupta,aditi.gupta.96@myntra.demo,9300000096,Bangalore,Karnataka,WHATSAPP,GOLD,True,True,True,True
+MYN-CUST-00097,Ishaan,Iyer,ishaan.iyer.97@myntra.demo,9300000097,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00098,Kabir,Nair,kabir.nair.98@myntra.demo,9300000098,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00099,Rahul,Verma,rahul.verma.99@myntra.demo,9300000099,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,False,False
+MYN-CUST-00100,Yash,Jain,yash.jain.100@myntra.demo,9300000100,Bangalore,Karnataka,EMAIL,SILVER,True,True,True,False
+MYN-CUST-00101,Varun,Reddy,varun.reddy.101@myntra.demo,9300000101,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,False,False
+MYN-CUST-00102,Arjun,Verma,arjun.verma.102@myntra.demo,9300000102,Delhi,Delhi,SMS,BRONZE,True,True,False,False
+MYN-CUST-00103,Rahul,Saxena,rahul.saxena.103@myntra.demo,9300000103,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00104,Ananya,Gupta,ananya.gupta.104@myntra.demo,9300000104,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,False,True
+MYN-CUST-00105,Neha,Mehta,neha.mehta.105@myntra.demo,9300000105,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00106,Tanya,Verma,tanya.verma.106@myntra.demo,9300000106,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00107,Ananya,Kumar,ananya.kumar.107@myntra.demo,9300000107,Kolkata,West Bengal,EMAIL,BRONZE,True,False,True,False
+MYN-CUST-00108,Simran,Singh,simran.singh.108@myntra.demo,9300000108,Mumbai,Maharashtra,SMS,GOLD,True,True,True,False
+MYN-CUST-00109,Ananya,Bose,ananya.bose.109@myntra.demo,9300000109,Mumbai,Maharashtra,EMAIL,BRONZE,True,False,True,False
+MYN-CUST-00110,Varun,Iyer,varun.iyer.110@myntra.demo,9300000110,Delhi,Delhi,EMAIL,GOLD,True,True,False,True
+MYN-CUST-00111,Ishaan,Malhotra,ishaan.malhotra.111@myntra.demo,9300000111,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,True,True,True
+MYN-CUST-00112,Pooja,Das,pooja.das.112@myntra.demo,9300000112,Chennai,Tamil Nadu,EMAIL,SILVER,True,True,False,True
+MYN-CUST-00113,Kabir,Saxena,kabir.saxena.113@myntra.demo,9300000113,Hyderabad,Telangana,SMS,PLATINUM,True,True,True,True
+MYN-CUST-00114,Ishaan,Verma,ishaan.verma.114@myntra.demo,9300000114,Kolkata,West Bengal,SMS,BRONZE,True,True,True,True
+MYN-CUST-00115,Dev,Jain,dev.jain.115@myntra.demo,9300000115,Mumbai,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00116,Arjun,Saxena,arjun.saxena.116@myntra.demo,9300000116,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,False,True,True
+MYN-CUST-00117,Ishaan,Saxena,ishaan.saxena.117@myntra.demo,9300000117,Kolkata,West Bengal,SMS,SILVER,True,False,True,False
+MYN-CUST-00118,Meera,Iyer,meera.iyer.118@myntra.demo,9300000118,Pune,Maharashtra,WHATSAPP,SILVER,True,True,True,True
+MYN-CUST-00119,Yash,Kumar,yash.kumar.119@myntra.demo,9300000119,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,False,True,True
+MYN-CUST-00120,Neha,Kumar,neha.kumar.120@myntra.demo,9300000120,Pune,Maharashtra,WHATSAPP,SILVER,True,False,False,False
+MYN-CUST-00121,Riya,Malhotra,riya.malhotra.121@myntra.demo,9300000121,Ahmedabad,Gujarat,EMAIL,BRONZE,False,True,True,False
+MYN-CUST-00122,Ananya,Das,ananya.das.122@myntra.demo,9300000122,Hyderabad,Telangana,RCS,BRONZE,True,False,True,True
+MYN-CUST-00123,Pooja,Malhotra,pooja.malhotra.123@myntra.demo,9300000123,Delhi,Delhi,EMAIL,SILVER,True,True,True,False
+MYN-CUST-00124,Aman,Gupta,aman.gupta.124@myntra.demo,9300000124,Hyderabad,Telangana,WHATSAPP,BRONZE,True,False,True,True
+MYN-CUST-00125,Dev,Kapoor,dev.kapoor.125@myntra.demo,9300000125,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00126,Aditi,Bose,aditi.bose.126@myntra.demo,9300000126,Delhi,Delhi,SMS,GOLD,True,False,True,True
+MYN-CUST-00127,Rohan,Malhotra,rohan.malhotra.127@myntra.demo,9300000127,Ahmedabad,Gujarat,RCS,GOLD,True,True,True,False
+MYN-CUST-00128,Karan,Kapoor,karan.kapoor.128@myntra.demo,9300000128,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00129,Nisha,Bose,nisha.bose.129@myntra.demo,9300000129,Chennai,Tamil Nadu,WHATSAPP,PLATINUM,False,False,True,False
+MYN-CUST-00130,Aman,Malhotra,aman.malhotra.130@myntra.demo,9300000130,Ahmedabad,Gujarat,WHATSAPP,PLATINUM,True,True,True,False
+MYN-CUST-00131,Meera,Gupta,meera.gupta.131@myntra.demo,9300000131,Kolkata,West Bengal,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00132,Priya,Singh,priya.singh.132@myntra.demo,9300000132,Pune,Maharashtra,SMS,GOLD,True,True,True,False
+MYN-CUST-00133,Yash,Gupta,yash.gupta.133@myntra.demo,9300000133,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00134,Meera,Das,meera.das.134@myntra.demo,9300000134,Mumbai,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00135,Riya,Kapoor,riya.kapoor.135@myntra.demo,9300000135,Bangalore,Karnataka,WHATSAPP,SILVER,True,False,False,False
+MYN-CUST-00136,Riya,Reddy,riya.reddy.136@myntra.demo,9300000136,Kolkata,West Bengal,WHATSAPP,GOLD,True,False,True,False
+MYN-CUST-00137,Karan,Patel,karan.patel.137@myntra.demo,9300000137,Hyderabad,Telangana,RCS,GOLD,True,True,True,True
+MYN-CUST-00138,Karan,Jain,karan.jain.138@myntra.demo,9300000138,Hyderabad,Telangana,EMAIL,PLATINUM,True,True,True,True
+MYN-CUST-00139,Pooja,Mehta,pooja.mehta.139@myntra.demo,9300000139,Bangalore,Karnataka,SMS,GOLD,True,True,True,False
+MYN-CUST-00140,Samar,Reddy,samar.reddy.140@myntra.demo,9300000140,Mumbai,Maharashtra,WHATSAPP,PLATINUM,True,True,True,True
+MYN-CUST-00141,Riya,Sharma,riya.sharma.141@myntra.demo,9300000141,Bangalore,Karnataka,EMAIL,GOLD,True,True,True,True
+MYN-CUST-00142,Rohan,Jain,rohan.jain.142@myntra.demo,9300000142,Kolkata,West Bengal,WHATSAPP,GOLD,True,True,True,True
+MYN-CUST-00143,Aditi,Verma,aditi.verma.143@myntra.demo,9300000143,Hyderabad,Telangana,WHATSAPP,BRONZE,False,True,False,True
+MYN-CUST-00144,Rahul,Verma,rahul.verma.144@myntra.demo,9300000144,Chennai,Tamil Nadu,SMS,SILVER,False,True,True,True
+MYN-CUST-00145,Simran,Kumar,simran.kumar.145@myntra.demo,9300000145,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00146,Pooja,Nair,pooja.nair.146@myntra.demo,9300000146,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,False,True
+MYN-CUST-00147,Nisha,Mehta,nisha.mehta.147@myntra.demo,9300000147,Pune,Maharashtra,EMAIL,SILVER,True,True,True,False
+MYN-CUST-00148,Nisha,Nair,nisha.nair.148@myntra.demo,9300000148,Delhi,Delhi,SMS,BRONZE,True,True,False,False
+MYN-CUST-00149,Simran,Reddy,simran.reddy.149@myntra.demo,9300000149,Bangalore,Karnataka,EMAIL,BRONZE,True,True,True,False
+MYN-CUST-00150,Neha,Kumar,neha.kumar.150@myntra.demo,9300000150,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,False,True
+MYN-CUST-00151,Meera,Singh,meera.singh.151@myntra.demo,9300000151,Mumbai,Maharashtra,SMS,BRONZE,True,True,False,True
+MYN-CUST-00152,Riya,Jain,riya.jain.152@myntra.demo,9300000152,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00153,Simran,Reddy,simran.reddy.153@myntra.demo,9300000153,Bangalore,Karnataka,EMAIL,BRONZE,True,True,True,True
+MYN-CUST-00154,Yash,Verma,yash.verma.154@myntra.demo,9300000154,Pune,Maharashtra,WHATSAPP,SILVER,False,True,False,False
+MYN-CUST-00155,Simran,Gupta,simran.gupta.155@myntra.demo,9300000155,Kolkata,West Bengal,RCS,SILVER,False,True,True,False
+MYN-CUST-00156,Sneha,Verma,sneha.verma.156@myntra.demo,9300000156,Chennai,Tamil Nadu,SMS,BRONZE,True,True,True,True
+MYN-CUST-00157,Ananya,Nair,ananya.nair.157@myntra.demo,9300000157,Bangalore,Karnataka,SMS,SILVER,True,True,True,True
+MYN-CUST-00158,Arjun,Gupta,arjun.gupta.158@myntra.demo,9300000158,Bangalore,Karnataka,WHATSAPP,SILVER,True,False,False,True
+MYN-CUST-00159,Ishaan,Kumar,ishaan.kumar.159@myntra.demo,9300000159,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,True
+MYN-CUST-00160,Meera,Kapoor,meera.kapoor.160@myntra.demo,9300000160,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00161,Varun,Malhotra,varun.malhotra.161@myntra.demo,9300000161,Hyderabad,Telangana,SMS,GOLD,True,True,True,True
+MYN-CUST-00162,Tanya,Kumar,tanya.kumar.162@myntra.demo,9300000162,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00163,Karan,Mehta,karan.mehta.163@myntra.demo,9300000163,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,False,False
+MYN-CUST-00164,Samar,Das,samar.das.164@myntra.demo,9300000164,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00165,Kabir,Patel,kabir.patel.165@myntra.demo,9300000165,Bangalore,Karnataka,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00166,Neha,Nair,neha.nair.166@myntra.demo,9300000166,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00167,Ananya,Malhotra,ananya.malhotra.167@myntra.demo,9300000167,Mumbai,Maharashtra,RCS,BRONZE,True,True,True,True
+MYN-CUST-00168,Nisha,Saxena,nisha.saxena.168@myntra.demo,9300000168,Kolkata,West Bengal,WHATSAPP,GOLD,True,True,True,True
+MYN-CUST-00169,Pooja,Singh,pooja.singh.169@myntra.demo,9300000169,Delhi,Delhi,EMAIL,GOLD,True,True,True,True
+MYN-CUST-00170,Nisha,Reddy,nisha.reddy.170@myntra.demo,9300000170,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00171,Riya,Kapoor,riya.kapoor.171@myntra.demo,9300000171,Kolkata,West Bengal,EMAIL,BRONZE,False,True,True,True
+MYN-CUST-00172,Aman,Mehta,aman.mehta.172@myntra.demo,9300000172,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00173,Sneha,Verma,sneha.verma.173@myntra.demo,9300000173,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00174,Neha,Saxena,neha.saxena.174@myntra.demo,9300000174,Bangalore,Karnataka,WHATSAPP,BRONZE,True,False,True,False
+MYN-CUST-00175,Nisha,Reddy,nisha.reddy.175@myntra.demo,9300000175,Kolkata,West Bengal,EMAIL,BRONZE,True,True,False,True
+MYN-CUST-00176,Riya,Saxena,riya.saxena.176@myntra.demo,9300000176,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00177,Neha,Kumar,neha.kumar.177@myntra.demo,9300000177,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,True
+MYN-CUST-00178,Neha,Kumar,neha.kumar.178@myntra.demo,9300000178,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00179,Riya,Saxena,riya.saxena.179@myntra.demo,9300000179,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00180,Kabir,Singh,kabir.singh.180@myntra.demo,9300000180,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00181,Neha,Kapoor,neha.kapoor.181@myntra.demo,9300000181,Pune,Maharashtra,WHATSAPP,BRONZE,False,True,True,True
+MYN-CUST-00182,Rohan,Verma,rohan.verma.182@myntra.demo,9300000182,Ahmedabad,Gujarat,EMAIL,GOLD,True,True,True,False
+MYN-CUST-00183,Varun,Bose,varun.bose.183@myntra.demo,9300000183,Delhi,Delhi,WHATSAPP,GOLD,True,False,True,True
+MYN-CUST-00184,Neha,Nair,neha.nair.184@myntra.demo,9300000184,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00185,Arjun,Singh,arjun.singh.185@myntra.demo,9300000185,Delhi,Delhi,WHATSAPP,BRONZE,True,True,False,False
+MYN-CUST-00186,Priya,Malhotra,priya.malhotra.186@myntra.demo,9300000186,Delhi,Delhi,WHATSAPP,PLATINUM,False,True,True,True
+MYN-CUST-00187,Aman,Nair,aman.nair.187@myntra.demo,9300000187,Delhi,Delhi,WHATSAPP,BRONZE,True,True,False,True
+MYN-CUST-00188,Rahul,Mehta,rahul.mehta.188@myntra.demo,9300000188,Ahmedabad,Gujarat,EMAIL,SILVER,True,True,True,True
+MYN-CUST-00189,Aman,Reddy,aman.reddy.189@myntra.demo,9300000189,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00190,Karan,Reddy,karan.reddy.190@myntra.demo,9300000190,Kolkata,West Bengal,SMS,SILVER,True,True,True,False
+MYN-CUST-00191,Ananya,Gupta,ananya.gupta.191@myntra.demo,9300000191,Bangalore,Karnataka,WHATSAPP,GOLD,True,True,False,True
+MYN-CUST-00192,Kabir,Patel,kabir.patel.192@myntra.demo,9300000192,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00193,Ishaan,Iyer,ishaan.iyer.193@myntra.demo,9300000193,Ahmedabad,Gujarat,EMAIL,GOLD,True,False,True,False
+MYN-CUST-00194,Aditi,Das,aditi.das.194@myntra.demo,9300000194,Mumbai,Maharashtra,RCS,PLATINUM,False,True,False,False
+MYN-CUST-00195,Aditi,Saxena,aditi.saxena.195@myntra.demo,9300000195,Delhi,Delhi,EMAIL,BRONZE,True,True,True,True
+MYN-CUST-00196,Arjun,Nair,arjun.nair.196@myntra.demo,9300000196,Bangalore,Karnataka,EMAIL,SILVER,True,True,True,False
+MYN-CUST-00197,Pooja,Iyer,pooja.iyer.197@myntra.demo,9300000197,Delhi,Delhi,WHATSAPP,SILVER,False,True,False,True
+MYN-CUST-00198,Dev,Sharma,dev.sharma.198@myntra.demo,9300000198,Bangalore,Karnataka,SMS,SILVER,True,True,True,False
+MYN-CUST-00199,Karan,Nair,karan.nair.199@myntra.demo,9300000199,Bangalore,Karnataka,EMAIL,BRONZE,True,True,True,False
+MYN-CUST-00200,Neha,Verma,neha.verma.200@myntra.demo,9300000200,Bangalore,Karnataka,WHATSAPP,GOLD,True,False,True,True
+MYN-CUST-00201,Varun,Iyer,varun.iyer.201@myntra.demo,9300000201,Bangalore,Karnataka,SMS,SILVER,True,False,False,True
+MYN-CUST-00202,Samar,Reddy,samar.reddy.202@myntra.demo,9300000202,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00203,Rahul,Verma,rahul.verma.203@myntra.demo,9300000203,Hyderabad,Telangana,WHATSAPP,BRONZE,False,True,True,False
+MYN-CUST-00204,Kiara,Verma,kiara.verma.204@myntra.demo,9300000204,Pune,Maharashtra,WHATSAPP,GOLD,True,True,False,False
+MYN-CUST-00205,Karan,Singh,karan.singh.205@myntra.demo,9300000205,Delhi,Delhi,WHATSAPP,SILVER,True,False,True,True
+MYN-CUST-00206,Karan,Nair,karan.nair.206@myntra.demo,9300000206,Pune,Maharashtra,SMS,BRONZE,True,True,True,False
+MYN-CUST-00207,Meera,Bose,meera.bose.207@myntra.demo,9300000207,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,False,True
+MYN-CUST-00208,Aditi,Singh,aditi.singh.208@myntra.demo,9300000208,Pune,Maharashtra,WHATSAPP,BRONZE,False,True,False,True
+MYN-CUST-00209,Simran,Mehta,simran.mehta.209@myntra.demo,9300000209,Kolkata,West Bengal,RCS,SILVER,True,True,True,False
+MYN-CUST-00210,Rohan,Iyer,rohan.iyer.210@myntra.demo,9300000210,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00211,Pooja,Sharma,pooja.sharma.211@myntra.demo,9300000211,Hyderabad,Telangana,WHATSAPP,SILVER,True,False,True,False
+MYN-CUST-00212,Karan,Singh,karan.singh.212@myntra.demo,9300000212,Chennai,Tamil Nadu,EMAIL,GOLD,True,True,True,False
+MYN-CUST-00213,Ananya,Nair,ananya.nair.213@myntra.demo,9300000213,Ahmedabad,Gujarat,SMS,SILVER,True,True,True,False
+MYN-CUST-00214,Priya,Verma,priya.verma.214@myntra.demo,9300000214,Chennai,Tamil Nadu,WHATSAPP,PLATINUM,True,True,True,False
+MYN-CUST-00215,Aman,Sharma,aman.sharma.215@myntra.demo,9300000215,Bangalore,Karnataka,SMS,BRONZE,True,True,True,True
+MYN-CUST-00216,Aditi,Bose,aditi.bose.216@myntra.demo,9300000216,Chennai,Tamil Nadu,RCS,SILVER,True,True,True,True
+MYN-CUST-00217,Sneha,Kumar,sneha.kumar.217@myntra.demo,9300000217,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00218,Riya,Jain,riya.jain.218@myntra.demo,9300000218,Bangalore,Karnataka,EMAIL,BRONZE,True,True,True,False
+MYN-CUST-00219,Aman,Mehta,aman.mehta.219@myntra.demo,9300000219,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00220,Dev,Singh,dev.singh.220@myntra.demo,9300000220,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,False,False
+MYN-CUST-00221,Riya,Nair,riya.nair.221@myntra.demo,9300000221,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00222,Aryan,Gupta,aryan.gupta.222@myntra.demo,9300000222,Mumbai,Maharashtra,EMAIL,GOLD,True,True,True,True
+MYN-CUST-00223,Simran,Mehta,simran.mehta.223@myntra.demo,9300000223,Mumbai,Maharashtra,EMAIL,GOLD,True,True,False,False
+MYN-CUST-00224,Riya,Nair,riya.nair.224@myntra.demo,9300000224,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00225,Tanya,Malhotra,tanya.malhotra.225@myntra.demo,9300000225,Chennai,Tamil Nadu,WHATSAPP,PLATINUM,True,True,False,False
+MYN-CUST-00226,Tanya,Sharma,tanya.sharma.226@myntra.demo,9300000226,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00227,Aryan,Verma,aryan.verma.227@myntra.demo,9300000227,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,True,True
+MYN-CUST-00228,Yash,Gupta,yash.gupta.228@myntra.demo,9300000228,Pune,Maharashtra,WHATSAPP,SILVER,True,False,True,False
+MYN-CUST-00229,Riya,Patel,riya.patel.229@myntra.demo,9300000229,Ahmedabad,Gujarat,EMAIL,GOLD,True,True,True,True
+MYN-CUST-00230,Neha,Bose,neha.bose.230@myntra.demo,9300000230,Bangalore,Karnataka,RCS,BRONZE,True,False,True,True
+MYN-CUST-00231,Arjun,Reddy,arjun.reddy.231@myntra.demo,9300000231,Kolkata,West Bengal,SMS,PLATINUM,True,True,True,False
+MYN-CUST-00232,Yash,Jain,yash.jain.232@myntra.demo,9300000232,Kolkata,West Bengal,EMAIL,PLATINUM,True,True,False,False
+MYN-CUST-00233,Priya,Jain,priya.jain.233@myntra.demo,9300000233,Chennai,Tamil Nadu,SMS,BRONZE,True,False,True,True
+MYN-CUST-00234,Nisha,Jain,nisha.jain.234@myntra.demo,9300000234,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00235,Neha,Patel,neha.patel.235@myntra.demo,9300000235,Hyderabad,Telangana,SMS,GOLD,False,True,True,True
+MYN-CUST-00236,Yash,Iyer,yash.iyer.236@myntra.demo,9300000236,Hyderabad,Telangana,WHATSAPP,BRONZE,False,False,True,False
+MYN-CUST-00237,Sneha,Singh,sneha.singh.237@myntra.demo,9300000237,Delhi,Delhi,EMAIL,BRONZE,True,True,True,False
+MYN-CUST-00238,Pooja,Bose,pooja.bose.238@myntra.demo,9300000238,Hyderabad,Telangana,WHATSAPP,BRONZE,False,True,True,False
+MYN-CUST-00239,Tanya,Patel,tanya.patel.239@myntra.demo,9300000239,Mumbai,Maharashtra,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00240,Samar,Bose,samar.bose.240@myntra.demo,9300000240,Kolkata,West Bengal,WHATSAPP,GOLD,True,True,False,True
+MYN-CUST-00241,Simran,Sharma,simran.sharma.241@myntra.demo,9300000241,Chennai,Tamil Nadu,SMS,SILVER,True,True,True,False
+MYN-CUST-00242,Ananya,Iyer,ananya.iyer.242@myntra.demo,9300000242,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00243,Aditi,Malhotra,aditi.malhotra.243@myntra.demo,9300000243,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,False,True
+MYN-CUST-00244,Neha,Reddy,neha.reddy.244@myntra.demo,9300000244,Pune,Maharashtra,RCS,SILVER,True,True,False,False
+MYN-CUST-00245,Meera,Singh,meera.singh.245@myntra.demo,9300000245,Kolkata,West Bengal,SMS,BRONZE,True,True,False,False
+MYN-CUST-00246,Aman,Mehta,aman.mehta.246@myntra.demo,9300000246,Pune,Maharashtra,SMS,GOLD,True,True,False,True
+MYN-CUST-00247,Sneha,Iyer,sneha.iyer.247@myntra.demo,9300000247,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00248,Sneha,Sharma,sneha.sharma.248@myntra.demo,9300000248,Mumbai,Maharashtra,EMAIL,GOLD,True,True,False,False
+MYN-CUST-00249,Neha,Patel,neha.patel.249@myntra.demo,9300000249,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,True
+MYN-CUST-00250,Kabir,Kapoor,kabir.kapoor.250@myntra.demo,9300000250,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00251,Riya,Mehta,riya.mehta.251@myntra.demo,9300000251,Chennai,Tamil Nadu,EMAIL,GOLD,True,True,False,False
+MYN-CUST-00252,Arjun,Iyer,arjun.iyer.252@myntra.demo,9300000252,Delhi,Delhi,SMS,GOLD,True,True,False,False
+MYN-CUST-00253,Aditi,Bose,aditi.bose.253@myntra.demo,9300000253,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00254,Simran,Kapoor,simran.kapoor.254@myntra.demo,9300000254,Pune,Maharashtra,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00255,Nisha,Gupta,nisha.gupta.255@myntra.demo,9300000255,Bangalore,Karnataka,EMAIL,GOLD,True,True,True,False
+MYN-CUST-00256,Neha,Sharma,neha.sharma.256@myntra.demo,9300000256,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00257,Arjun,Nair,arjun.nair.257@myntra.demo,9300000257,Pune,Maharashtra,EMAIL,GOLD,False,True,True,False
+MYN-CUST-00258,Rohan,Kumar,rohan.kumar.258@myntra.demo,9300000258,Kolkata,West Bengal,SMS,GOLD,True,True,True,False
+MYN-CUST-00259,Aditi,Gupta,aditi.gupta.259@myntra.demo,9300000259,Mumbai,Maharashtra,EMAIL,SILVER,True,True,True,False
+MYN-CUST-00260,Varun,Kumar,varun.kumar.260@myntra.demo,9300000260,Delhi,Delhi,RCS,BRONZE,True,True,True,False
+MYN-CUST-00261,Aryan,Kumar,aryan.kumar.261@myntra.demo,9300000261,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00262,Neha,Nair,neha.nair.262@myntra.demo,9300000262,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,False,False,True
+MYN-CUST-00263,Ananya,Bose,ananya.bose.263@myntra.demo,9300000263,Pune,Maharashtra,WHATSAPP,PLATINUM,True,True,True,False
+MYN-CUST-00264,Arjun,Bose,arjun.bose.264@myntra.demo,9300000264,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,False,True
+MYN-CUST-00265,Arjun,Kapoor,arjun.kapoor.265@myntra.demo,9300000265,Hyderabad,Telangana,SMS,SILVER,True,True,True,True
+MYN-CUST-00266,Kabir,Patel,kabir.patel.266@myntra.demo,9300000266,Bangalore,Karnataka,WHATSAPP,PLATINUM,True,False,True,True
+MYN-CUST-00267,Ananya,Malhotra,ananya.malhotra.267@myntra.demo,9300000267,Pune,Maharashtra,SMS,SILVER,True,False,False,False
+MYN-CUST-00268,Rahul,Reddy,rahul.reddy.268@myntra.demo,9300000268,Kolkata,West Bengal,WHATSAPP,BRONZE,True,False,True,False
+MYN-CUST-00269,Ananya,Iyer,ananya.iyer.269@myntra.demo,9300000269,Delhi,Delhi,SMS,SILVER,True,True,False,False
+MYN-CUST-00270,Simran,Kumar,simran.kumar.270@myntra.demo,9300000270,Delhi,Delhi,SMS,BRONZE,True,False,True,False
+MYN-CUST-00271,Pooja,Malhotra,pooja.malhotra.271@myntra.demo,9300000271,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00272,Arjun,Iyer,arjun.iyer.272@myntra.demo,9300000272,Kolkata,West Bengal,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00273,Kiara,Gupta,kiara.gupta.273@myntra.demo,9300000273,Kolkata,West Bengal,WHATSAPP,SILVER,True,False,True,True
+MYN-CUST-00274,Meera,Sharma,meera.sharma.274@myntra.demo,9300000274,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00275,Karan,Patel,karan.patel.275@myntra.demo,9300000275,Kolkata,West Bengal,WHATSAPP,BRONZE,False,True,True,True
+MYN-CUST-00276,Aryan,Saxena,aryan.saxena.276@myntra.demo,9300000276,Bangalore,Karnataka,EMAIL,SILVER,True,True,True,False
+MYN-CUST-00277,Pooja,Reddy,pooja.reddy.277@myntra.demo,9300000277,Bangalore,Karnataka,WHATSAPP,PLATINUM,True,False,True,False
+MYN-CUST-00278,Kiara,Reddy,kiara.reddy.278@myntra.demo,9300000278,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,True
+MYN-CUST-00279,Aditi,Das,aditi.das.279@myntra.demo,9300000279,Bangalore,Karnataka,EMAIL,SILVER,True,True,True,True
+MYN-CUST-00280,Rahul,Malhotra,rahul.malhotra.280@myntra.demo,9300000280,Chennai,Tamil Nadu,EMAIL,BRONZE,False,True,True,False
+MYN-CUST-00281,Pooja,Singh,pooja.singh.281@myntra.demo,9300000281,Pune,Maharashtra,WHATSAPP,SILVER,True,True,False,True
+MYN-CUST-00282,Aman,Patel,aman.patel.282@myntra.demo,9300000282,Hyderabad,Telangana,SMS,SILVER,True,True,True,False
+MYN-CUST-00283,Priya,Kumar,priya.kumar.283@myntra.demo,9300000283,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,True,False,False
+MYN-CUST-00284,Riya,Malhotra,riya.malhotra.284@myntra.demo,9300000284,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00285,Riya,Nair,riya.nair.285@myntra.demo,9300000285,Pune,Maharashtra,WHATSAPP,PLATINUM,False,True,False,False
+MYN-CUST-00286,Aryan,Singh,aryan.singh.286@myntra.demo,9300000286,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,True,True
+MYN-CUST-00287,Aditi,Sharma,aditi.sharma.287@myntra.demo,9300000287,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00288,Aryan,Reddy,aryan.reddy.288@myntra.demo,9300000288,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00289,Tanya,Bose,tanya.bose.289@myntra.demo,9300000289,Mumbai,Maharashtra,WHATSAPP,GOLD,True,False,True,False
+MYN-CUST-00290,Yash,Reddy,yash.reddy.290@myntra.demo,9300000290,Chennai,Tamil Nadu,WHATSAPP,PLATINUM,False,True,True,False
+MYN-CUST-00291,Neha,Das,neha.das.291@myntra.demo,9300000291,Delhi,Delhi,WHATSAPP,GOLD,False,False,False,False
+MYN-CUST-00292,Aryan,Nair,aryan.nair.292@myntra.demo,9300000292,Delhi,Delhi,EMAIL,SILVER,True,True,False,False
+MYN-CUST-00293,Sneha,Patel,sneha.patel.293@myntra.demo,9300000293,Ahmedabad,Gujarat,WHATSAPP,BRONZE,False,True,True,True
+MYN-CUST-00294,Rohan,Patel,rohan.patel.294@myntra.demo,9300000294,Hyderabad,Telangana,EMAIL,SILVER,True,True,True,False
+MYN-CUST-00295,Nisha,Bose,nisha.bose.295@myntra.demo,9300000295,Delhi,Delhi,WHATSAPP,SILVER,True,False,True,False
+MYN-CUST-00296,Nisha,Kumar,nisha.kumar.296@myntra.demo,9300000296,Pune,Maharashtra,EMAIL,SILVER,True,True,True,False
+MYN-CUST-00297,Aditi,Nair,aditi.nair.297@myntra.demo,9300000297,Kolkata,West Bengal,EMAIL,PLATINUM,True,True,True,False
+MYN-CUST-00298,Priya,Sharma,priya.sharma.298@myntra.demo,9300000298,Kolkata,West Bengal,EMAIL,BRONZE,True,False,True,False
+MYN-CUST-00299,Karan,Bose,karan.bose.299@myntra.demo,9300000299,Bangalore,Karnataka,WHATSAPP,GOLD,True,True,True,True
+MYN-CUST-00300,Meera,Kapoor,meera.kapoor.300@myntra.demo,9300000300,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00301,Aryan,Jain,aryan.jain.301@myntra.demo,9300000301,Ahmedabad,Gujarat,SMS,SILVER,True,True,True,False
+MYN-CUST-00302,Ishaan,Jain,ishaan.jain.302@myntra.demo,9300000302,Delhi,Delhi,SMS,BRONZE,True,False,True,False
+MYN-CUST-00303,Karan,Saxena,karan.saxena.303@myntra.demo,9300000303,Pune,Maharashtra,SMS,BRONZE,True,True,False,False
+MYN-CUST-00304,Samar,Singh,samar.singh.304@myntra.demo,9300000304,Delhi,Delhi,SMS,BRONZE,False,True,True,False
+MYN-CUST-00305,Ishaan,Iyer,ishaan.iyer.305@myntra.demo,9300000305,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,False,False
+MYN-CUST-00306,Ananya,Kapoor,ananya.kapoor.306@myntra.demo,9300000306,Kolkata,West Bengal,SMS,GOLD,True,True,True,True
+MYN-CUST-00307,Tanya,Bose,tanya.bose.307@myntra.demo,9300000307,Pune,Maharashtra,EMAIL,BRONZE,True,True,True,False
+MYN-CUST-00308,Ananya,Kumar,ananya.kumar.308@myntra.demo,9300000308,Kolkata,West Bengal,RCS,GOLD,True,True,False,True
+MYN-CUST-00309,Simran,Saxena,simran.saxena.309@myntra.demo,9300000309,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,True
+MYN-CUST-00310,Ananya,Mehta,ananya.mehta.310@myntra.demo,9300000310,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00311,Ananya,Patel,ananya.patel.311@myntra.demo,9300000311,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00312,Arjun,Kapoor,arjun.kapoor.312@myntra.demo,9300000312,Delhi,Delhi,WHATSAPP,BRONZE,True,False,True,True
+MYN-CUST-00313,Neha,Kapoor,neha.kapoor.313@myntra.demo,9300000313,Delhi,Delhi,RCS,SILVER,True,True,True,False
+MYN-CUST-00314,Neha,Patel,neha.patel.314@myntra.demo,9300000314,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00315,Priya,Kumar,priya.kumar.315@myntra.demo,9300000315,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00316,Dev,Bose,dev.bose.316@myntra.demo,9300000316,Bangalore,Karnataka,WHATSAPP,PLATINUM,True,True,False,False
+MYN-CUST-00317,Meera,Iyer,meera.iyer.317@myntra.demo,9300000317,Mumbai,Maharashtra,SMS,GOLD,True,True,False,False
+MYN-CUST-00318,Yash,Mehta,yash.mehta.318@myntra.demo,9300000318,Mumbai,Maharashtra,WHATSAPP,GOLD,True,False,True,False
+MYN-CUST-00319,Aditi,Verma,aditi.verma.319@myntra.demo,9300000319,Bangalore,Karnataka,SMS,BRONZE,True,True,True,False
+MYN-CUST-00320,Simran,Sharma,simran.sharma.320@myntra.demo,9300000320,Bangalore,Karnataka,WHATSAPP,PLATINUM,True,False,False,False
+MYN-CUST-00321,Rohan,Singh,rohan.singh.321@myntra.demo,9300000321,Bangalore,Karnataka,WHATSAPP,SILVER,True,False,True,False
+MYN-CUST-00322,Ishaan,Kumar,ishaan.kumar.322@myntra.demo,9300000322,Chennai,Tamil Nadu,EMAIL,GOLD,True,False,True,True
+MYN-CUST-00323,Neha,Mehta,neha.mehta.323@myntra.demo,9300000323,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00324,Samar,Sharma,samar.sharma.324@myntra.demo,9300000324,Ahmedabad,Gujarat,SMS,BRONZE,False,True,True,False
+MYN-CUST-00325,Rahul,Das,rahul.das.325@myntra.demo,9300000325,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00326,Rohan,Mehta,rohan.mehta.326@myntra.demo,9300000326,Delhi,Delhi,WHATSAPP,BRONZE,False,True,True,False
+MYN-CUST-00327,Neha,Jain,neha.jain.327@myntra.demo,9300000327,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00328,Neha,Nair,neha.nair.328@myntra.demo,9300000328,Delhi,Delhi,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00329,Aryan,Malhotra,aryan.malhotra.329@myntra.demo,9300000329,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,True
+MYN-CUST-00330,Varun,Nair,varun.nair.330@myntra.demo,9300000330,Bangalore,Karnataka,WHATSAPP,GOLD,True,False,True,True
+MYN-CUST-00331,Riya,Bose,riya.bose.331@myntra.demo,9300000331,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00332,Tanya,Reddy,tanya.reddy.332@myntra.demo,9300000332,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,True,True
+MYN-CUST-00333,Pooja,Das,pooja.das.333@myntra.demo,9300000333,Delhi,Delhi,SMS,BRONZE,True,True,True,True
+MYN-CUST-00334,Ananya,Malhotra,ananya.malhotra.334@myntra.demo,9300000334,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00335,Neha,Jain,neha.jain.335@myntra.demo,9300000335,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,False,False
+MYN-CUST-00336,Dev,Das,dev.das.336@myntra.demo,9300000336,Bangalore,Karnataka,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00337,Ananya,Kapoor,ananya.kapoor.337@myntra.demo,9300000337,Mumbai,Maharashtra,SMS,BRONZE,True,True,True,False
+MYN-CUST-00338,Rohan,Singh,rohan.singh.338@myntra.demo,9300000338,Pune,Maharashtra,EMAIL,SILVER,True,True,True,False
+MYN-CUST-00339,Aryan,Bose,aryan.bose.339@myntra.demo,9300000339,Hyderabad,Telangana,SMS,BRONZE,True,True,True,False
+MYN-CUST-00340,Simran,Saxena,simran.saxena.340@myntra.demo,9300000340,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00341,Ananya,Das,ananya.das.341@myntra.demo,9300000341,Ahmedabad,Gujarat,WHATSAPP,BRONZE,False,True,True,False
+MYN-CUST-00342,Kiara,Kapoor,kiara.kapoor.342@myntra.demo,9300000342,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00343,Rohan,Mehta,rohan.mehta.343@myntra.demo,9300000343,Kolkata,West Bengal,WHATSAPP,PLATINUM,True,True,True,False
+MYN-CUST-00344,Pooja,Malhotra,pooja.malhotra.344@myntra.demo,9300000344,Kolkata,West Bengal,WHATSAPP,SILVER,True,False,False,False
+MYN-CUST-00345,Sneha,Sharma,sneha.sharma.345@myntra.demo,9300000345,Chennai,Tamil Nadu,WHATSAPP,BRONZE,False,True,True,False
+MYN-CUST-00346,Karan,Verma,karan.verma.346@myntra.demo,9300000346,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,True,True
+MYN-CUST-00347,Kiara,Reddy,kiara.reddy.347@myntra.demo,9300000347,Pune,Maharashtra,EMAIL,BRONZE,True,True,True,False
+MYN-CUST-00348,Simran,Patel,simran.patel.348@myntra.demo,9300000348,Mumbai,Maharashtra,WHATSAPP,SILVER,True,False,True,True
+MYN-CUST-00349,Riya,Reddy,riya.reddy.349@myntra.demo,9300000349,Delhi,Delhi,WHATSAPP,BRONZE,False,True,True,False
+MYN-CUST-00350,Tanya,Sharma,tanya.sharma.350@myntra.demo,9300000350,Mumbai,Maharashtra,EMAIL,SILVER,True,True,False,True
+MYN-CUST-00351,Riya,Jain,riya.jain.351@myntra.demo,9300000351,Bangalore,Karnataka,WHATSAPP,PLATINUM,True,True,True,False
+MYN-CUST-00352,Karan,Verma,karan.verma.352@myntra.demo,9300000352,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00353,Pooja,Jain,pooja.jain.353@myntra.demo,9300000353,Bangalore,Karnataka,WHATSAPP,PLATINUM,True,True,True,False
+MYN-CUST-00354,Neha,Malhotra,neha.malhotra.354@myntra.demo,9300000354,Bangalore,Karnataka,SMS,PLATINUM,True,True,True,False
+MYN-CUST-00355,Sneha,Verma,sneha.verma.355@myntra.demo,9300000355,Hyderabad,Telangana,EMAIL,PLATINUM,True,False,False,False
+MYN-CUST-00356,Ishaan,Nair,ishaan.nair.356@myntra.demo,9300000356,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00357,Nisha,Bose,nisha.bose.357@myntra.demo,9300000357,Mumbai,Maharashtra,EMAIL,GOLD,True,True,True,False
+MYN-CUST-00358,Meera,Bose,meera.bose.358@myntra.demo,9300000358,Bangalore,Karnataka,EMAIL,GOLD,True,True,True,True
+MYN-CUST-00359,Varun,Jain,varun.jain.359@myntra.demo,9300000359,Bangalore,Karnataka,WHATSAPP,BRONZE,False,True,True,False
+MYN-CUST-00360,Aditi,Bose,aditi.bose.360@myntra.demo,9300000360,Delhi,Delhi,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00361,Aryan,Gupta,aryan.gupta.361@myntra.demo,9300000361,Delhi,Delhi,SMS,SILVER,True,True,True,True
+MYN-CUST-00362,Rahul,Singh,rahul.singh.362@myntra.demo,9300000362,Chennai,Tamil Nadu,EMAIL,SILVER,True,True,False,True
+MYN-CUST-00363,Arjun,Gupta,arjun.gupta.363@myntra.demo,9300000363,Mumbai,Maharashtra,WHATSAPP,BRONZE,False,True,True,True
+MYN-CUST-00364,Varun,Nair,varun.nair.364@myntra.demo,9300000364,Pune,Maharashtra,SMS,BRONZE,True,True,True,False
+MYN-CUST-00365,Pooja,Singh,pooja.singh.365@myntra.demo,9300000365,Pune,Maharashtra,EMAIL,GOLD,True,True,True,True
+MYN-CUST-00366,Neha,Gupta,neha.gupta.366@myntra.demo,9300000366,Delhi,Delhi,EMAIL,BRONZE,True,False,True,False
+MYN-CUST-00367,Ananya,Kumar,ananya.kumar.367@myntra.demo,9300000367,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,True,True
+MYN-CUST-00368,Yash,Reddy,yash.reddy.368@myntra.demo,9300000368,Ahmedabad,Gujarat,WHATSAPP,PLATINUM,True,True,True,False
+MYN-CUST-00369,Arjun,Kumar,arjun.kumar.369@myntra.demo,9300000369,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00370,Arjun,Jain,arjun.jain.370@myntra.demo,9300000370,Delhi,Delhi,SMS,GOLD,True,True,True,True
+MYN-CUST-00371,Karan,Nair,karan.nair.371@myntra.demo,9300000371,Hyderabad,Telangana,EMAIL,GOLD,True,False,True,False
+MYN-CUST-00372,Dev,Singh,dev.singh.372@myntra.demo,9300000372,Mumbai,Maharashtra,EMAIL,SILVER,True,False,False,False
+MYN-CUST-00373,Dev,Nair,dev.nair.373@myntra.demo,9300000373,Delhi,Delhi,WHATSAPP,BRONZE,True,False,True,True
+MYN-CUST-00374,Aditi,Kapoor,aditi.kapoor.374@myntra.demo,9300000374,Mumbai,Maharashtra,RCS,GOLD,True,False,True,False
+MYN-CUST-00375,Sneha,Mehta,sneha.mehta.375@myntra.demo,9300000375,Delhi,Delhi,EMAIL,SILVER,True,True,False,False
+MYN-CUST-00376,Dev,Reddy,dev.reddy.376@myntra.demo,9300000376,Bangalore,Karnataka,EMAIL,SILVER,False,True,True,False
+MYN-CUST-00377,Meera,Singh,meera.singh.377@myntra.demo,9300000377,Mumbai,Maharashtra,RCS,SILVER,False,True,True,True
+MYN-CUST-00378,Yash,Nair,yash.nair.378@myntra.demo,9300000378,Kolkata,West Bengal,WHATSAPP,PLATINUM,True,True,True,False
+MYN-CUST-00379,Ananya,Mehta,ananya.mehta.379@myntra.demo,9300000379,Hyderabad,Telangana,EMAIL,SILVER,False,True,True,True
+MYN-CUST-00380,Neha,Jain,neha.jain.380@myntra.demo,9300000380,Hyderabad,Telangana,EMAIL,PLATINUM,True,True,True,True
+MYN-CUST-00381,Kabir,Kumar,kabir.kumar.381@myntra.demo,9300000381,Pune,Maharashtra,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00382,Varun,Singh,varun.singh.382@myntra.demo,9300000382,Chennai,Tamil Nadu,RCS,SILVER,True,False,True,False
+MYN-CUST-00383,Simran,Gupta,simran.gupta.383@myntra.demo,9300000383,Ahmedabad,Gujarat,RCS,GOLD,False,True,True,False
+MYN-CUST-00384,Yash,Bose,yash.bose.384@myntra.demo,9300000384,Mumbai,Maharashtra,WHATSAPP,GOLD,True,True,True,True
+MYN-CUST-00385,Tanya,Saxena,tanya.saxena.385@myntra.demo,9300000385,Kolkata,West Bengal,EMAIL,GOLD,True,True,False,True
+MYN-CUST-00386,Karan,Jain,karan.jain.386@myntra.demo,9300000386,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00387,Simran,Gupta,simran.gupta.387@myntra.demo,9300000387,Chennai,Tamil Nadu,EMAIL,SILVER,True,False,True,False
+MYN-CUST-00388,Tanya,Kapoor,tanya.kapoor.388@myntra.demo,9300000388,Delhi,Delhi,SMS,BRONZE,True,True,False,False
+MYN-CUST-00389,Yash,Patel,yash.patel.389@myntra.demo,9300000389,Kolkata,West Bengal,WHATSAPP,GOLD,False,True,True,True
+MYN-CUST-00390,Kabir,Kumar,kabir.kumar.390@myntra.demo,9300000390,Mumbai,Maharashtra,WHATSAPP,PLATINUM,True,False,True,False
+MYN-CUST-00391,Nisha,Patel,nisha.patel.391@myntra.demo,9300000391,Chennai,Tamil Nadu,WHATSAPP,PLATINUM,True,True,True,False
+MYN-CUST-00392,Nisha,Bose,nisha.bose.392@myntra.demo,9300000392,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00393,Sneha,Kapoor,sneha.kapoor.393@myntra.demo,9300000393,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00394,Simran,Kapoor,simran.kapoor.394@myntra.demo,9300000394,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,True
+MYN-CUST-00395,Rohan,Kumar,rohan.kumar.395@myntra.demo,9300000395,Pune,Maharashtra,EMAIL,PLATINUM,True,True,True,False
+MYN-CUST-00396,Aryan,Gupta,aryan.gupta.396@myntra.demo,9300000396,Kolkata,West Bengal,WHATSAPP,BRONZE,True,False,False,False
+MYN-CUST-00397,Priya,Mehta,priya.mehta.397@myntra.demo,9300000397,Delhi,Delhi,EMAIL,SILVER,True,True,False,True
+MYN-CUST-00398,Yash,Iyer,yash.iyer.398@myntra.demo,9300000398,Bangalore,Karnataka,EMAIL,SILVER,True,True,False,True
+MYN-CUST-00399,Samar,Iyer,samar.iyer.399@myntra.demo,9300000399,Pune,Maharashtra,EMAIL,BRONZE,True,True,False,False
+MYN-CUST-00400,Ananya,Iyer,ananya.iyer.400@myntra.demo,9300000400,Kolkata,West Bengal,EMAIL,GOLD,True,False,True,True
+MYN-CUST-00401,Nisha,Sharma,nisha.sharma.401@myntra.demo,9300000401,Pune,Maharashtra,WHATSAPP,BRONZE,True,False,False,False
+MYN-CUST-00402,Nisha,Singh,nisha.singh.402@myntra.demo,9300000402,Bangalore,Karnataka,WHATSAPP,GOLD,True,True,True,True
+MYN-CUST-00403,Arjun,Das,arjun.das.403@myntra.demo,9300000403,Kolkata,West Bengal,WHATSAPP,BRONZE,True,False,True,True
+MYN-CUST-00404,Rohan,Iyer,rohan.iyer.404@myntra.demo,9300000404,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00405,Aryan,Saxena,aryan.saxena.405@myntra.demo,9300000405,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00406,Aryan,Nair,aryan.nair.406@myntra.demo,9300000406,Mumbai,Maharashtra,SMS,SILVER,True,False,False,False
+MYN-CUST-00407,Varun,Kapoor,varun.kapoor.407@myntra.demo,9300000407,Hyderabad,Telangana,SMS,PLATINUM,True,True,True,False
+MYN-CUST-00408,Samar,Sharma,samar.sharma.408@myntra.demo,9300000408,Hyderabad,Telangana,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00409,Dev,Nair,dev.nair.409@myntra.demo,9300000409,Ahmedabad,Gujarat,SMS,SILVER,True,True,True,False
+MYN-CUST-00410,Priya,Iyer,priya.iyer.410@myntra.demo,9300000410,Kolkata,West Bengal,EMAIL,SILVER,True,True,True,False
+MYN-CUST-00411,Yash,Malhotra,yash.malhotra.411@myntra.demo,9300000411,Bangalore,Karnataka,RCS,SILVER,True,True,True,True
+MYN-CUST-00412,Tanya,Sharma,tanya.sharma.412@myntra.demo,9300000412,Bangalore,Karnataka,EMAIL,BRONZE,True,True,True,False
+MYN-CUST-00413,Aditi,Malhotra,aditi.malhotra.413@myntra.demo,9300000413,Ahmedabad,Gujarat,SMS,GOLD,True,True,True,False
+MYN-CUST-00414,Simran,Saxena,simran.saxena.414@myntra.demo,9300000414,Kolkata,West Bengal,WHATSAPP,PLATINUM,True,True,True,False
+MYN-CUST-00415,Varun,Sharma,varun.sharma.415@myntra.demo,9300000415,Chennai,Tamil Nadu,EMAIL,SILVER,True,True,True,True
+MYN-CUST-00416,Aman,Das,aman.das.416@myntra.demo,9300000416,Bangalore,Karnataka,SMS,SILVER,True,True,True,True
+MYN-CUST-00417,Kabir,Gupta,kabir.gupta.417@myntra.demo,9300000417,Ahmedabad,Gujarat,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00418,Sneha,Bose,sneha.bose.418@myntra.demo,9300000418,Ahmedabad,Gujarat,EMAIL,GOLD,True,True,False,False
+MYN-CUST-00419,Dev,Saxena,dev.saxena.419@myntra.demo,9300000419,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00420,Riya,Bose,riya.bose.420@myntra.demo,9300000420,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00421,Kiara,Singh,kiara.singh.421@myntra.demo,9300000421,Chennai,Tamil Nadu,SMS,SILVER,True,True,True,True
+MYN-CUST-00422,Pooja,Das,pooja.das.422@myntra.demo,9300000422,Hyderabad,Telangana,WHATSAPP,GOLD,True,True,False,True
+MYN-CUST-00423,Riya,Patel,riya.patel.423@myntra.demo,9300000423,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00424,Yash,Kapoor,yash.kapoor.424@myntra.demo,9300000424,Hyderabad,Telangana,SMS,BRONZE,True,False,True,False
+MYN-CUST-00425,Samar,Das,samar.das.425@myntra.demo,9300000425,Bangalore,Karnataka,WHATSAPP,GOLD,True,True,False,False
+MYN-CUST-00426,Karan,Sharma,karan.sharma.426@myntra.demo,9300000426,Pune,Maharashtra,WHATSAPP,GOLD,True,False,True,True
+MYN-CUST-00427,Riya,Malhotra,riya.malhotra.427@myntra.demo,9300000427,Bangalore,Karnataka,EMAIL,BRONZE,True,True,True,True
+MYN-CUST-00428,Neha,Kumar,neha.kumar.428@myntra.demo,9300000428,Kolkata,West Bengal,SMS,GOLD,True,True,True,False
+MYN-CUST-00429,Karan,Gupta,karan.gupta.429@myntra.demo,9300000429,Hyderabad,Telangana,EMAIL,GOLD,True,True,True,True
+MYN-CUST-00430,Samar,Mehta,samar.mehta.430@myntra.demo,9300000430,Ahmedabad,Gujarat,SMS,BRONZE,True,False,True,False
+MYN-CUST-00431,Neha,Saxena,neha.saxena.431@myntra.demo,9300000431,Mumbai,Maharashtra,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00432,Ananya,Kapoor,ananya.kapoor.432@myntra.demo,9300000432,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00433,Simran,Saxena,simran.saxena.433@myntra.demo,9300000433,Chennai,Tamil Nadu,WHATSAPP,BRONZE,True,True,True,True
+MYN-CUST-00434,Aditi,Patel,aditi.patel.434@myntra.demo,9300000434,Kolkata,West Bengal,WHATSAPP,PLATINUM,True,True,True,False
+MYN-CUST-00435,Nisha,Saxena,nisha.saxena.435@myntra.demo,9300000435,Chennai,Tamil Nadu,WHATSAPP,SILVER,True,True,True,True
+MYN-CUST-00436,Pooja,Jain,pooja.jain.436@myntra.demo,9300000436,Ahmedabad,Gujarat,SMS,PLATINUM,True,True,True,False
+MYN-CUST-00437,Aman,Singh,aman.singh.437@myntra.demo,9300000437,Bangalore,Karnataka,WHATSAPP,GOLD,True,True,True,True
+MYN-CUST-00438,Kiara,Mehta,kiara.mehta.438@myntra.demo,9300000438,Hyderabad,Telangana,RCS,GOLD,True,True,True,False
+MYN-CUST-00439,Aditi,Jain,aditi.jain.439@myntra.demo,9300000439,Kolkata,West Bengal,WHATSAPP,BRONZE,False,True,False,False
+MYN-CUST-00440,Rahul,Mehta,rahul.mehta.440@myntra.demo,9300000440,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00441,Aman,Nair,aman.nair.441@myntra.demo,9300000441,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,True,True
+MYN-CUST-00442,Riya,Gupta,riya.gupta.442@myntra.demo,9300000442,Bangalore,Karnataka,EMAIL,BRONZE,True,False,True,False
+MYN-CUST-00443,Riya,Kumar,riya.kumar.443@myntra.demo,9300000443,Kolkata,West Bengal,SMS,GOLD,True,True,True,False
+MYN-CUST-00444,Arjun,Sharma,arjun.sharma.444@myntra.demo,9300000444,Mumbai,Maharashtra,WHATSAPP,SILVER,True,True,False,False
+MYN-CUST-00445,Varun,Gupta,varun.gupta.445@myntra.demo,9300000445,Kolkata,West Bengal,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00446,Kabir,Mehta,kabir.mehta.446@myntra.demo,9300000446,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00447,Aman,Patel,aman.patel.447@myntra.demo,9300000447,Ahmedabad,Gujarat,WHATSAPP,BRONZE,True,False,True,False
+MYN-CUST-00448,Pooja,Verma,pooja.verma.448@myntra.demo,9300000448,Chennai,Tamil Nadu,EMAIL,BRONZE,True,True,True,False
+MYN-CUST-00449,Arjun,Singh,arjun.singh.449@myntra.demo,9300000449,Kolkata,West Bengal,SMS,SILVER,True,True,True,False
+MYN-CUST-00450,Rohan,Verma,rohan.verma.450@myntra.demo,9300000450,Pune,Maharashtra,WHATSAPP,GOLD,True,False,True,True
+MYN-CUST-00451,Karan,Sharma,karan.sharma.451@myntra.demo,9300000451,Ahmedabad,Gujarat,RCS,PLATINUM,True,True,True,False
+MYN-CUST-00452,Samar,Reddy,samar.reddy.452@myntra.demo,9300000452,Delhi,Delhi,EMAIL,SILVER,True,True,False,True
+MYN-CUST-00453,Arjun,Mehta,arjun.mehta.453@myntra.demo,9300000453,Kolkata,West Bengal,WHATSAPP,SILVER,True,True,False,True
+MYN-CUST-00454,Sneha,Iyer,sneha.iyer.454@myntra.demo,9300000454,Hyderabad,Telangana,WHATSAPP,SILVER,True,False,False,False
+MYN-CUST-00455,Kiara,Mehta,kiara.mehta.455@myntra.demo,9300000455,Delhi,Delhi,WHATSAPP,SILVER,True,False,False,False
+MYN-CUST-00456,Ananya,Nair,ananya.nair.456@myntra.demo,9300000456,Mumbai,Maharashtra,EMAIL,PLATINUM,True,True,True,False
+MYN-CUST-00457,Riya,Malhotra,riya.malhotra.457@myntra.demo,9300000457,Bangalore,Karnataka,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00458,Meera,Kapoor,meera.kapoor.458@myntra.demo,9300000458,Hyderabad,Telangana,WHATSAPP,BRONZE,True,True,False,False
+MYN-CUST-00459,Neha,Das,neha.das.459@myntra.demo,9300000459,Delhi,Delhi,WHATSAPP,SILVER,False,True,True,False
+MYN-CUST-00460,Rohan,Patel,rohan.patel.460@myntra.demo,9300000460,Chennai,Tamil Nadu,EMAIL,BRONZE,True,True,True,True
+MYN-CUST-00461,Dev,Singh,dev.singh.461@myntra.demo,9300000461,Ahmedabad,Gujarat,EMAIL,BRONZE,True,True,True,False
+MYN-CUST-00462,Ishaan,Gupta,ishaan.gupta.462@myntra.demo,9300000462,Delhi,Delhi,WHATSAPP,PLATINUM,True,True,True,False
+MYN-CUST-00463,Ananya,Patel,ananya.patel.463@myntra.demo,9300000463,Pune,Maharashtra,WHATSAPP,SILVER,True,True,True,True
+MYN-CUST-00464,Aryan,Bose,aryan.bose.464@myntra.demo,9300000464,Ahmedabad,Gujarat,WHATSAPP,PLATINUM,True,True,False,False
+MYN-CUST-00465,Aryan,Sharma,aryan.sharma.465@myntra.demo,9300000465,Pune,Maharashtra,WHATSAPP,GOLD,True,True,True,True
+MYN-CUST-00466,Priya,Malhotra,priya.malhotra.466@myntra.demo,9300000466,Mumbai,Maharashtra,EMAIL,BRONZE,True,True,True,False
+MYN-CUST-00467,Ishaan,Nair,ishaan.nair.467@myntra.demo,9300000467,Delhi,Delhi,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00468,Ananya,Verma,ananya.verma.468@myntra.demo,9300000468,Pune,Maharashtra,EMAIL,BRONZE,False,True,True,False
+MYN-CUST-00469,Karan,Gupta,karan.gupta.469@myntra.demo,9300000469,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00470,Meera,Kapoor,meera.kapoor.470@myntra.demo,9300000470,Delhi,Delhi,WHATSAPP,BRONZE,True,True,False,False
+MYN-CUST-00471,Ananya,Verma,ananya.verma.471@myntra.demo,9300000471,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00472,Varun,Das,varun.das.472@myntra.demo,9300000472,Pune,Maharashtra,SMS,SILVER,True,True,False,True
+MYN-CUST-00473,Kiara,Jain,kiara.jain.473@myntra.demo,9300000473,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00474,Simran,Verma,simran.verma.474@myntra.demo,9300000474,Hyderabad,Telangana,EMAIL,GOLD,True,False,True,False
+MYN-CUST-00475,Ananya,Jain,ananya.jain.475@myntra.demo,9300000475,Pune,Maharashtra,EMAIL,GOLD,False,True,True,False
+MYN-CUST-00476,Neha,Iyer,neha.iyer.476@myntra.demo,9300000476,Kolkata,West Bengal,WHATSAPP,SILVER,False,True,True,False
+MYN-CUST-00477,Priya,Mehta,priya.mehta.477@myntra.demo,9300000477,Delhi,Delhi,WHATSAPP,GOLD,True,True,False,True
+MYN-CUST-00478,Kiara,Malhotra,kiara.malhotra.478@myntra.demo,9300000478,Ahmedabad,Gujarat,WHATSAPP,SILVER,True,True,True,False
+MYN-CUST-00479,Aryan,Gupta,aryan.gupta.479@myntra.demo,9300000479,Bangalore,Karnataka,WHATSAPP,BRONZE,True,True,True,False
+MYN-CUST-00480,Meera,Kumar,meera.kumar.480@myntra.demo,9300000480,Pune,Maharashtra,SMS,GOLD,True,True,False,False
+MYN-CUST-00481,Kabir,Saxena,kabir.saxena.481@myntra.demo,9300000481,Pune,Maharashtra,SMS,GOLD,True,True,True,True
+MYN-CUST-00482,Simran,Singh,simran.singh.482@myntra.demo,9300000482,Mumbai,Maharashtra,RCS,BRONZE,False,True,False,False
+MYN-CUST-00483,Varun,Kapoor,varun.kapoor.483@myntra.demo,9300000483,Chennai,Tamil Nadu,SMS,BRONZE,True,True,False,False
+MYN-CUST-00484,Simran,Gupta,simran.gupta.484@myntra.demo,9300000484,Kolkata,West Bengal,RCS,PLATINUM,True,False,True,False
+MYN-CUST-00485,Rohan,Kapoor,rohan.kapoor.485@myntra.demo,9300000485,Hyderabad,Telangana,WHATSAPP,GOLD,False,True,True,False
+MYN-CUST-00486,Pooja,Patel,pooja.patel.486@myntra.demo,9300000486,Chennai,Tamil Nadu,SMS,GOLD,True,True,True,False
+MYN-CUST-00487,Priya,Saxena,priya.saxena.487@myntra.demo,9300000487,Mumbai,Maharashtra,EMAIL,PLATINUM,True,True,True,True
+MYN-CUST-00488,Ishaan,Kapoor,ishaan.kapoor.488@myntra.demo,9300000488,Mumbai,Maharashtra,EMAIL,GOLD,False,False,True,False
+MYN-CUST-00489,Priya,Das,priya.das.489@myntra.demo,9300000489,Mumbai,Maharashtra,WHATSAPP,BRONZE,False,True,True,True
+MYN-CUST-00490,Dev,Saxena,dev.saxena.490@myntra.demo,9300000490,Chennai,Tamil Nadu,WHATSAPP,GOLD,True,True,True,False
+MYN-CUST-00491,Yash,Mehta,yash.mehta.491@myntra.demo,9300000491,Pune,Maharashtra,EMAIL,BRONZE,True,False,True,False
+MYN-CUST-00492,Neha,Jain,neha.jain.492@myntra.demo,9300000492,Chennai,Tamil Nadu,WHATSAPP,SILVER,False,True,True,False
+MYN-CUST-00493,Riya,Reddy,riya.reddy.493@myntra.demo,9300000493,Pune,Maharashtra,SMS,GOLD,True,True,True,False
+MYN-CUST-00494,Rahul,Bose,rahul.bose.494@myntra.demo,9300000494,Delhi,Delhi,EMAIL,GOLD,True,False,True,False
+MYN-CUST-00495,Arjun,Reddy,arjun.reddy.495@myntra.demo,9300000495,Chennai,Tamil Nadu,EMAIL,BRONZE,True,True,True,True
+MYN-CUST-00496,Aditi,Sharma,aditi.sharma.496@myntra.demo,9300000496,Ahmedabad,Gujarat,EMAIL,SILVER,True,True,True,False
+MYN-CUST-00497,Priya,Kumar,priya.kumar.497@myntra.demo,9300000497,Pune,Maharashtra,RCS,GOLD,True,True,True,False
+MYN-CUST-00498,Sneha,Kapoor,sneha.kapoor.498@myntra.demo,9300000498,Hyderabad,Telangana,SMS,SILVER,True,False,False,True
+MYN-CUST-00499,Meera,Malhotra,meera.malhotra.499@myntra.demo,9300000499,Chennai,Tamil Nadu,WHATSAPP,PLATINUM,True,True,False,True
+MYN-CUST-00500,Tanya,Jain,tanya.jain.500@myntra.demo,9300000500,Ahmedabad,Gujarat,SMS,BRONZE,True,True,True,False

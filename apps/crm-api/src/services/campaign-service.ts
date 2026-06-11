@@ -13,7 +13,6 @@ import {
   type SegmentRule,
 } from '@scp/shared';
 import { renderTemplate } from '@scp/ai';
-import { getDefaultBrandId } from '../lib/brand.js';
 import { sendQueue } from '../lib/queue.js';
 
 const consentField: Record<Channel, keyof Prisma.CustomerWhereInput> = {
@@ -39,8 +38,7 @@ async function resolveCampaignRule(campaign: {
   return {};
 }
 
-export async function createCampaign(input: CreateCampaignInput) {
-  const brandId = await getDefaultBrandId();
+export async function createCampaign(brandId: string, input: CreateCampaignInput) {
   const totalAllocation = input.variants.reduce((s, v) => s + v.allocation, 0);
   if (totalAllocation !== 100) {
     throw Object.assign(new Error('Variant allocations must sum to 100.'), { statusCode: 400 });
@@ -48,6 +46,12 @@ export async function createCampaign(input: CreateCampaignInput) {
 
   let segmentRuleSnapshot = input.segmentRule;
   if (!segmentRuleSnapshot && input.segmentId) {
+    const segment = await prisma.segment.findFirst({
+      where: { id: input.segmentId, brandId },
+    });
+    if (!segment) {
+      throw Object.assign(new Error('Segment not found.'), { statusCode: 404 });
+    }
     const latestRule = await prisma.segmentRule.findFirst({
       where: { segmentId: input.segmentId },
       orderBy: { version: 'desc' },
@@ -142,12 +146,14 @@ function hasConsent(c: AudienceCustomer, channel: Channel): boolean {
  * Pre-launch safety panel. Computes the cleaned audience and the risks a
  * marketer must acknowledge before spending message budget.
  */
-export async function runSafetyCheck(campaignId: string): Promise<SafetyCheckResult> {
-  const campaign = await prisma.campaign.findUniqueOrThrow({
-    where: { id: campaignId },
+export async function runSafetyCheck(campaignId: string, brandId: string): Promise<SafetyCheckResult> {
+  const campaign = await prisma.campaign.findFirst({
+    where: { id: campaignId, brandId },
     include: { variants: true },
   });
-  const brandId = await getDefaultBrandId();
+  if (!campaign) {
+    throw Object.assign(new Error('Campaign not found.'), { statusCode: 404 });
+  }
   const rule = await resolveCampaignRule(campaign);
   const audience = await resolveAudience(rule, brandId);
 
@@ -203,11 +209,14 @@ export async function runSafetyCheck(campaignId: string): Promise<SafetyCheckRes
   };
 }
 
-export async function launchCampaign(campaignId: string) {
-  const campaign = await prisma.campaign.findUniqueOrThrow({
-    where: { id: campaignId },
+export async function launchCampaign(campaignId: string, brandId: string) {
+  const campaign = await prisma.campaign.findFirst({
+    where: { id: campaignId, brandId },
     include: { variants: { orderBy: { label: 'asc' } } },
   });
+  if (!campaign) {
+    throw Object.assign(new Error('Campaign not found.'), { statusCode: 404 });
+  }
   if (campaign.status !== CampaignStatus.DRAFT && campaign.status !== CampaignStatus.SCHEDULED) {
     throw Object.assign(new Error(`Campaign is already ${campaign.status}.`), { statusCode: 409 });
   }
@@ -215,7 +224,6 @@ export async function launchCampaign(campaignId: string) {
     throw Object.assign(new Error('Campaign has no variants.'), { statusCode: 400 });
   }
 
-  const brandId = await getDefaultBrandId();
   const rule = await resolveCampaignRule(campaign);
   const audience = await resolveAudience(rule, brandId);
 
@@ -243,6 +251,8 @@ export async function launchCampaign(campaignId: string) {
 
   // 3. Allocate targeted customers across variants by allocation %.
   const offer = campaign.offerCode ?? 'COMEBACK15';
+  const brand = await prisma.brand.findUnique({ where: { id: brandId }, select: { name: true } });
+  const brandName = brand?.name ?? 'your brand';
   const communications: Prisma.CommunicationCreateManyInput[] = [];
   const events: Prisma.CommunicationEventCreateManyInput[] = [];
   const now = new Date();
@@ -268,20 +278,23 @@ export async function launchCampaign(campaignId: string) {
         }
       }
       const commId = randomUUID();
-      const body = renderTemplate(variant.bodyTemplate, {
+      const templateVars = {
         firstName: customer.name.split(' ')[0] ?? 'there',
         category: customer.favouriteCategory,
         offer: variant.offerCode ?? offer,
         city: customer.city,
         persona: customer.persona,
-      });
+        brandName,
+      };
+      const body = renderTemplate(variant.bodyTemplate, templateVars);
+      const renderedSubject = variant.subject ? renderTemplate(variant.subject, templateVars) : null;
       communications.push({
         id: commId,
         campaignId,
         variantId: variant.id,
         customerId: customer.id,
         channel,
-        renderedSubject: variant.subject ?? null,
+        renderedSubject,
         renderedBody: body,
         recipient: channel === Channel.EMAIL ? customer.email : customer.phone,
         status: CommunicationStatus.QUEUED,
@@ -310,6 +323,7 @@ export async function launchCampaign(campaignId: string) {
       offer,
       city: customer.city,
       persona: customer.persona,
+      brandName,
     });
     communications.push({
       id: commId,
@@ -379,8 +393,7 @@ export async function launchCampaign(campaignId: string) {
   };
 }
 
-export async function listCampaigns() {
-  const brandId = await getDefaultBrandId();
+export async function listCampaigns(brandId: string) {
   return prisma.campaign.findMany({
     where: { brandId },
     orderBy: { createdAt: 'desc' },
@@ -388,9 +401,9 @@ export async function listCampaigns() {
   });
 }
 
-export async function getCampaign(id: string) {
-  return prisma.campaign.findUnique({
-    where: { id },
+export async function getCampaign(id: string, brandId: string) {
+  return prisma.campaign.findFirst({
+    where: { id, brandId },
     include: { variants: true, segment: true },
   });
 }

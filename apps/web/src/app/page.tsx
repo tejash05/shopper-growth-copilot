@@ -14,7 +14,9 @@ import { api } from '@/lib/api';
 import { ATTRIBUTION_ORDERS_LABEL, ATTRIBUTION_REVENUE_LABEL, ATTRIBUTION_TOOLTIP } from '@/lib/attribution-copy';
 import { buildStudioUrl, DEFAULT_WINBACK_GOAL } from '@/lib/studio-navigation';
 import { Topbar } from '@/components/layout/topbar';
+import { EmptyWorkspaceActions } from '@/components/layout/workspace-selector';
 import { StatCard } from '@/components/shared/stat-card';
+import { EmptyState } from '@/components/shared/states';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ProgressBar } from '@/components/ui/misc';
@@ -25,7 +27,27 @@ export const dynamic = 'force-dynamic';
 
 export default async function DashboardPage() {
   const data = await api.dashboard();
-  const { metrics, communicationPerformance: comm, opportunity } = data;
+  const { brandName, metrics, communicationPerformance: comm, opportunity } = data;
+  const isEmpty = metrics.totalShoppers === 0;
+
+  if (isEmpty) {
+    return (
+      <>
+        <Topbar
+          title="Command Center"
+          subtitle={`${brandName} — upload shopper data to unlock growth insights`}
+        />
+        <div className="p-6">
+          <EmptyState
+            icon={Users}
+            title="No shopper data yet"
+            description={`${brandName} does not have any customers or orders yet. Generate demo data for this workspace or import your own when available.`}
+            action={<EmptyWorkspaceActions />}
+          />
+        </div>
+      </>
+    );
+  }
 
   const funnel = [
     { label: 'Sent', value: comm.sent },
@@ -36,10 +58,12 @@ export default async function DashboardPage() {
 
   return (
     <>
-      <Topbar title="Command Center" subtitle="Real-time view of NovaWear's shopper base and growth engine" />
+      <Topbar
+        title="Command Center"
+        subtitle={`Real-time view of ${brandName}'s shopper base and growth engine`}
+      />
       <div className="space-y-6 p-6">
-        {/* AI opportunity card */}
-        <Card className="overflow-hidden border-primary/20">
+        <Card className="overflow-hidden border-primary/20" data-tour="ai-opportunity-card">
           <div className="flex flex-col gap-5 p-6 md:flex-row md:items-center md:justify-between">
             <div className="flex gap-4">
               <div className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
@@ -67,7 +91,6 @@ export default async function DashboardPage() {
           </div>
         </Card>
 
-        {/* KPI grid */}
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
           <StatCard label="Total shoppers" value={metrics.totalShoppers.toLocaleString('en-IN')} icon={Users} hint="Across all cities" />
           <StatCard label="Total revenue" value={formatInrCompact(metrics.totalRevenue)} icon={IndianRupee} hint="Lifetime realised spend" />
@@ -84,12 +107,11 @@ export default async function DashboardPage() {
             value={formatInrCompact(metrics.attributedRevenue)}
             icon={Activity}
             accent
-            hint={`${metrics.attributedOrders.toLocaleString('en-IN')} simulated attributed orders`}
+            hint={`${metrics.attributedOrders.toLocaleString('en-IN')} ${ATTRIBUTION_ORDERS_LABEL}`}
             hintTitle={ATTRIBUTION_TOOLTIP}
           />
         </div>
 
-        {/* Communication performance */}
         <div className="grid gap-6 lg:grid-cols-3">
           <Card className="lg:col-span-2">
             <CardHeader>

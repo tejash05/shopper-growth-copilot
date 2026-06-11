@@ -26,7 +26,17 @@ import {
 } from '@scp/shared';
 import { apiFetch, ApiError } from '@/lib/api';
 import type { CampaignPlanResponse, GenerateMessagesResponse } from '@/lib/types';
+import {
+  buildMessageTemplate,
+  buildSavedSegmentGoal,
+  createDefaultVariants,
+  defaultEmailSubject,
+  parseDiscountPercent,
+  variantBodyFromPlan,
+} from '@/lib/campaign-templates';
+import { useBrand } from '@/contexts/brand-context';
 import { useCampaignAudience } from '@/hooks/use-campaign-audience';
+import { getLatestSegmentRule } from '@/lib/segments';
 import { SegmentSourcePanel } from '@/components/campaigns/segment-source-panel';
 import { readPrefilledGoal, studioPathWithout } from '@/lib/studio-navigation';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -41,28 +51,6 @@ import { ChannelBadge } from '@/components/shared/labels';
 
 const DEFAULT_GOAL =
   'Win back high-value shoppers who haven’t purchased in 45 days and promote the summer collection.';
-
-function parseDiscountPercent(value: string | undefined, fallback = 15): number {
-  if (!value) return fallback;
-  const match = value.match(/(\d+(?:\.\d+)?)/);
-  return match ? Number(match[1]) : fallback;
-}
-
-function buildMessageTemplate(channel: Channel, discountPercent: number): string {
-  const templates: Record<Channel, string> = {
-    WHATSAPP: `Hey {{firstName}}! Your favourite {{category}} picks are back at NovaWear. Enjoy ${discountPercent}% off this weekend with {{offer}}. Tap to explore 👉`,
-    SMS: `{{firstName}}, your {{category}} favourites are back. ${discountPercent}% off with {{offer}}. Shop now.`,
-    EMAIL: `Hi {{firstName}},\n\nYour favourite {{category}} styles are back in stock. Here’s ${discountPercent}% off with {{offer}}.\n\nExplore your edit.\n— NovaWear`,
-    RCS: `{{firstName}}, your {{category}} favourites are back ✨ ${discountPercent}% off with {{offer}}.\n[ Shop now ]`,
-  };
-  return templates[channel];
-}
-
-function variantBodyFromPlan(channel: Channel, plan: CampaignPlanResponse): string {
-  const discountPercent = parseDiscountPercent(plan.plan.result.offerRecommendation.value);
-  const sample = plan.plan.result.sampleMessages.find((m) => m.channel === channel);
-  return sample?.text ?? buildMessageTemplate(channel, discountPercent);
-}
 
 interface VariantState {
   label: string;
@@ -83,43 +71,103 @@ export function CampaignStudio() {
 function CampaignStudioInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const { selectedBrand } = useBrand();
+  const brandName = selectedBrand?.name ?? 'your brand';
   const initialSegmentId = searchParams.get('segmentId');
   const [goal, setGoal] = React.useState(
     () => readPrefilledGoal(searchParams.get('goal')) ?? DEFAULT_GOAL,
   );
   const [plan, setPlan] = React.useState<CampaignPlanResponse | null>(null);
+  const [savedSegmentPlan, setSavedSegmentPlan] = React.useState<CampaignPlanResponse | null>(null);
+  const [generatedFromSavedSegment, setGeneratedFromSavedSegment] = React.useState(false);
 
   const [name, setName] = React.useState('');
-  const [offerCode, setOfferCode] = React.useState('COMEBACK15');
+  const [offerCode, setOfferCode] = React.useState('SAVE15');
   const [fallback, setFallback] = React.useState<Channel | ''>(Channel.SMS);
   const [controlRatio, setControlRatio] = React.useState(0.1);
-  const [variants, setVariants] = React.useState<VariantState[]>([
-    {
-      label: 'A',
-      channel: Channel.WHATSAPP,
-      allocation: 60,
-      bodyTemplate: buildMessageTemplate(Channel.WHATSAPP, 15),
-    },
-    {
-      label: 'B',
-      channel: Channel.SMS,
-      allocation: 40,
-      bodyTemplate: buildMessageTemplate(Channel.SMS, 15),
-    },
-  ]);
+  const [variants, setVariants] = React.useState<VariantState[]>(() => createDefaultVariants());
   const [messages, setMessages] = React.useState<GenerateMessagesResponse | null>(null);
   const [campaignId, setCampaignId] = React.useState<string | null>(null);
   const [safety, setSafety] = React.useState<SafetyCheckResult | null>(null);
-  const preloadedName = React.useRef(false);
+  const lastSegmentIdRef = React.useRef<string | null>(null);
+  const lastSourceRef = React.useRef<'ai' | 'saved' | null>(null);
 
   const audience = useCampaignAudience({ initialSegmentId, plan });
 
-  React.useEffect(() => {
-    if (audience.selectedSegment && audience.source === 'saved' && !preloadedName.current) {
-      setName(`${audience.selectedSegment.name} Campaign`);
-      preloadedName.current = true;
+  const activePlan = audience.source === 'saved' ? savedSegmentPlan : plan;
+
+  const resetCampaignFields = React.useCallback(() => {
+    setName('');
+    setOfferCode('SAVE15');
+    setFallback(Channel.SMS);
+    setVariants(createDefaultVariants());
+    setMessages(null);
+    setSafety(null);
+    setCampaignId(null);
+    setGeneratedFromSavedSegment(false);
+    setSavedSegmentPlan(null);
+  }, []);
+
+  const applyPlanToFields = React.useCallback((res: CampaignPlanResponse, fromSavedSegment: boolean) => {
+    if (fromSavedSegment) {
+      setSavedSegmentPlan(res);
+      setGeneratedFromSavedSegment(true);
+    } else {
+      setGeneratedFromSavedSegment(false);
     }
-  }, [audience.selectedSegment, audience.source]);
+    setName(`${res.plan.result.recommendedSegmentName} Campaign`);
+    setOfferCode(res.plan.result.offerRecommendation.code);
+    const primary = res.channel.result.primaryChannel;
+    const fb = res.channel.result.fallbackChannel ?? Channel.SMS;
+    setFallback(fb);
+    setVariants([
+      {
+        label: 'A',
+        channel: primary,
+        allocation: 60,
+        bodyTemplate: variantBodyFromPlan(primary, res),
+      },
+      {
+        label: 'B',
+        channel: fb,
+        allocation: 40,
+        bodyTemplate: variantBodyFromPlan(fb, res),
+      },
+    ]);
+    setMessages(null);
+    setSafety(null);
+    setCampaignId(null);
+  }, []);
+
+  React.useEffect(() => {
+    if (audience.source !== 'saved') return;
+    const segId = audience.selectedSegmentId;
+    if (segId === lastSegmentIdRef.current) return;
+    lastSegmentIdRef.current = segId;
+    if (segId) resetCampaignFields();
+  }, [audience.selectedSegmentId, audience.source, resetCampaignFields]);
+
+  React.useEffect(() => {
+    if (lastSourceRef.current === audience.source) return;
+    const prevSource = lastSourceRef.current;
+    lastSourceRef.current = audience.source;
+
+    setMessages(null);
+    setSafety(null);
+    setCampaignId(null);
+
+    if (audience.source === 'saved') {
+      resetCampaignFields();
+      return;
+    }
+
+    if (prevSource === 'saved') {
+      setSavedSegmentPlan(null);
+      setGeneratedFromSavedSegment(false);
+    }
+
+    if (plan) applyPlanToFields(plan, false);
+  }, [audience.source, plan, applyPlanToFields, resetCampaignFields]);
 
   const rule = audience.activeRule;
   const readyToConfigure =
@@ -134,16 +182,31 @@ function CampaignStudioInner() {
       }),
     onSuccess: (res) => {
       setPlan(res);
-      setName(res.plan.result.recommendedSegmentName + ' Campaign');
-      setOfferCode(res.plan.result.offerRecommendation.code);
-      const primary = res.channel.result.primaryChannel;
-      const fb = res.channel.result.fallbackChannel ?? Channel.SMS;
-      setFallback(fb);
-      setVariants([
-        { label: 'A', channel: primary, allocation: 60, bodyTemplate: variantBodyFromPlan(primary, res) },
-        { label: 'B', channel: fb, allocation: 40, bodyTemplate: variantBodyFromPlan(fb, res) },
-      ]);
+      if (audience.source === 'ai') {
+        applyPlanToFields(res, false);
+      }
     },
+  });
+
+  const savedSegmentPlanMutation = useMutation({
+    mutationFn: () => {
+      const segment = audience.selectedSegment;
+      const rule = segment ? getLatestSegmentRule(segment) : undefined;
+      if (!segment || !rule) throw new Error('Select a saved segment first.');
+      const effectiveGoal = buildSavedSegmentGoal(segment.name, brandName, goal);
+      return apiFetch<CampaignPlanResponse>('/api/ai/campaign-plan', {
+        method: 'POST',
+        body: JSON.stringify({
+          goal: effectiveGoal,
+          segmentName: segment.name,
+          naturalLanguageQuery: segment.naturalLanguageQuery ?? undefined,
+          segmentRule: rule,
+          audienceSize: segment.cachedAudienceSize ?? undefined,
+          revenuePotential: segment.cachedRevenuePotential ?? undefined,
+        }),
+      });
+    },
+    onSuccess: (res) => applyPlanToFields(res, true),
   });
 
   const messagesMutation = useMutation({
@@ -154,9 +217,9 @@ function CampaignStudioInner() {
           rule,
           channel: variants[0]!.channel,
           offerCode,
-          discountPercent: plan
-            ? parseDiscountPercent(plan.plan.result.offerRecommendation.value)
-            : 15,
+          discountPercent: activePlan
+            ? parseDiscountPercent(activePlan.plan.result.offerRecommendation.value)
+            : parseDiscountPercent(offerCode.replace(/[^\d]/g, '') || undefined),
           goal,
           sampleSize: 6,
         }),
@@ -183,7 +246,7 @@ function CampaignStudioInner() {
             label: v.label,
             channel: v.channel,
             allocation: v.allocation,
-            subject: v.channel === Channel.EMAIL ? (v.subject ?? 'Your NovaWear favourites are back') : undefined,
+            subject: v.channel === Channel.EMAIL ? (v.subject ?? defaultEmailSubject()) : undefined,
             bodyTemplate: v.bodyTemplate,
           })),
         }),
@@ -251,7 +314,62 @@ function CampaignStudioInner() {
         aiSegmentName={plan?.plan.result.recommendedSegmentName}
         aiExplanation={plan?.plan.result.businessReason}
         onRetryLoad={() => void audience.refetchSegments()}
+        onGenerateFromSegment={() => savedSegmentPlanMutation.mutate()}
+        generateFromSegmentPending={savedSegmentPlanMutation.isPending}
+        generatedFromSavedSegment={generatedFromSavedSegment}
       />
+
+      {savedSegmentPlanMutation.isError && (
+        <Card className="border-destructive/30 bg-destructive/5">
+          <CardContent className="p-5 text-sm text-destructive">
+            Couldn’t generate a campaign plan for this segment. Ensure the CRM API is running.
+          </CardContent>
+        </Card>
+      )}
+
+      {savedSegmentPlan && audience.source === 'saved' && (
+        <Card>
+          <CardHeader>
+            <CardTitle className="flex flex-wrap items-center gap-2 text-base">
+              <Sparkles className="size-4 text-primary" />
+              Campaign plan for {audience.selectedSegment?.name ?? 'saved segment'}
+              <Badge variant="primary" className="font-normal">
+                Generated from saved segment
+              </Badge>
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3 text-sm">
+            <div>
+              <Label className="text-muted-foreground">Strategy</Label>
+              <p className="leading-relaxed">{savedSegmentPlan.plan.result.messageStrategy}</p>
+            </div>
+            <div>
+              <Label className="text-muted-foreground">Offer</Label>
+              <p>
+                <Badge variant="primary" className="mr-2">
+                  {savedSegmentPlan.plan.result.offerRecommendation.code}
+                </Badge>
+                {savedSegmentPlan.plan.result.offerRecommendation.rationale}
+              </p>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-3">
+              <Metric
+                label="Audience size"
+                value={savedSegmentPlan.preview.audienceSize.toLocaleString('en-IN')}
+              />
+              <Metric
+                label="Primary channel"
+                value={CHANNEL_LABELS[savedSegmentPlan.channel.result.primaryChannel]}
+              />
+              <Metric
+                label="Est. revenue"
+                value={formatInrCompact(savedSegmentPlan.impact.result.estimatedRevenue)}
+                accent
+              />
+            </div>
+          </CardContent>
+        </Card>
+      )}
 
       {planMutation.isError && (
         <Card className="border-destructive/30 bg-destructive/5">
@@ -351,14 +469,21 @@ function CampaignStudioInner() {
           {/* Step 3: configure variants */}
           <Card>
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
+              <CardTitle className="flex flex-wrap items-center gap-2">
                 <MessageSquare className="size-4 text-primary" />
                 Channels & A/B variants
+                {generatedFromSavedSegment && audience.source === 'saved' && (
+                  <Badge variant="primary" className="font-normal">
+                    Generated from saved segment
+                  </Badge>
+                )}
               </CardTitle>
               <CardDescription>
                 Personalisation tokens: <code className="rounded bg-muted px-1">{'{{firstName}}'}</code>{' '}
                 <code className="rounded bg-muted px-1">{'{{category}}'}</code>{' '}
-                <code className="rounded bg-muted px-1">{'{{offer}}'}</code>
+                <code className="rounded bg-muted px-1">{'{{offer}}'}</code>{' '}
+                <code className="rounded bg-muted px-1">{'{{brandName}}'}</code>
+                {' '}(resolves to {brandName} at launch)
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -400,9 +525,12 @@ function CampaignStudioInner() {
                           value={v.channel}
                           onChange={(e) => {
                             const ch = e.target.value as Channel;
-                            const bodyTemplate = plan
-                              ? variantBodyFromPlan(ch, plan)
-                              : buildMessageTemplate(ch, 15);
+                            const discount = activePlan
+                              ? parseDiscountPercent(activePlan.plan.result.offerRecommendation.value)
+                              : parseDiscountPercent(offerCode.replace(/[^\d]/g, '') || undefined);
+                            const bodyTemplate = activePlan
+                              ? variantBodyFromPlan(ch, activePlan)
+                              : buildMessageTemplate(ch, discount);
                             updateVariant(i, { channel: ch, bodyTemplate });
                           }}
                         >

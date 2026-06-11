@@ -13,6 +13,8 @@
     "push": "dotenv -e ../../.env -- prisma db push",
     "migrate": "dotenv -e ../../.env -- prisma migrate dev",
     "migrate:deploy": "dotenv -e ../../.env -- prisma migrate deploy",
+    "backfill:tenant": "dotenv -e ../../.env -- tsx scripts/backfill-tenant-fields.ts",
+    "push:tenant": "pnpm backfill:tenant && dotenv -e ../../.env -- prisma db push --accept-data-loss",
     "studio": "dotenv -e ../../.env -- prisma studio",
     "seed": "tsx src/seed/index.ts",
     "typecheck": "tsc --noEmit",
@@ -22,11 +24,11 @@
     "schema": "prisma/schema.prisma"
   },
   "dependencies": {
+    "@faker-js/faker": "^9.0.3",
     "@prisma/client": "^5.20.0",
     "@scp/shared": "workspace:*"
   },
   "devDependencies": {
-    "@faker-js/faker": "^9.0.3",
     "dotenv": "^16.4.5",
     "dotenv-cli": "^7.4.2",
     "prisma": "^5.20.0",

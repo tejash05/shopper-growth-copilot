@@ -11,7 +11,11 @@ This is **not** a generic sales CRM. It is a consumer/retail growth tool in the 
 Xeno — segmentation, personalised campaigns, simulated omni-channel delivery, and revenue
 attribution for a fashion brand (**NovaWear**).
 
-> **Live demo:** _<add deployment URL>_  ·  **Walkthrough video:** _<add Loom/YouTube link>_
+## Live Demo
+
+**App:** [https://web-production-092f5.up.railway.app/](https://web-production-092f5.up.railway.app/)
+
+> **Walkthrough video:** _<add Loom/YouTube link>_
 
 ---
 
@@ -39,6 +43,8 @@ the product is fully usable with zero API keys.
 | **AI insights** | What worked / what didn't, best channel/variant/audience, and the recommended next campaign. |
 
 > **Saved segments:** Saved segments can be reused in Campaign Studio. Campaigns keep a `segmentId` reference plus a `segmentRuleSnapshot` for auditability.
+| **Workspace data import** | Upload CSV or JSON shoppers/orders per workspace. Preview → validate → import with row-level errors, upsert dedupe, and automatic RFM/persona recompute. |
+| **Workspace demo data** | Empty workspaces can generate brand-scoped demo shoppers without running global seed or touching NovaWear. |
 
 ---
 
@@ -178,6 +184,97 @@ event log by timestamp). Schema: [`packages/db/prisma/schema.prisma`](packages/d
 
 ---
 
+## Workspace data import
+
+Each workspace (brand) can load its own shopper and order data from **CSV** or **JSON** via
+**Data Import** (`/data-import`). All import routes are scoped by the active workspace through
+the `X-Brand-Id` header — the same email or phone can exist in NovaWear and another workspace
+without conflict.
+
+### Supported formats
+
+| Format | Use case |
+| --- | --- |
+| **Combined JSON** | One file with `customers` and `orders` arrays |
+| **customers.csv** | Shopper rows only |
+| **orders.csv** | Order rows only (can be uploaded with customers.csv) |
+
+Download sample templates from the import page (customer CSV, order CSV, JSON).
+
+### Customer CSV columns
+
+`externalCustomerId`, `firstName`, `lastName`, `email`, `phone`, `city`, `state`,
+`preferredChannel`, `loyaltyTier`, `consentWhatsApp`, `consentSms`, `consentEmail`, `consentRcs`
+
+**Required identity:** at least one of `externalCustomerId`, `email`, or `phone`.
+
+### Order CSV columns
+
+`externalOrderId`, `externalCustomerId`, `customerEmail`, `customerPhone`, `orderDate`,
+`orderValue`, `currency`, `category`, `productName`, `quantity`, `status`
+
+**Required:** `orderDate`, `orderValue`, `category` or `productName`, and a customer reference
+via `externalCustomerId`, `customerEmail`, or `customerPhone`.
+
+Defaults: currency = workspace currency (INR), `quantity = 1`, status = COMPLETED.
+
+### JSON template
+
+```json
+{
+  "customers": [
+    {
+      "externalCustomerId": "CUST001",
+      "firstName": "Priya",
+      "lastName": "Sharma",
+      "email": "priya@example.com",
+      "phone": "9876543210",
+      "city": "Bangalore",
+      "preferredChannel": "WHATSAPP",
+      "loyaltyTier": "GOLD",
+      "consentWhatsApp": true,
+      "consentSms": true,
+      "consentEmail": true,
+      "consentRcs": false
+    }
+  ],
+  "orders": [
+    {
+      "externalOrderId": "ORD001",
+      "externalCustomerId": "CUST001",
+      "orderDate": "2026-05-20",
+      "orderValue": 2499,
+      "currency": "INR",
+      "category": "FASHION",
+      "productName": "Summer Floral Dress",
+      "quantity": 1,
+      "status": "COMPLETED"
+    }
+  ]
+}
+```
+
+### Import flow
+
+1. **Upload** — choose JSON or CSV (max **10MB** per file).
+2. **Preview** — first 10 rows per entity.
+3. **Validate** — row-level Zod errors (row number, field, message).
+4. **Import** — brand-scoped upsert (`externalCustomerId` → email → phone for customers;
+   `externalOrderId` for orders).
+5. **Done** — dashboard/customers refresh for the current workspace.
+
+**Limits (v1):** 10,000 customers and 50,000 orders per import. Parsing is synchronous in-memory
+for this take-home; production would use async jobs (BullMQ) and object storage (S3).
+
+### Workspace demo data (not global seed)
+
+On an empty workspace dashboard, **Generate demo data for this workspace** creates realistic
+shoppers/orders for **that brand only** via `POST /api/brands/:brandId/demo-data`. It does **not**
+call `pnpm db:seed`, truncate tables, or switch you to NovaWear. NovaWear remains available via
+**View NovaWear demo workspace**.
+
+---
+
 ## Scale assumptions & tradeoffs
 
 For take-home scope: Postgres is the primary store, Redis/BullMQ runs async sends + callback
@@ -195,14 +292,15 @@ per-user LLM cost. Full discussion in [`docs/scaling-tradeoffs.md`](docs/scaling
 pnpm dev            # run web + both services
 pnpm typecheck      # typecheck all packages/apps
 pnpm build          # build everything
-pnpm db:seed        # regenerate the demo dataset
+pnpm db:seed        # regenerate the global NovaWear demo dataset (wipes all brands)
+pnpm db:push        # apply schema changes (required after pulling import models)
 pnpm db:studio      # open Prisma Studio
 pnpm infra:down     # stop Postgres + Redis
 ```
 
 ## Future improvements
 
-- AuthN/Z + multi-tenant brand scoping (currently single demo brand).
+- AuthN/Z + RBAC (workspace scoping exists via `X-Brand-Id`; no login yet).
 - Real provider adapters behind the channel-service interface.
 - Precomputed/materialised segment membership + scheduled recompute of RFM.
 - Streaming monitor via SSE/WebSockets instead of polling.

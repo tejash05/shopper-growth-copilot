@@ -6,19 +6,17 @@ import {
   type SegmentPreviewResult,
   type SegmentRule,
 } from '@scp/shared';
-import { getDefaultBrandId } from '../lib/brand.js';
 
-/** Resolve a structured rule into a brand-scoped Prisma where clause. */
-async function resolveWhere(rule: SegmentRule): Promise<Prisma.CustomerWhereInput> {
-  const brandId = await getDefaultBrandId();
+function brandScopedWhere(brandId: string, rule: SegmentRule): Prisma.CustomerWhereInput {
   return { brandId, ...(segmentRuleToPrismaWhere(rule) as Prisma.CustomerWhereInput) };
 }
 
 export async function previewSegment(
+  brandId: string,
   rule: SegmentRule,
   sampleSize: number,
 ): Promise<SegmentPreviewResult> {
-  const where = await resolveWhere(rule);
+  const where = brandScopedWhere(brandId, rule);
 
   const [audienceSize, agg, categoryGroups, channelGroups, sample] = await Promise.all([
     prisma.customer.count({ where }),
@@ -76,9 +74,8 @@ export async function previewSegment(
   };
 }
 
-export async function createSegment(input: CreateSegmentInput) {
-  const brandId = await getDefaultBrandId();
-  const where = await resolveWhere(input.rule);
+export async function createSegment(brandId: string, input: CreateSegmentInput) {
+  const where = brandScopedWhere(brandId, input.rule);
   const audienceSize = await prisma.customer.count({ where });
   const agg = await prisma.customer.aggregate({ where, _sum: { totalSpend: true } });
 
@@ -97,9 +94,8 @@ export async function createSegment(input: CreateSegmentInput) {
   });
 }
 
-/** Fetch a sample of the audience with the fields needed for message generation. */
-export async function sampleAudienceForMessaging(rule: SegmentRule, take: number) {
-  const where = await resolveWhere(rule);
+export async function sampleAudienceForMessaging(brandId: string, rule: SegmentRule, take: number) {
+  const where = brandScopedWhere(brandId, rule);
   const rows = await prisma.customer.findMany({
     where,
     orderBy: { totalSpend: 'desc' },
@@ -121,8 +117,7 @@ export async function sampleAudienceForMessaging(rule: SegmentRule, take: number
   }));
 }
 
-export async function listSegments() {
-  const brandId = await getDefaultBrandId();
+export async function listSegments(brandId: string) {
   return prisma.segment.findMany({
     where: { brandId },
     orderBy: { createdAt: 'desc' },

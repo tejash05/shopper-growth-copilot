@@ -5,10 +5,9 @@ import {
   CommunicationStatus,
   DORMANT_THRESHOLD_DAYS,
 } from '@scp/shared';
-import { getDefaultBrandId } from '../lib/brand.js';
 
-export async function getDashboard() {
-  const brandId = await getDefaultBrandId();
+export async function getDashboard(brandId: string) {
+  const brand = await prisma.brand.findUnique({ where: { id: brandId } });
   const dormantCutoff = new Date(Date.now() - DORMANT_THRESHOLD_DAYS * 86_400_000);
 
   const [
@@ -41,7 +40,6 @@ export async function getDashboard() {
       _sum: { orderValue: true },
       _count: { _all: true },
     }),
-    // Opportunity audience: high-value, dormant, at-risk shoppers.
     prisma.customer.count({
       where: {
         brandId,
@@ -78,12 +76,12 @@ export async function getDashboard() {
   const clicked =
     statusCount(CommunicationStatus.CLICKED) + statusCount(CommunicationStatus.ATTRIBUTED_ORDER);
 
-  // Recoverable revenue heuristic: ~6% of dormant high-value shoppers reconvert
-  // at their typical order value.
   const avgOrder = opportunityRevenue._avg.averageOrderValue ?? 2500;
   const recoverableRevenue = Math.round(opportunity * 0.06 * avgOrder);
 
   return {
+    brandId,
+    brandName: brand?.name ?? 'Workspace',
     metrics: {
       totalShoppers,
       totalRevenue: Math.round(revenueAgg._sum.totalSpend ?? 0),

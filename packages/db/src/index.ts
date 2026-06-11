@@ -18,3 +18,8 @@ if (process.env.NODE_ENV !== 'production') {
 
 export * from '@prisma/client';
 export { PrismaClient } from '@prisma/client';
+export {
+  generateBrandDemoData,
+  type GenerateBrandDemoOptions,
+  type GenerateBrandDemoResult,
+} from './demo/generate-brand-demo.js';

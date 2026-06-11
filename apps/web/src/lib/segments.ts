@@ -81,4 +81,7 @@ export function findSegmentById(segments: SegmentSummary[], id: string): Segment
   return segments.find((s) => s.id === id);
 }
 
+export const segmentsQueryKey = (brandId: string | null) => ['segments', brandId] as const;
+
+/** @deprecated Use segmentsQueryKey(brandId) */
 export const SEGMENTS_QUERY_KEY = ['segments'] as const;

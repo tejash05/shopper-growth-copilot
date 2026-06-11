@@ -10,8 +10,8 @@ if (process.env.SKIP_DEV_GUARD !== '1') {
     execSync('lsof -ti :3000', { stdio: 'ignore' });
     console.error(
       '\n❌ Dev server is running on port 3000.\n' +
-        '   Stop it before `pnpm build` (shared .next causes webpack/CSS errors).\n' +
-        '   Fix a broken dev UI: pnpm --filter @scp/web dev:clean\n',
+        '   Stop it before `pnpm build` (shared port causes webpack/CSS errors).\n' +
+        '   Fix a broken dev UI: pnpm dev:clean\n',
     );
     process.exit(1);
   } catch {

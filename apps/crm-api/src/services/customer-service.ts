@@ -1,6 +1,5 @@
 import { prisma, type Prisma } from '@scp/db';
 import type { CustomerListItem, CustomerListQuery, Paginated } from '@scp/shared';
-import { getDefaultBrandId } from '../lib/brand.js';
 
 function buildWhere(brandId: string, q: CustomerListQuery): Prisma.CustomerWhereInput {
   const where: Prisma.CustomerWhereInput = { brandId };
@@ -19,8 +18,10 @@ function buildWhere(brandId: string, q: CustomerListQuery): Prisma.CustomerWhere
   return where;
 }
 
-export async function listCustomers(q: CustomerListQuery): Promise<Paginated<CustomerListItem>> {
-  const brandId = await getDefaultBrandId();
+export async function listCustomers(
+  brandId: string,
+  q: CustomerListQuery,
+): Promise<Paginated<CustomerListItem>> {
   const where = buildWhere(brandId, q);
 
   const [total, rows] = await Promise.all([
@@ -42,8 +43,8 @@ export async function listCustomers(q: CustomerListQuery): Promise<Paginated<Cus
   };
 }
 
-export async function getCustomerDetail(id: string) {
-  const customer = await prisma.customer.findUnique({ where: { id } });
+export async function getCustomerDetail(brandId: string, id: string) {
+  const customer = await prisma.customer.findFirst({ where: { id, brandId } });
   if (!customer) return null;
 
   const [orders, communications] = await Promise.all([
@@ -61,7 +62,6 @@ export async function getCustomerDetail(id: string) {
     }),
   ]);
 
-  // Merge orders + communications into a single chronological timeline.
   const timeline = [
     ...orders.map((o) => ({
       type: 'ORDER' as const,

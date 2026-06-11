@@ -12,6 +12,8 @@ import type {
 } from '@scp/shared';
 
 export interface DashboardData {
+  brandId: string;
+  brandName: string;
   metrics: {
     totalShoppers: number;
     totalRevenue: number;

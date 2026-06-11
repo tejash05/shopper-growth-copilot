@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useQuery } from '@tanstack/react-query';
 import { ArrowRight, Lightbulb, Sparkles, ThumbsDown, ThumbsUp } from 'lucide-react';
 import { CHANNEL_LABELS } from '@scp/shared';
-import { api } from '@/lib/api';
+import { api, ApiError } from '@/lib/api';
 import { buildStudioUrl } from '@/lib/studio-navigation';
 import type { CampaignInsightsResponse } from '@/lib/types';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -12,6 +12,7 @@ import { Badge } from '@/components/ui/badge';
 import { buttonVariants } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { cn } from '@/lib/utils';
+import { useBrand } from '@/contexts/brand-context';
 
 interface InsightsPanelProps {
   campaignId: string;
@@ -20,12 +21,18 @@ interface InsightsPanelProps {
 }
 
 export default function InsightsPanel({ campaignId, metricsSettled }: InsightsPanelProps) {
-  const { data, isLoading, isFetching } = useQuery<CampaignInsightsResponse>({
-    queryKey: ['insights', campaignId],
+  const { selectedBrandId } = useBrand();
+  const { data, isLoading, isFetching, isError, error } = useQuery<CampaignInsightsResponse>({
+    queryKey: ['insights', selectedBrandId, campaignId],
     queryFn: () => api.campaignInsights(campaignId),
-    enabled: metricsSettled,
+    enabled: metricsSettled && Boolean(selectedBrandId),
     staleTime: 60_000,
+    retry: (_count, err) => !(err instanceof ApiError && err.status === 404),
   });
+
+  if (isError && error instanceof ApiError && error.status === 404) {
+    return null;
+  }
 
   if (!metricsSettled) {
     return (

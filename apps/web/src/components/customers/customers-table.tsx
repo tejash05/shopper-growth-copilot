@@ -23,6 +23,7 @@ import {
 } from '@scp/shared';
 import { api } from '@/lib/api';
 import { useDebounce } from '@/lib/hooks';
+import { useBrand } from '@/contexts/brand-context';
 import { Input } from '@/components/ui/input';
 import { Select } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
@@ -35,6 +36,7 @@ import { CustomerDetailDrawer } from './customer-detail-drawer';
 type SortKey = 'totalSpend' | 'lastPurchaseAt' | 'orderCount' | 'rfmTotal' | 'lifetimeValue';
 
 export function CustomersTable() {
+  const { selectedBrandId } = useBrand();
   const [page, setPage] = React.useState(1);
   const [sortBy, setSortBy] = React.useState<SortKey>('totalSpend');
   const [sortDir, setSortDir] = React.useState<'asc' | 'desc'>('desc');
@@ -62,8 +64,9 @@ export function CustomersTable() {
   }).toString();
 
   const { data, isLoading, isError, isFetching } = useQuery<Paginated<CustomerListItem>>({
-    queryKey: ['customers', qs],
+    queryKey: ['customers', selectedBrandId, qs],
     queryFn: () => api.customers(qs),
+    enabled: Boolean(selectedBrandId),
     placeholderData: keepPreviousData,
   });
 

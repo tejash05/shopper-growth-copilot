@@ -14,6 +14,7 @@ export const ai = createAiService({
  * the AI was asked and what it produced.
  */
 export async function recordAiRun<T>(
+  brandId: string | null | undefined,
   capability: string,
   input: unknown,
   exec: () => Promise<AiResult<T>>,
@@ -21,6 +22,7 @@ export async function recordAiRun<T>(
   const res = await exec();
   const run = await prisma.aiAgentRun.create({
     data: {
+      brandId: brandId ?? null,
       capability,
       provider: res.provider,
       model: res.model,

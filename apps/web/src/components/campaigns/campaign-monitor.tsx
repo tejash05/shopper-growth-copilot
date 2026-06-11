@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import { useQuery } from '@tanstack/react-query';
 import { Activity, MousePointerClick, Send, ShoppingBag, TrendingUp, Zap } from 'lucide-react';
 import { CHANNEL_LABELS, formatInrCompact, formatPercent } from '@scp/shared';
-import { api } from '@/lib/api';
+import { api, ApiError } from '@/lib/api';
 import { ATTRIBUTION_REVENUE_LABEL, ATTRIBUTION_TOOLTIP } from '@/lib/attribution-copy';
 import type { CampaignDetail, CampaignMetricsResponse } from '@/lib/types';
 import { CampaignAudienceCard } from '@/components/campaigns/campaign-audience-card';
@@ -15,6 +15,11 @@ import { ProgressBar } from '@/components/ui/misc';
 import { Skeleton } from '@/components/ui/skeleton';
 import { StatCard } from '@/components/shared/stat-card';
 import { ChannelBadge } from '@/components/shared/labels';
+import {
+  CampaignWorkspaceNotFound,
+  isCampaignNotFoundError,
+} from '@/components/campaigns/campaign-workspace-not-found';
+import { useBrand } from '@/contexts/brand-context';
 
 // Heavy / below-the-fold components are lazy-loaded.
 const TimelineChart = dynamic(() => import('./timeline-chart'), {
@@ -31,11 +36,21 @@ function isMetricsSettled(metrics: CampaignMetricsResponse['metrics'] | undefine
 }
 
 export function CampaignMonitor({ campaign }: { campaign: CampaignDetail }) {
-  const { data, isLoading } = useQuery<CampaignMetricsResponse>({
-    queryKey: ['metrics', campaign.id],
+  const { selectedBrandId } = useBrand();
+  const { data, isLoading, isError, error } = useQuery<CampaignMetricsResponse>({
+    queryKey: ['metrics', selectedBrandId, campaign.id],
     queryFn: () => api.campaignMetrics(campaign.id),
-    refetchInterval: (q) => (isMetricsSettled(q.state.data?.metrics) ? false : 3000),
+    enabled: Boolean(selectedBrandId),
+    retry: (_count, err) => !(err instanceof ApiError && err.status === 404),
+    refetchInterval: (query) => {
+      if (query.state.error instanceof ApiError && query.state.error.status === 404) return false;
+      return isMetricsSettled(query.state.data?.metrics) ? false : 3000;
+    },
   });
+
+  if (isError && isCampaignNotFoundError(error)) {
+    return <CampaignWorkspaceNotFound />;
+  }
 
   if (isLoading || !data) {
     return (

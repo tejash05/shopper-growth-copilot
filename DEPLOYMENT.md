@@ -103,7 +103,7 @@ Railway injects `PORT`. The app binds via `CRM_API_PORT`, which falls back to `p
 | `REDIS_URL` | `${{Redis.REDIS_URL}}` |
 | `CHANNEL_SERVICE_URL` | Public HTTPS URL of channel-service (set after Step 3) |
 | `CHANNEL_CALLBACK_SECRET` | Strong random string (≥8 chars) |
-| `CORS_ORIGIN` | Your Vercel production URL, e.g. `https://your-app.vercel.app` |
+| `CORS_ORIGIN` | Live web app URL, e.g. `https://web-production-092f5.up.railway.app` |
 | `AI_PROVIDER` | `mock` (demo) or `openai` |
 | `OPENAI_API_KEY` | Required if `AI_PROVIDER=openai` |
 | `OPENAI_MODEL` | `gpt-4o-mini` (optional) |
@@ -188,14 +188,14 @@ After both services are live:
 
 The browser calls `${NEXT_PUBLIC_CRM_API_URL}/api/...` directly ([`apps/web/src/lib/api.ts`](apps/web/src/lib/api.ts)).
 
-Deploy and note your Vercel URL (e.g. `https://your-app.vercel.app`).
+Deploy and note your live web URL (e.g. `https://web-production-092f5.up.railway.app`).
 
 ### CORS
 
-Set crm-api `CORS_ORIGIN` to your Vercel URL (comma-separated for preview + production):
+Set crm-api `CORS_ORIGIN` to your live web URL (comma-separated if you add preview/staging hosts):
 
 ```env
-CORS_ORIGIN=https://your-app.vercel.app
+CORS_ORIGIN=https://web-production-092f5.up.railway.app
 ```
 
 crm-api reads this in [`apps/crm-api/src/server.ts`](apps/crm-api/src/server.ts). If unset, all origins are allowed (local dev default).
@@ -210,7 +210,7 @@ After all services are deployed:
 |-------|-----|
 | **crm-api health** | `curl https://<crm-api>/health` → `{ "status": "ok", "service": "crm-api" }` |
 | **channel-service health** | `curl https://<channel-service>/health` → `{ "status": "ok", "service": "channel-service" }` |
-| **Dashboard** | Open Vercel URL → shopper counts visible (requires seed or real data) |
+| **Dashboard** | Open [https://web-production-092f5.up.railway.app/](https://web-production-092f5.up.railway.app/) → shopper counts visible (requires seed or real data) |
 | **Campaign Studio** | Generate plan → segment/offer populated (mock AI OK) |
 | **AI status** | DevTools → `POST /api/ai/campaign-plan` → `plan.status` is `SUCCESS` or `FALLBACK` |
 | **Launch + monitor** | Launch campaign → KPI cards settle; channel/variant sent counts align |
@@ -255,7 +255,7 @@ pnpm --filter @scp/web start
 |---------|----------------|
 | Campaign stuck at `QUEUED` | `CHANNEL_SERVICE_URL` wrong or channel-service down |
 | No callbacks / no funnel progress | `CRM_API_URL` on channel-service not public HTTPS |
-| CORS errors in browser | `CORS_ORIGIN` on crm-api missing or wrong Vercel URL |
+| CORS errors in browser | `CORS_ORIGIN` on crm-api missing or wrong web app URL |
 | Empty dashboard | Schema not pushed or seed not run |
 | AI always `FALLBACK` | OpenAI quota/key issue — mock still works with `AI_PROVIDER=mock` |
 

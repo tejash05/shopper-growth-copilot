@@ -4,6 +4,7 @@
 //    projection rebuildable from events (event sourcing for the send funnel).
 //  - ChannelCallback stores every raw inbound callback (audit + replay).
 //  - Heavy read paths (customer table filters, campaign funnels) are indexed.
+//  - Tenant isolation: Brand is the workspace; compound uniques are per brandId.
 
 generator client {
   provider = "prisma-client-js"
@@ -78,32 +79,55 @@ enum Gender {
   OTHER
 }
 
+enum ImportSourceType {
+  CSV
+  JSON
+  XLSX
+  DEMO
+}
+
+enum ImportJobStatus {
+  PENDING
+  VALIDATING
+  PROCESSING
+  COMPLETED
+  FAILED
+}
+
 // ───────────────────────── core retail ─────────────────────────
 
 model Brand {
-  id        String   @id @default(cuid())
-  name      String   @unique
-  industry  String
-  createdAt DateTime @default(now())
+  id         String   @id @default(cuid())
+  name       String   @unique
+  industry   String
+  ownerEmail String?
+  currency   String   @default("INR")
+  createdAt  DateTime @default(now())
 
-  customers Customer[]
-  campaigns Campaign[]
-  segments  Segment[]
-  products  Product[]
+  customers  Customer[]
+  campaigns  Campaign[]
+  segments   Segment[]
+  products   Product[]
+  orders     Order[]
+  aiAgentRuns AiAgentRun[]
+  importJobs ImportJob[]
 }
 
 model Customer {
-  id    String  @id @default(cuid())
-  brand Brand   @relation(fields: [brandId], references: [id])
+  id    String @id @default(cuid())
+  brand Brand  @relation(fields: [brandId], references: [id])
   brandId String
 
   name          String
-  email         String  @unique
+  email         String
   phone         String
   city          String
   gender        Gender?
   loyaltyTier   LoyaltyTier @default(BRONZE)
   preferredChannel Channel  @default(WHATSAPP)
+
+  /// External CRM id for future import dedupe (nullable — unique when set).
+  externalCustomerId String?
 
   // consent flags per channel
   consentWhatsApp Boolean @default(true)
@@ -134,14 +158,18 @@ model Customer {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  orders         Order[]
-  communications Communication[]
+  orders           Order[]
+  communications   Communication[]
   attributedOrders AttributedOrder[]
 
-  // Indexes tuned for the customer table + segment resolution.
+  @@unique([brandId, email])
+  @@unique([brandId, phone])
+  @@unique([brandId, externalCustomerId])
+  @@index([brandId])
   @@index([brandId, city])
   @@index([brandId, churnRisk])
   @@index([brandId, favouriteCategory])
+  @@index([brandId, preferredChannel])
   @@index([brandId, persona])
   @@index([brandId, loyaltyTier])
   @@index([brandId, totalSpend])
@@ -165,20 +193,29 @@ model Product {
 
 model Order {
   id         String   @id @default(cuid())
+  brand      Brand    @relation(fields: [brandId], references: [id])
+  brandId    String
   customer   Customer @relation(fields: [customerId], references: [id])
   customerId String
 
-  orderNumber    String   @unique
+  orderNumber    String
+  /// External order id for future import dedupe (nullable — unique when set).
+  externalOrderId String?
   totalAmount    Float
   discountAmount Float    @default(0)
   category       ProductCategory
   placedAt       DateTime
 
-  items OrderItem[]
+  items           OrderItem[]
   attributedOrder AttributedOrder?
 
   createdAt DateTime @default(now())
 
+  @@unique([brandId, orderNumber])
+  @@unique([brandId, externalOrderId])
+  @@index([brandId])
+  @@index([brandId, placedAt])
+  @@index([brandId, totalAmount])
   @@index([customerId, placedAt])
   @@index([category])
   @@index([placedAt])
@@ -352,7 +389,8 @@ model CommunicationEvent {
   createdAt       DateTime @default(now())
 
   @@index([communicationId, occurredAt])
-  @@index([eventType])
+  @@index([communicationId, eventType])
+  @@index([eventType, occurredAt])
   @@index([occurredAt])
 }
 
@@ -397,6 +435,8 @@ model AttributedOrder {
 
 model AiAgentRun {
   id         String   @id @default(cuid())
+  brand      Brand?   @relation(fields: [brandId], references: [id])
+  brandId    String?
   capability String   // matches AiCapability values
   provider   String   // "mock" | "openai"
   model      String?
@@ -410,6 +450,7 @@ model AiAgentRun {
 
   auditLogs AiAuditLog[]
 
+  @@index([brandId])
   @@index([capability])
   @@index([createdAt])
 }
@@ -424,4 +465,44 @@ model AiAuditLog {
   createdAt DateTime @default(now())
 
   @@index([runId])
+}
+
+// ───────────────────────── data import ─────────────────────────
+
+model ImportJob {
+  id        String   @id @default(cuid())
+  brand     Brand    @relation(fields: [brandId], references: [id])
+  brandId   String
+
+  fileName  String
+  sourceType ImportSourceType
+  status    ImportJobStatus @default(PENDING)
+
+  customersImported Int @default(0)
+  ordersImported    Int @default(0)
+  rowsSkipped       Int @default(0)
+  errorsCount       Int @default(0)
+
+  createdAt   DateTime  @default(now())
+  completedAt DateTime?
+
+  errors ImportError[]
+
+  @@index([brandId, createdAt])
+}
+
+model ImportError {
+  id          String    @id @default(cuid())
+  importJob   ImportJob @relation(fields: [importJobId], references: [id], onDelete: Cascade)
+  importJobId String
+
+  rowNumber  Int
+  entityType String
+  field      String?
+  message    String
+  rawRow     Json
+
+  createdAt DateTime @default(now())
+
+  @@index([importJobId])
 }

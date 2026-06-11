@@ -1,21 +1,27 @@
 import type { FastifyInstance } from 'fastify';
 import { createSegmentSchema, segmentPreviewSchema } from '@scp/shared';
+import { resolveBrandId } from '../lib/brand.js';
 import { parseOr400 } from '../lib/validate.js';
 import { createSegment, listSegments, previewSegment } from '../services/segment-service.js';
 
 export async function segmentRoutes(app: FastifyInstance) {
-  app.get('/api/segments', async () => listSegments());
+  app.get('/api/segments', async (req) => {
+    const brandId = await resolveBrandId(req);
+    return listSegments(brandId);
+  });
 
   app.post('/api/segments/preview', async (req, reply) => {
     const input = parseOr400(segmentPreviewSchema, req.body, reply);
     if (!input) return;
-    return previewSegment(input.rule, input.sampleSize);
+    const brandId = await resolveBrandId(req);
+    return previewSegment(brandId, input.rule, input.sampleSize);
   });
 
   app.post('/api/segments', async (req, reply) => {
     const input = parseOr400(createSegmentSchema, req.body, reply);
     if (!input) return;
-    const segment = await createSegment(input);
+    const brandId = await resolveBrandId(req);
+    const segment = await createSegment(brandId, input);
     return reply.code(201).send(segment);
   });
 }

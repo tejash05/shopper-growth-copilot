@@ -15,6 +15,12 @@ export interface AudienceStats {
 
 export interface GenerateCampaignPlanInput {
   goal: string;
+  /** Active workspace name for brand-aware copy. */
+  brandName?: string;
+  /** Saved segment context — grounds the plan on a known audience. */
+  segmentName?: string;
+  naturalLanguageQuery?: string;
+  segmentRule?: SegmentRule;
   /** Optional pre-resolved audience to ground the estimate. */
   audience?: AudienceStats;
 }
@@ -32,6 +38,7 @@ export interface GeneratePersonalizedMessagesInput {
   offerCode?: string;
   discountPercent?: number;
   goal?: string;
+  brandName?: string;
   customers: MessageCustomer[];
 }
 

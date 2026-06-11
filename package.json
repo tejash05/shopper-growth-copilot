@@ -8,12 +8,14 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "dev": "turbo run dev --parallel",
+    "dev": "turbo run dev",
+    "dev:clean": "pnpm --filter @scp/web exec rm -rf .next-dev .next && pnpm dev",
     "build": "turbo run build",
     "lint": "turbo run lint",
     "typecheck": "turbo run typecheck",
     "db:generate": "pnpm --filter @scp/db generate",
     "db:push": "pnpm --filter @scp/db push",
+    "db:push:tenant": "pnpm --filter @scp/db push:tenant",
     "db:migrate": "pnpm --filter @scp/db migrate",
     "db:migrate:deploy": "pnpm --filter @scp/db migrate:deploy",
     "db:seed": "pnpm --filter @scp/db seed",

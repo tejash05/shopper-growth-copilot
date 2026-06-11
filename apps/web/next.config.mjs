@@ -6,6 +6,9 @@ const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Keep dev and production artifacts separate so `pnpm build` during dev work
+  // does not corrupt the running dev server's webpack/CSS chunks.
+  distDir: process.env.NODE_ENV === 'production' ? '.next' : '.next-dev',
   // Monorepo: pin tracing root so Next doesn't guess from multiple lockfiles.
   outputFileTracingRoot: repoRoot,
   // Workspace packages export raw TS; let Next transpile them.

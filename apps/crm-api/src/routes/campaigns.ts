@@ -1,5 +1,6 @@
 import type { FastifyInstance } from 'fastify';
 import { AiCapability, createCampaignSchema } from '@scp/shared';
+import { resolveBrandId } from '../lib/brand.js';
 import { parseOr400 } from '../lib/validate.js';
 import {
   createCampaign,
@@ -18,10 +19,14 @@ import {
 import { ai, recordAiRun } from '../lib/ai.js';
 
 export async function campaignRoutes(app: FastifyInstance) {
-  app.get('/api/campaigns', async () => listCampaigns());
+  app.get('/api/campaigns', async (req) => {
+    const brandId = await resolveBrandId(req);
+    return listCampaigns(brandId);
+  });
 
   app.get<{ Params: { id: string } }>('/api/campaigns/:id', async (req, reply) => {
-    const campaign = await getCampaign(req.params.id);
+    const brandId = await resolveBrandId(req);
+    const campaign = await getCampaign(req.params.id, brandId);
     if (!campaign) return reply.code(404).send({ error: 'NotFound', message: 'Campaign not found.' });
     return campaign;
   });
@@ -29,39 +34,43 @@ export async function campaignRoutes(app: FastifyInstance) {
   app.post('/api/campaigns', async (req, reply) => {
     const input = parseOr400(createCampaignSchema, req.body, reply);
     if (!input) return;
-    const campaign = await createCampaign(input);
+    const brandId = await resolveBrandId(req);
+    const campaign = await createCampaign(brandId, input);
     return reply.code(201).send(campaign);
   });
 
-  app.get<{ Params: { id: string } }>('/api/campaigns/:id/safety-check', async (req) =>
-    runSafetyCheck(req.params.id),
-  );
+  app.get<{ Params: { id: string } }>('/api/campaigns/:id/safety-check', async (req) => {
+    const brandId = await resolveBrandId(req);
+    return runSafetyCheck(req.params.id, brandId);
+  });
 
   app.post<{ Params: { id: string } }>('/api/campaigns/:id/launch', async (req, reply) => {
-    const result = await launchCampaign(req.params.id);
+    const brandId = await resolveBrandId(req);
+    const result = await launchCampaign(req.params.id, brandId);
     return reply.code(202).send(result);
   });
 
   app.get<{ Params: { id: string } }>('/api/campaigns/:id/metrics', async (req) => {
+    const brandId = await resolveBrandId(req);
     const [metrics, channels, variants, timeline] = await Promise.all([
-      getCampaignMetrics(req.params.id),
-      getChannelBreakdown(req.params.id),
-      getVariantBreakdown(req.params.id),
-      getEventTimeline(req.params.id),
+      getCampaignMetrics(req.params.id, brandId),
+      getChannelBreakdown(req.params.id, brandId),
+      getVariantBreakdown(req.params.id, brandId),
+      getEventTimeline(req.params.id, brandId),
     ]);
     return { metrics, channels, variants, timeline };
   });
 
-  // AI post-campaign insights: performance analysis + next-best-action.
-  app.get<{ Params: { id: string } }>('/api/campaigns/:id/insights', async (req) => {
-    const campaign = await getCampaign(req.params.id);
-    if (!campaign) return { error: 'NotFound' };
+  app.get<{ Params: { id: string } }>('/api/campaigns/:id/insights', async (req, reply) => {
+    const brandId = await resolveBrandId(req);
+    const campaign = await getCampaign(req.params.id, brandId);
+    if (!campaign) return reply.code(404).send({ error: 'NotFound', message: 'Campaign not found.' });
 
     const [metrics, channels, variants, topAudience] = await Promise.all([
-      getCampaignMetrics(req.params.id),
-      getChannelBreakdown(req.params.id),
-      getVariantBreakdown(req.params.id),
-      getTopAudience(req.params.id),
+      getCampaignMetrics(req.params.id, brandId),
+      getChannelBreakdown(req.params.id, brandId),
+      getVariantBreakdown(req.params.id, brandId),
+      getTopAudience(req.params.id, brandId),
     ]);
 
     const analysisInput = {
@@ -79,6 +88,7 @@ export async function campaignRoutes(app: FastifyInstance) {
     };
 
     const { result: analysis } = await recordAiRun(
+      brandId,
       AiCapability.ANALYZE_CAMPAIGN_PERFORMANCE,
       analysisInput,
       () => ai.analyzeCampaignPerformance(analysisInput),
@@ -88,7 +98,7 @@ export async function campaignRoutes(app: FastifyInstance) {
       metrics,
       bestChannel: analysis.result.bestChannel,
     };
-    const { result: next } = await recordAiRun(AiCapability.RECOMMEND_NEXT_ACTION, nextInput, () =>
+    const { result: next } = await recordAiRun(brandId, AiCapability.RECOMMEND_NEXT_ACTION, nextInput, () =>
       ai.recommendNextAction(nextInput),
     );
 
