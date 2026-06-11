@@ -15,7 +15,7 @@ attribution for a fashion brand (**NovaWear**).
 
 **App:** [https://web-production-092f5.up.railway.app/](https://web-production-092f5.up.railway.app/)
 
-> **Walkthrough video:** _<add Loom/YouTube link>_
+**Walkthrough video:** [Shopper Growth Copilot demo (Google Drive)](https://drive.google.com/file/d/1bwMOvtPTRYMD-csPsYYSfiHt716pOm5r/view?usp=sharing)
 
 ---
 
